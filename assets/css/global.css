@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header .section {
+    display: flex;
+    align-items: center;
+}
+
+header .section1 {
+    background-color: hsl(18, 81%, 47%);
+    height: 75px;
+}
+
+header .section1 .container {
+    justify-content: space-between;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+header .section1 .container img {
+    display: block;
+}
+
+header .section1 .container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+header .section1 .container a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header .section1 .container .searchBar {
+    display: flex;
+    align-items: center;
+}
+
+header .section1 .container .searchBar input {
+    box-sizing: border-box;
+    width: 600px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 40px;
+}
+
+header .section1 .container .searchBar button {
+    position: absolute;
+    padding-left: 565px;
+}
+
+header .section1 .container .buttonGroup {
+    display: flex;
+    gap: 15px;
+}
+
+header .section1 .container .buttonGroup button {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    gap: 5px;
+}
+
+header .section2 {
+    background-color: hsl(21, 96%, 56%);
+}
+
+header .section2 nav {
+    width: 100%;
+}
+
+header .section2 nav .container {
+    justify-content: center;
+}
+
+header .section2 nav .container .item {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    cursor: pointer;
+    height: 100%;
+    padding: 15px 30px;
+}
+
+header .section2 nav .container .item .sub {
+    display: none;
+    position: absolute;
+    top: 123px;
+    margin-left: -30px;
+    border: 1px solid hsl(0, 0%, 87%);
+    width: 230px;
+    background-color: white;
+}
+
+header .section2 nav .container .item:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+header .section2 nav .container .item:hover .sub {
+    display: block;
+}
+
+header .section2 nav .container .item .sub .subItem {
+    padding: 15px 30px;
+}
+
+header .section2 nav .container .item .sub .subItem:hover {
+    background-color: lightgray;
+}
+
+footer .section{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 16px;
+}
+
+footer .section1 {
+    background-color: hsl(18, 81%, 47%);
+    height: 200px;
+}
+
+footer .section1 .container h3 {
+    margin-top: 0;
+}
+
+footer .section1 .container ul {
+    margin-bottom: 0;
+}
+
+footer .section2 {
+    background-color: hsl(21, 96%, 56%);
+    height: 50px;
+}
+
+main {
+    flex: 1;
+}
