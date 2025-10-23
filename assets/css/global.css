@@ -9,6 +9,12 @@ body {
     flex-direction: column;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 header .container {
     display: flex;
     align-items: center;
@@ -160,4 +166,5 @@ footer .section2 {
 
 main {
     flex: 1;
+    margin-top: 123.400px;
 }
