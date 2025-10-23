@@ -1,0 +1,40 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f5;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+main {
+    background: #ffffff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 1000px;
+    overflow: hidden;
+}
+
+/*Cột bên trái*/
+main .left-panel{
+    flex: 2;
+    padding: 40px 30px;
+    border-right: 1px solid #e0e0e0;
+}
+main .left-panel h2{
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+
+}
+/*Anhr đại diện*/
+main .avatar-section{
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+main.avatar-section p{
+    color: #555;
+    font-size: 14px;
+}
+
+
