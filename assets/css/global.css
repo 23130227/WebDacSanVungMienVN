@@ -66,7 +66,7 @@ header .section1 .container .searchBar input {
 
 header .section1 .container .searchBar button {
     position: absolute;
-    padding-left: 565px;
+    margin-left: 565px;
 }
 
 header .section1 .container .buttonGroup {
@@ -133,7 +133,7 @@ header .section2 nav .container .item .sub .subItem:hover {
     background-color: lightgray;
 }
 
-footer .section{
+footer .section {
     display: flex;
     align-items: center;
     color: white;
