@@ -11,7 +11,7 @@ main{
     padding: 40px;
     width: 500px;
 }
-main #login{
+main div{
     font-size: 60px;
     text-align: center;
     font-weight: bold;
