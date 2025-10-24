@@ -1,0 +1,52 @@
+#forget_password{
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#forget_password{
+    padding: 125px;
+    margin-top: 60px
+
+}
+#forget_password div{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+
+}
+#forget_password nav{
+    text-align: left;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+#forget_password nav label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+#forget_password nav input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+#forget_password nav button{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+}
