@@ -36,5 +36,72 @@ main.avatar-section p{
     color: #555;
     font-size: 14px;
 }
+form label{
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+    color: #333;
+}
 
+input[type="text"],
+input[type="email"],
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+
+}
+input :focus,
+select :focus{
+    border-color: #1e5631;
+    box-shadow: 0 0 0 2px rgba(30, 86, 49, 0.1);
+}
+::placeholder{
+    color: #aaa;
+}
+/*Giới tinh*/
+.gender{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+.gender label{
+    margin-right: 10px;
+}
+/*Ngày sinh*/
+.dob select{
+    width: 32%;
+    margin-right: 4px;
+    border-radius: 6px;
+}
+/*Checkbox*/
+.checkbox {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #333;
+}
+.checkbox label{
+    display: block;
+    margin-bottom: 5px;
+}
+/*Nút cập nhật*/
+.btn-update {
+    background: #1e5631;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+    cursor:pointer;
+    transition: background 0.3s ease;
+}
+.btn-update:hover{
+    background: #164927;
+}
 
