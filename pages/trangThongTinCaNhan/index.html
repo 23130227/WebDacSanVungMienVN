@@ -8,59 +8,86 @@
 </head>
 <body>
  <main>
+  <div class="account-container">
     <div class="left-panel">
         <h2>Thông tin tài khoản</h2>
         <div class="avatar-section">
-            <img src="assets/images/user.png" alt="avatar">
-            <p>Tải ảnh của bạn</p>
+            <img id="avatarPreview" src="assets/images/user.png" alt="avatar">
+            <input type="file" id="avatarInput" accept="image/" hidden>
+            <label for="avatarInput" class="upload-btn">Tải ảnh của bạn</label>
         </div>
 
         <form>
-            <label>Email</label>
-            <input type="email" id="email" placeholder="Nhập email của bạn">
-            <label for="fullname">Họ và tên</label>
-            <input type="text" id="fullname" placeholder="Nhập họ và tên">
+            <input type="email" id="email" value="email" disabled>
+            <input type="text" id="fullname" value="fullname" placeholder="Nhập họ và tên">
 
-            <div class=""gender>
-                <label>Giới tính</label><br>
-                <input type="radio" name="gender" id="male">
-                <label for="male">Nam</label>
-                <input type="radio" name="gender" id="female">
-                <label for="female">Nữ</label>
-                <input type="radio" name="gender" id="none" checked>
-                <label for="none">Không xác định</label>
+
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
             </div>
-
-            <label>Ngày sinh (Không bắt buộc)</label>
-            <div class=""dob>
-                <select><option>Ngày</option></select>
-                <select><option>Tháng</option></select>
-                <select><option>Năm</option></select>
+            <div class="dob">
+                <select id="day"><option>Ngày</option></select>
+                <select id="month"><option>Tháng</option></select>
+                <select id="year"><option>Năm</option></select>
             </div>
 
             <div class="checkbox">
-                <label><input type="checkbox">Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
+                <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
             </div>
             <button class="btn-update" type="submit">Cập nhật</button>
         </form>
-
     </div>
 
     <div class="right-panel">
         <div class ="info-block">
             <h3>Số điện thoại và Email</h3>
-            <p>📞 Số điện thoại</p>
-            <button class="btn-gray">Cập nhật</button>
-            <p>📧 Email</p>
-            <p class="email">Chưa có email</p>
-        </div>
+            <div class="info-item">
+                <div class="info-left">
+                    <span class="icon">📞</span>
+                    <div>
+                        <p class="label">Số điện thoại</p>
+                        <p class="decs">
+                            <span class="placeholder">Cập nhật số điện thoại</span>
+                        </p>
+                    </div>
 
-        <div class="info-block">
-            <h3>Bảo mật</h3>
-            <button class="btn-gray">Đổi mật khẩu</button>
-        </div>
+
+                </div>
+                <button class="btn-gray">Cập nhật</button>
+
+
+            </div>
+            <div class="info-item">
+                <div class="info-left">
+                    <span class="icon">📧</span>
+                    <div>
+                        <p class="label">Email</p>
+                        <p class="decs">
+                            <span class="placeholder">Cập nhật email</span>
+                        </p>
+
+                    </div>
+                </div>
+                <button class="btn-gray">Cập nhật</button>
+        
+            </div>
+            <div class="info-block">
+                <h3>Bảo mật</h3>
+                <div class="info-item">
+                    <div class="info-left">
+                        <span class="icon">🔒</span>
+                        <p class="label">Đổi mật khẩu </p>
+
+                    </div>
+                    <button class="btn-gray">Cập nhật</button>
+                </div>
+            </div>
     </div>
 
- </main>   
+  </div>
+</main>
+
 </body>
 </html>
