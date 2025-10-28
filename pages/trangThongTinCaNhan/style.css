@@ -188,7 +188,7 @@ select:focus {
 
 /* Nút cập nhật */
 .btn-gray {
-    background: hsl(18, 81%, 47%);
+    background: #1e5631;
     color: #fff;
     border: none;
     border-radius: 6px;
