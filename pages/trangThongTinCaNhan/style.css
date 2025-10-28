@@ -1,27 +1,42 @@
+footer{
+    width: 100%;
+    height: auto;
+}
 body {
+    width: 100%;
+
     font-family: 'Inter', sans-serif;
     background: #f4f6f5;
+    margin: 0;
+    display: flex;
+    flex-direction:  column;
+    min-height: 100vh;
+}
+.account-page{
+    margin-top: 105x;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
-    padding: 40px;
 }
-
-.account-container {
-    display: flex;
-    flex-direction: row;
-    justify-items: space-between;
+.account-page .account-container {
+   display: flex;
+    gap: 30px;
     align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 1200px;
-    overflow: hidden;
+    padding: 40px;
+    box-sizing: border-box;
+    
+    
 }
 
 /* Cột trái */
 .left-panel {
     flex: 2;
-    padding: 40px 35px;
+    padding: 30px;
     border-right: 1px solid #e0e0e0;
 }
 .left-panel h2 {
@@ -34,15 +49,18 @@ body {
 
 /* Avatar upload */
 .avatar-section {
-    text-align: center;
-    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 .avatar-section img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid #1e5631;
+    border: 3px solid #9cc07f;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 .upload-btn {
     display: block;
@@ -128,8 +146,8 @@ select:focus {
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
+    display: block;
     margin: 20px auto;
-    margin-left: 70px;
 }
 .btn-update:hover {
     background: #164927;
@@ -138,8 +156,10 @@ select:focus {
 /* Cột phải */
 .right-panel {
     flex: 1;
-    padding: 40px 30px;
-    background: #fff;
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 10px ;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .info-block {
@@ -183,7 +203,7 @@ select:focus {
 
 .desc {
     font-size: 14px;
-    color: #777;
+    color: #ccc;
 }
 
 /* Nút cập nhật */
@@ -201,9 +221,9 @@ select:focus {
 }
 
 .btn-gray:hover {
-    background: #e5e7eb;
+    background: #164927;
 }
 .placeholder{
-    color: #aaa;
+    color: #ccc;
     font-style: italic;
 }

@@ -2,17 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrangThongTinCaNhan</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <main>
+<header>
+    <section class="section section1">
+        <div class="container">
+            <a href="index.html">DacSanVungMien</a>
+            <form method="get">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit">
+                    <img src="../../assets/images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="aGroup">
+                <a href="">
+                    <img src="../../assets/images/user.png" height="24" width="24"/>
+                    Đăng nhập / Đăng ký
+                </a>
+                <a href="">
+                    <img src="../../assets/images/grocery-store.png" height="24" width="24"/>
+                    Giỏ hàng
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <nav>
+            <div class="container">
+                <a href="" class="item">Trang chủ</a>
+                <a href="" class="item">Giới thiệu</a>
+                <div class="item">
+                    Đặc sản theo miền
+                    <div class="sub">
+                        <a href="" class="subItem">Đặc sản miền Bắc</a>
+                        <a href="" class="subItem">Đặc sản miền Trung</a>
+                        <a href="" class="subItem">Đặc sản miền Nam</a>
+                    </div>
+                </div>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a href="" class="subItem">Mứt</a>
+                        <a href="" class="subItem">Trà</a>
+                        <a href="" class="subItem">Bánh</a>
+                        <a href="" class="subItem">Lạp xưởng</a>
+                    </div>
+                </div>
+                <a href="" class="item">Khuyến mãi / ưu đãi</a>
+                <a href="" class="item">Tin tức / blog</a>
+                <a href="" class="item">Liên hệ</a>
+                <a href="" class="item">Hỗ trợ</a>
+            </div>
+        </nav>
+    </section>
+</header>
+
+
+<main class="account-page">
   <div class="account-container">
     <div class="left-panel">
         <h2>Thông tin tài khoản</h2>
         <div class="avatar-section">
-            <img id="avatarPreview" src="assets/images/user.png" alt="avatar">
+            <img id="avatarPreview" src="assets/images/user.png" >
             <input type="file" id="avatarInput" accept="image/" hidden>
             <label for="avatarInput" class="upload-btn">Tải ảnh của bạn</label>
         </div>
@@ -88,6 +142,27 @@
 
   </div>
 </main>
-
+<footer>
+    <section class="section section1">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            Copyright 2025 ©. Designed by Nhóm 13
+        </div>
+    </section>
+</footer>
 </body>
 </html>
