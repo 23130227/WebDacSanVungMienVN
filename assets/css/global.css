@@ -9,10 +9,10 @@ body {
     flex-direction: column;
 }
 
-header .container {
-    display: flex;
-    align-items: center;
+header {
+    position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 header .section {
@@ -20,8 +20,18 @@ header .section {
     align-items: center;
 }
 
+header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
 header .section1 {
-    background-color: hsl(18, 81%, 47%);
+    background-color: hsl(85, 41%, 56%);
     height: 75px;
 }
 
@@ -35,26 +45,18 @@ header .section1 .container img {
     display: block;
 }
 
-header .section1 .container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
 header .section1 .container a {
-    text-decoration: none;
     color: white;
     font-size: 25px;
     font-weight: bold;
 }
 
-header .section1 .container .searchBar {
+header .section1 .container form {
     display: flex;
     align-items: center;
 }
 
-header .section1 .container .searchBar input {
+header .section1 .container form input {
     box-sizing: border-box;
     width: 600px;
     height: 40px;
@@ -64,27 +66,29 @@ header .section1 .container .searchBar input {
     padding-right: 40px;
 }
 
-header .section1 .container .searchBar button {
+header .section1 .container form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
     position: absolute;
-    padding-left: 565px;
+    margin-left: 565px;
 }
 
-header .section1 .container .buttonGroup {
+header .section1 .container .aGroup {
     display: flex;
     gap: 15px;
 }
 
-header .section1 .container .buttonGroup button {
+header .section1 .container .aGroup a {
     display: flex;
     align-items: center;
-    color: white;
-    font-weight: bold;
     font-size: 15px;
     gap: 5px;
 }
 
 header .section2 {
-    background-color: hsl(21, 96%, 56%);
+    background-color: hsl(85, 44%, 40%);
 }
 
 header .section2 nav {
@@ -100,7 +104,6 @@ header .section2 nav .container .item {
     align-items: center;
     color: white;
     gap: 5px;
-    cursor: pointer;
     height: 100%;
     padding: 15px 30px;
 }
@@ -118,7 +121,6 @@ header .section2 nav .container .item .sub {
 header .section2 nav .container .item:hover {
     background-color: white;
     color: black;
-    cursor: pointer;
 }
 
 header .section2 nav .container .item:hover .sub {
@@ -127,13 +129,15 @@ header .section2 nav .container .item:hover .sub {
 
 header .section2 nav .container .item .sub .subItem {
     padding: 15px 30px;
+    display: block;
+    color: black;
 }
 
 header .section2 nav .container .item .sub .subItem:hover {
     background-color: lightgray;
 }
 
-footer .section{
+footer .section {
     display: flex;
     align-items: center;
     color: white;
@@ -141,7 +145,7 @@ footer .section{
 }
 
 footer .section1 {
-    background-color: hsl(18, 81%, 47%);
+    background-color: hsl(85, 41%, 56%);
     height: 200px;
 }
 
@@ -154,10 +158,12 @@ footer .section1 .container ul {
 }
 
 footer .section2 {
-    background-color: hsl(21, 96%, 56%);
+    background-color: hsl(85, 44%, 40%);
     height: 50px;
 }
 
 main {
     flex: 1;
+    margin-top: 123.400px;
+    margin-bottom: 50px;
 }

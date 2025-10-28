@@ -1,0 +1,77 @@
+main .section{
+    display: flex;
+    justify-content: center;
+}
+
+main .container{
+    max-width: 1200px;
+}
+
+main img{
+    display: block;
+}
+
+main .itemImage {
+    width: 200px;
+    height: 200px;
+}
+
+main a{
+    text-decoration: none;
+}
+
+main .navItemList{
+    display: flex;
+    flex-direction: column;
+}
+main .itemList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 920px;
+}
+
+main .item {
+    border: 1px solid hsl(0, 0%, 83%);
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+main .itemName {
+    color: black;
+}
+
+main h4 {
+    color: red;
+}
+
+main .buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(85, 44%, 40%);
+    color: white;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    opacity: 75%;
+    border-radius: 5px;
+}
+
+main .buy:hover {
+    opacity: 1;
+}
+
+main nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main button {
+    border: 2px solid hsl(0, 0%, 83%);
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
