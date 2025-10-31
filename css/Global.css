@@ -1,3 +1,22 @@
+main {
+    flex: 1;
+    margin-top: 123.400px;
+    margin-bottom: 50px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1200px;
+}
+
+img {
+    display: block;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -15,15 +34,9 @@ header {
     z-index: 1000;
 }
 
-header .section {
-    display: flex;
-    align-items: center;
-}
-
 header .container {
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 header a {
@@ -45,10 +58,13 @@ header .section1 .container img {
     display: block;
 }
 
-header .section1 .container a {
+header .section1 .container .title {
     color: white;
-    font-size: 25px;
     font-weight: bold;
+}
+
+header .section1 .container .title1 {
+    font-size: 25px;
 }
 
 header .section1 .container form {
@@ -58,7 +74,7 @@ header .section1 .container form {
 
 header .section1 .container form input {
     box-sizing: border-box;
-    width: 600px;
+    width: 400px;
     height: 40px;
     border: none;
     border-radius: 20px;
@@ -72,15 +88,15 @@ header .section1 .container form button {
     cursor: pointer;
     padding: 0;
     position: absolute;
-    margin-left: 565px;
+    margin-left: 365px;
 }
 
-header .section1 .container .aGroup {
+header .section1 .container .group {
     display: flex;
     gap: 15px;
 }
 
-header .section1 .container .aGroup a {
+header .section1 .container .group .title {
     display: flex;
     align-items: center;
     font-size: 15px;
@@ -137,33 +153,32 @@ header .section2 nav .container .item .sub .subItem:hover {
     background-color: lightgray;
 }
 
-footer .section {
-    display: flex;
-    align-items: center;
-    color: white;
-    padding-left: 16px;
-}
-
 footer .section1 {
     background-color: hsl(85, 41%, 56%);
-    height: 200px;
+    color: white;
 }
 
-footer .section1 .container h3 {
-    margin-top: 0;
+footer .section1 a{
+    color: white;
 }
 
-footer .section1 .container ul {
-    margin-bottom: 0;
+footer .section .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .section .container .hoTroKhachHang{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .section .container .social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 footer .section2 {
     background-color: hsl(85, 44%, 40%);
-    height: 50px;
-}
-
-main {
-    flex: 1;
-    margin-top: 123.400px;
-    margin-bottom: 50px;
+    color: white;
 }
