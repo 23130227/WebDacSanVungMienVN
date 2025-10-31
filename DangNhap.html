@@ -4,21 +4,128 @@
     <meta charset="UTF-8">
     <title>Trang đăng nhập</title>
     <link rel="stylesheet" href="css/DangNhap.css">
+    <link rel="stylesheet" href="css/Global.css">
+
 </head>
 <body>
-    <main>
-        <div id="login">Đăng Nhập</div>
-        <nav>
-            <label class="account">Tài Khoản:</label>
-            <input type="text" placeholder="Tên đăng nhập">
-            <label class="pass" id>Mật khẩu:</label>
-            <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-        </nav>
-        <input type="checkbox" id="nhomatkhau">
-        <label for="nhomatkhau">Nhớ mật khẩu</label>
-        <a href="http://localhost:63342/Project_LTW/pages/TrangDangKy/sign_up.html?_ijt=u24fvnvqr5nmggqduudrrscebf&_ij_reload=RELOAD_ON_SAVE" title="Di chuyển đến trang chủ đăng ký"> Đăng ký tài khoản</a>
-        <button type="button">Đăng nhập</button>
-        <a href="http://localhost:63342/Project_LTW/pages/TrangQuenMatKhau/forget_pass.html?_ijt=gsih6qr7aqnu90l8fjs8fjsb46&_ij_reload=RELOAD_ON_SAVE" title="Di chuyển đến trang quên mật khẩu"> Quên mật khẩu</a>
-    </main>
+<header>
+    <section class="section section1">
+        <div class="container">
+            <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
+            <form method="get">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit">
+                    <img src="images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="group">
+                <div class="title title2">
+                    Hotline: 0921955395
+                </div>
+                <div class="title title3">
+                    <img src="images/user.png" height="24" width="24"/>
+                    <a class="title title3" href="DangNhap.html">
+                        Đăng nhập
+                    </a>
+                    <div class="title title4">/</div>
+                    <a class="title title5" href="DangKy.html">
+                        Đăng ký
+                    </a>
+                </div>
+                <a class="title title6" href="">
+                    <img src="images/grocery-store.png" height="24" width="24"/>
+
+                    Giỏ hàng
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            <nav>
+                <div class="container">
+                    <a href="" class="item">Trang chủ</a>
+                    <a href="" class="item">Giới thiệu</a>
+                    <div class="item">
+                        Danh mục sản phẩm
+                        <div class="sub">
+                            <a href="" class="subItem">Đặc sản miền Bắc</a>
+                            <a href="" class="subItem">Đặc sản miền Trung</a>
+                            <a href="" class="subItem">Đặc sản miền Nam</a>
+                            <a href="" class="subItem">Mứt</a>
+                            <a href="" class="subItem">Trà</a>
+                            <a href="" class="subItem">Bánh</a>
+                            <a href="" class="subItem">Lạp xưởng</a>
+                        </div>
+                    </div>
+                    <a href="" class="item">Khuyến mãi / ưu đãi</a>
+                    <a href="" class="item">Tin tức / blog</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+</header>
+
+<main id ="sign_in">
+    <div id="login">Đăng Nhập</div>
+    <div class="form-group">
+        <label for="username" class="account">Tài Khoản:</label>
+        <input type="text" id="username" placeholder="Tên đăng nhập">
+    </div>
+    <div class="form-group">
+        <label for="pass" class="pass">Mật khẩu:</label>
+        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
+    </div>
+    <div class="remember-register">
+        <label>
+            <input type="checkbox" id="nhomatkhau"> Nhớ mật khẩu</label>
+            <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
+    </div>
+    <button type="button" id="login-btn">Đăng nhập</button>
+    <div class="forget">
+        <a href="http://localhost:63342/Project_LTW/QuenMatKhau.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE" title="Quên mật khẩu">Quên mật khẩu</a>
+    </div>
+</main>
+
+<footer>
+    <section class="section section1">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+            <div class="hoTroKhachHang">
+                <h4>Hỗ trợ khách hàng</h4>
+                <a href="">Câu hỏi thường gặp</a>
+                <a href="">Hướng dẫn đạt hàng và thanh toán</a>
+                <a href="">Chính sách giao hàng</a>
+                <a href="">Chính sách đổi trả</a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <img src="images/facebook.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/tik-tok.png" height="64" width="64"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            <p>Copyright 2025 ©. Designed by Nhóm 13</p>
+        </div>
+    </section>
+</footer>
 </body>
 </html>
