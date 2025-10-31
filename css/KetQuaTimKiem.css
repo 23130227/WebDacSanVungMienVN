@@ -27,8 +27,8 @@ main .navItemList{
 main .itemList {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    width: 920px;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 main .item {
