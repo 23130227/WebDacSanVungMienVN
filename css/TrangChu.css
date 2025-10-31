@@ -20,6 +20,8 @@ main .sectionItem .container {
 main .sectionItem .container .itemImage img {
     width: 200px;
     height: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 main .sectionItem .container h1 {
@@ -29,14 +31,38 @@ main .sectionItem .container h1 {
 
 main .sectionItem .container .itemList {
     display: flex;
-    justify-content: center;
     gap: 15px;
+    overflow: hidden;
+    padding: 10px;
+    scroll-behavior: smooth;
+    width: 1150px;
+    margin: 0 auto;
+}
+main .sectionItem .container .itemList .item {
+    flex: 0 0 220px;
+}
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 main .sectionItem .container .item {
     padding: 10px;
     background-color: white;
     border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 main .sectionItem .container .item h4 {
