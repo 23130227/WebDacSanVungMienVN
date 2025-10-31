@@ -1,0 +1,63 @@
+main .section-mua-hang {
+    margin-top: 50px;
+}
+
+main img {
+    width: 420px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+main .anh-va-tuy-chon-mua-hang {
+    display: flex;
+    gap: 15px;
+}
+
+main .product-name {
+    margin-top: 0;
+}
+
+main .chon-so-luong #so-luong {
+    width: 50px;
+    height: 30px;
+}
+
+main form button {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: hsl(85, 44%, 40%);
+    opacity: 75%;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+main form button:hover {
+    opacity: 1;
+}
+
+main p:last-child{
+    margin-bottom: 0;
+}
+
+main .mo-ta-san-pham .title{
+    border-bottom: 2px solid hsl(0, 0%, 83%);
+    padding-bottom: 5px;
+}
+
+main .display-flex {
+    display: flex;
+}
+
+main .justify-content-center {
+    justify-content: center;
+}
+
+main .mo-ta-image{
+    width: 600px;
+    height: 350px;
+}

@@ -82,3 +82,16 @@ main .sectionTinTuc .container .tinTucList {
     display: flex;
     gap: 15px;
 }
+
+main .sectionTinTuc .container .tinTucList .tinTuc {
+    height: 375px;
+}
+
+main .sectionTinTuc .container .showAll {
+    display: flex;
+    justify-content: right;
+}
+
+main .sectionTinTuc .container .showAll h4 {
+    margin: 0;
+}
