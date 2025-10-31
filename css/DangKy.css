@@ -1,39 +1,40 @@
-body{
+#sign_up{
     font-family: Arial, sans-serif;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 125px;
+    margin-top: 60px
 }
-main{
-    padding: 40px;
-    width: 500px;
-}
-main #sign_up{
-    font-size: 60px;
+#sign_up div{
+    font-size: 40px;
     text-align: center;
     font-weight: bold;
 }
-main nav{
+
+#sign_up nav{
     text-align: left;
-    padding: 2px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
 }
-main nav label{
+#sign_up nav label{
     display: block;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
-main nav input{
+#sign_up nav input{
     width: 100%;
     padding: 10px;
     border-radius: 8px;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     box-sizing: border-box;
 }
-main button {
+#sign_up nav button {
     display: block;
     width: 100%;
     padding: 12px;
@@ -43,5 +44,5 @@ main button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 5px;
 }

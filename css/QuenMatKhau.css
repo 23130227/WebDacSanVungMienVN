@@ -6,12 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-#forget_password{
     padding: 125px;
     margin-top: 60px
-
 }
 #forget_password div{
     font-size: 40px;
