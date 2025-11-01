@@ -1,7 +1,4 @@
-footer{
-    width: 100%;
-    height: auto;
-}
+
 body {
     width: 100%;
 
@@ -13,7 +10,7 @@ body {
     min-height: 100vh;
 }
 .account-page{
-    margin-top: 105x;
+    margin-top: 105px;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -157,17 +154,17 @@ select:focus {
 .right-panel {
     flex: 1;
     padding: 30px;
-    background-color: #fafafa;
+    background-color: #fff;
     border-radius: 10px ;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
 }
 
 .info-block {
-    background: #fafafa;
+    background: #fff;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    
 }
 
 .info-block h3 {
