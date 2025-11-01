@@ -1,0 +1,112 @@
+main .section-mua-hang {
+    margin-top: 50px;
+}
+
+main img {
+    width: 420px;
+    height: 420px;
+    border-radius: 5px;
+}
+
+main .anh-va-tuy-chon-mua-hang {
+    display: flex;
+    gap: 15px;
+}
+
+main .product-name {
+    margin-top: 0;
+}
+
+main .quy-cach-dong-goi {
+    margin-bottom: 16px;
+    gap: 5px;
+}
+
+main .quy-cach-button {
+    background: none;
+    width: 75px;
+    height: 35px;
+    border: 2px solid #cccccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+main .quy-cach-button:hover {
+    border: 2px solid #888;
+}
+
+main .quy-cach-button.active {
+    border-color: hsl(85, 44%, 40%);
+    background-color: hsl(85, 44%, 40%, 50%);
+}
+
+main .align-items-center {
+    align-items: center;
+}
+
+main .chon-so-luong {
+    gap: 5px;
+}
+
+main .so-luong {
+    width: 75px;
+    text-align: center;
+    height: 33px;
+    padding: 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-left: none;
+    border-right: none;
+    font-size: 15px;
+}
+
+main .tang-giam-so-luong button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #cccccc;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+main .them-vao-gio-hang {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: hsl(85, 44%, 40%);
+    opacity: 75%;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+main .them-vao-gio-hang:hover {
+    opacity: 1;
+}
+
+main p:last-child {
+    margin-bottom: 0;
+}
+
+main .mo-ta-san-pham .title {
+    border-bottom: 2px solid hsl(0, 0%, 83%);
+    padding-bottom: 5px;
+}
+
+main .display-flex {
+    display: flex;
+}
+
+main .justify-content-center {
+    justify-content: center;
+}
+
+main .mo-ta-image {
+    width: 600px;
+    height: 350px;
+}

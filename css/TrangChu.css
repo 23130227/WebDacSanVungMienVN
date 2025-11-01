@@ -1,0 +1,123 @@
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+main .sectionPanel img {
+    width: 100%;
+    height: 450px;
+}
+
+main .sectionItem {
+    margin-top: 50px;
+}
+
+main .sectionItem .container {
+    background-color: hsl(86, 41%, 63%);
+    border-radius: 10px;
+}
+
+main .sectionItem .container .itemImage img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+main .sectionItem .container h1 {
+    text-align: center;
+    color: white;
+}
+
+main .sectionItem .container .itemList {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    padding: 10px;
+    scroll-behavior: smooth;
+    width: 1150px;
+    margin: 0 auto;
+}
+main .sectionItem .container .itemList .item {
+    flex: 0 0 220px;
+}
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+main .sectionItem .container .item {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main .sectionItem .container .item h4 {
+    color: red;
+}
+
+main .item .buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(85, 44%, 40%);
+    color: white;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    opacity: 75%;
+    border-radius: 5px;
+}
+
+main .item .buy:hover {
+    opacity: 1;
+}
+
+main .sectionItem .container .showAll {
+    text-align: center;
+    color: white;
+}
+
+main .sectionItem .container .labelImage {
+    position: absolute;
+    margin-left: -50px;
+    padding-top: 25px;
+    width: 80px;
+    height: 80px;
+}
+
+main .sectionTinTuc img{
+    width: 100%;
+    height: 200px;
+}
+
+main .sectionTinTuc .container .tinTucList {
+    display: flex;
+    gap: 15px;
+}
+
+main .sectionTinTuc .container .tinTucList .tinTuc {
+    height: 375px;
+}
+
+main .sectionTinTuc .container .showAll {
+    display: flex;
+    justify-content: right;
+}
+
+main .sectionTinTuc .container .showAll h4 {
+    margin: 0;
+}
