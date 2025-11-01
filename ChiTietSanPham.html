@@ -5,6 +5,7 @@
     <title>Chi tiết sản phẩm</title>
     <link rel="stylesheet" href="css/Global.css">
     <link rel="stylesheet" href="css/ChiTietSanPham.css">
+    <script src="js/ChiTietSanPham.js" defer></script>
 </head>
 <body>
 <header>
@@ -81,16 +82,23 @@
                     <p>
                         <strong>Cách dùng: </strong>Đảo trong chảo nóng hoặc cho vào lò vi sóng 2 phút
                     </p>
-                    <p>
-                        <strong>Quy cách đóng gói: </strong>500g
-                    </p>
-                    <form>
-                        <div class="chon-so-luong">
-                            <strong>Số lượng: </strong>
-                            <input id="so-luong" class="so-luong" type="number" min="1" value="1">
+                    <div class="quy-cach-dong-goi display-flex align-items-center">
+                        <strong>Quy cách đóng gói:</strong>
+                        <div class="quy-cach-option">
+                            <button class="quy-cach-button">500g</button>
+                            <button class="quy-cach-button">1kg</button>
+                            <button class="quy-cach-button">1.5kg</button>
                         </div>
-                        <button type="submit">Thêm vào giỏ hàng</button>
-                    </form>
+                    </div>
+                    <div class="chon-so-luong display-flex align-items-center">
+                        <strong>Số lượng:</strong>
+                        <div class="tang-giam-so-luong display-flex">
+                            <button class="giam-button">-</button>
+                            <input type="text" class="so-luong" value="1" readonly>
+                            <button class="tang-button">+</button>
+                        </div>
+                    </div>
+                    <button class="them-vao-gio-hang" type="submit">Thêm vào giỏ hàng</button>
                 </div>
             </div>
             <div class="mo-ta-san-pham">
