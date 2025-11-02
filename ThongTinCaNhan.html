@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrangThongTinCaNhan</title>
+    <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/ThongTinCaNhan.css">
+</head>
+<body>
+<header>
+    <section class="section section1">
+        <div class="container">
+            <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
+            <form method="get">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit">
+                    <img src="images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="group">
+                <div class="title title2">
+                    Hotline: 0921955395
+                </div>
+                <div class="title title3">
+                    <img src="images/user.png" height="24" width="24"/>
+                    <a class="title title3" href="DangNhap.html">
+                        Đăng nhập
+                    </a>
+                    <div class="title title4">/</div>
+                    <a class="title title5" href="DangKy.html">
+                        Đăng ký
+                    </a>
+                </div>
+                <a class="title title6" href="">
+                    <img src="images/grocery-store.png" height="24" width="24"/>
+                    Giỏ hàng
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            <nav>
+                <div class="container">
+                    <a href="" class="item">Trang chủ</a>
+                    <a href="" class="item">Giới thiệu</a>
+                    <div class="item">
+                        Danh mục sản phẩm
+                        <div class="sub">
+                            <a href="" class="subItem">Tất cả sản phẩm</a>
+                            <a href="" class="subItem">Đặc sản miền Bắc</a>
+                            <a href="" class="subItem">Đặc sản miền Trung</a>
+                            <a href="" class="subItem">Đặc sản miền Nam</a>
+                            <a href="" class="subItem">Mứt</a>
+                            <a href="" class="subItem">Trà</a>
+                            <a href="" class="subItem">Bánh</a>
+                            <a href="" class="subItem">Lạp xưởng</a>
+                        </div>
+                    </div>
+                    <a href="" class="item">Khuyến mãi / ưu đãi</a>
+                    <a href="" class="item">Tin tức / blog</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+</header>
+
+<main class="account-page">
+  <div class="account-container">
+    <div class="left-panel">
+        <h2>Thông tin tài khoản</h2>
+        <div class="avatar-section">
+            <img id="avatarPreview" src="assets/images/user.png" >
+            <input type="file" id="avatarInput" accept="image/" hidden>
+            <label for="avatarInput" class="upload-btn">Tải ảnh của bạn</label>
+        </div>
+
+        <form>
+            <input type="email" id="email" value="email" disabled>
+            <input type="text" id="fullname" value="fullname" placeholder="Nhập họ và tên">
+
+
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
+            </div>
+            <div class="dob">
+                <select id="day"><option>Ngày</option></select>
+                <select id="month"><option>Tháng</option></select>
+                <select id="year"><option>Năm</option></select>
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
+            </div>
+            <button class="btn-update" type="submit">Cập nhật</button>
+        </form>
+    </div>
+
+    <div class="right-panel">
+        <div class ="info-block">
+            <h3>Số điện thoại và Email</h3>
+            <div class="info-item">
+                <div class="info-left">
+                    <span class="icon">📞</span>
+                    <div>
+                        <p class="label">Số điện thoại</p>
+                        <p class="decs">
+                            <span class="placeholder">Cập nhật số điện thoại</span>
+                        </p>
+                    </div>
+
+
+                </div>
+                <button class="btn-gray">Cập nhật</button>
+
+
+            </div>
+            <div class="info-item">
+                <div class="info-left">
+                    <span class="icon">📧</span>
+                    <div>
+                        <p class="label">Email</p>
+                        <p class="decs">
+                            <span class="placeholder">Cập nhật email</span>
+                        </p>
+
+                    </div>
+                </div>
+                <button class="btn-gray">Cập nhật</button>
+        
+            </div>
+        <div class="info-block">
+            <h3>Bảo mật</h3>
+            <div class="info-item">
+                <div class="info-left">
+                    <span class="icon">🔒</span>
+                    <p class="label">Đổi mật khẩu </p>
+
+                </div>
+                <button class="btn-gray">Cập nhật</button>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</main>
+<footer>
+    <section class="section section1">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+            <div class="hoTroKhachHang">
+                <h4>Hỗ trợ khách hàng</h4>
+                <a href="">Câu hỏi thường gặp</a>
+                <a href="">Hướng dẫn đạt hàng và thanh toán</a>
+                <a href="">Chính sách giao hàng</a>
+                <a href="">Chính sách đổi trả</a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <img src="images/facebook.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/tik-tok.png" height="64" width="64"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section section2">
+        <div class="container">
+            <p>Copyright 2025 ©. Designed by Nhóm 13</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
