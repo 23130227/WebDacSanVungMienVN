@@ -1,26 +1,44 @@
-const buttons = document.querySelectorAll(".quy-cach-button");
+document.addEventListener("DOMContentLoaded", function() {
+    // Lấy tất cả sản phẩm trong giỏ hàng
+    const cartItems = document.querySelectorAll(".cart-item");
 
-buttons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        buttons.forEach(b => {
-            b.classList.remove("active");
-        })
-        button.classList.add("active");
+    cartItems.forEach(item => {
+        const minusBtn = item.querySelector(".giam-button");
+        const plusBtn = item.querySelector(".tang-button");
+        const quantityInput = item.querySelector(".so-luong");
+        const priceText = item.querySelector(".price").textContent.replace("đ", "").replace(/\./g, "");
+
+        // Khi nhấn nút giảm
+        minusBtn.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+                updateTotal();
+            }
+        });
+
+        // Khi nhấn nút tăng
+        plusBtn.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+            updateTotal();
+        });
     });
-});
 
-const giamButton = document.querySelector(".giam-button");
-const tangButton = document.querySelector(".tang-button");
-const soLuong = document.querySelector(".so-luong");
+    // Hàm cập nhật tổng cộng
+    function updateTotal() {
+        let total = 0;
+        cartItems.forEach(item => {
+            const price = parseInt(item.querySelector(".price").textContent.replace("đ", "").replace(/\./g, ""));
+            const qty = parseInt(item.querySelector(".so-luong").value);
+            total += price * qty;
+        });
 
-giamButton.addEventListener("click", () => {
-    let currentSoLuong = parseInt(soLuong.value);
-    if (currentSoLuong > 1) {
-        soLuong.value = currentSoLuong - 1;
+        // Hiển thị tổng cộng (thêm dấu chấm ngăn cách nghìn)
+        const totalText = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        document.getElementById("total-price").textContent = totalText + "đ";
     }
-})
 
-tangButton.addEventListener("click", () => {
-    let currentSoLuong = parseInt(soLuong.value);
-    soLuong.value = currentSoLuong + 1;
-})
+    // Gọi 1 lần khi trang mới mở
+    updateTotal();
+});

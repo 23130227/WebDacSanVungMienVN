@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="css/DangNhap.css">
+    <title>Giỏ Hàng</title>
     <link rel="stylesheet" href="css/Global.css">
-
+    <link rel="stylesheet" href="css/GioHang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/GioHang.js"></script>
 </head>
 <body>
 <header>
@@ -49,7 +50,6 @@
                     <div class="item">
                         Danh mục sản phẩm
                         <div class="sub">
-                            <a href="" class="subItem">Tất cả sản phẩm</a>
                             <a href="" class="subItem">Đặc sản miền Bắc</a>
                             <a href="" class="subItem">Đặc sản miền Trung</a>
                             <a href="" class="subItem">Đặc sản miền Nam</a>
@@ -68,27 +68,63 @@
 </header>
 
 <main>
-    <div id="login">Đăng Nhập</div>
-    <div class="form-group">
-        <label for="username" class="account">Gmail:</label>
-        <input type="text" id="username" placeholder="Nhập gmail">
-    </div>
-    <div class="form-group">
-        <label for="pass" class="pass">Mật khẩu:</label>
-        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-    </div>
-    <div class="remember-register">
-        <label>
-            <input type="checkbox" id="nhomatkhau">
-                Nhớ mật khẩu
-        </label>
-        <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
-    </div>
-    <button type="button" id="login-btn">Đăng nhập</button>
-    <div class="forget">
-        <a href="http://localhost:63342/Project_LTW/QuenMatKhau.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE" title="Quên mật khẩu">Quên mật khẩu</a>
-    </div>
+    <section class="cart-section">
+        <h1>Giỏ hàng của bạn</h1>
+        <div class="cart-container">
+            <div class="cart-item">
+                <div class="item-left">
+                    <img src="images/keodua.png" alt="Kẹo dừa" />
+                    <button class="remove-btn">Xóa</button>
+                </div>
+
+                <div class="item-middle">Kẹo dừa</div>
+
+                <div class="item-right">
+                    <p class="price">40.000đ</p>
+                    <div class="tang-giam-so-luong">
+                        <button class="giam-button">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" class="so-luong" value="1" readonly>
+                        <button class="tang-button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-left">
+                    <img src="images/banhpia.png" alt="Bánh pía" />
+                    <button class="remove-btn">Xóa</button>
+                </div>
+                <div class="item-middle">Bánh pía</div>
+                <div class="item-right">
+                    <p class="price">30.000đ</p>
+                    <div class="tang-giam-so-luong">
+                        <button class="giam-button">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" class="so-luong" value="1" readonly>
+                        <button class="tang-button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-total">
+                <p>Tổng cộng: <span id="total-price">75.000đ</span></p>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Đặt hàng
+                </button>
+            </div>
+
+        </div>
+    </section>
 </main>
+
 
 <footer>
     <section class="section section1">

@@ -1,0 +1,121 @@
+
+main .cart-section {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 60px 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .cart-section h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main .cart-section .cart-container {
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+main .cart-section .cart-container .cart-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 160px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+main .cart-section .cart-container .cart-item .item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+main .cart-section .cart-container .cart-item .item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+main .cart-section .cart-container .cart-item .item-left .remove-btn {
+    border: none;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+main .cart-section .cart-container .cart-item .item-left .remove-btn:hover {
+    background: gray;
+}
+
+main .cart-section .cart-container .cart-item .item-middle {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+main .cart-section .cart-container .cart-item .item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main .cart-section .cart-container .cart-item .item-right .price {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong{
+    display: flex;
+}
+main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong button{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #cccccc;
+    cursor: pointer;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong input{
+    width: 35px;
+    text-align: center;
+}
+
+main .cart-section .cart-container .cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main .cart-section .cart-container .cart-total .order-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
