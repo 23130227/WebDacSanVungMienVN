@@ -3,7 +3,7 @@ main a {
     color: black;
 }
 
-main .sectionPanel img {
+main .sectionBanner img {
     width: 100%;
     height: 450px;
 }
@@ -109,11 +109,15 @@ main .sectionTinTuc img{
 
 main .sectionTinTuc .container .tinTucList {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 main .sectionTinTuc .container .tinTucList .tinTuc {
-    height: 375px;
+    display: flex;
+    flex-direction: column;
+    height: 425px;
+    width: 290px;
 }
 
 main .sectionTinTuc .container .showAll {
@@ -123,4 +127,10 @@ main .sectionTinTuc .container .showAll {
 
 main .sectionTinTuc .container .showAll h4 {
     margin: 0;
+}
+
+main .tinTucText {
+    height: 100%;
+    border: 1px solid #cccccc;
+    padding: 10px;
 }

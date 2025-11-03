@@ -11,7 +11,7 @@ main .categoryItem .categoryList {
     width: 225px;
 }
 
-main .categoryItem .categoryList button {
+main .categoryItem .categoryList .danh-muc-button {
     border: none;
     background: none;
     border-bottom: 1px solid hsl(0, 0%, 83%);
@@ -20,7 +20,7 @@ main .categoryItem .categoryList button {
     text-align: left;
     font-weight: bold;
     padding: 10px;
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: pointer;
 }
 
@@ -34,7 +34,7 @@ main .categoryItem .navItemList {
     width: 955px;
 }
 
-main .itemImage {
+main .itemImage img {
     width: 200px;
     height: 200px;
 }
@@ -102,4 +102,8 @@ main .categoryItem .navItemList nav button {
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+main .categoryItem .categoryList .danh-muc-button.active {
+    opacity: 1;
 }
