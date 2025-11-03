@@ -1,3 +1,15 @@
+main .display-flex {
+    display: flex;
+}
+
+main .justify-content-center {
+    justify-content: center;
+}
+
+main .align-items-center {
+    align-items: center;
+}
+
 main .section-mua-hang {
     margin-top: 50px;
 }
@@ -9,8 +21,7 @@ main img {
 }
 
 main .anh-va-tuy-chon-mua-hang {
-    display: flex;
-    gap: 15px;
+    gap: 30px;
 }
 
 main .product-name {
@@ -40,10 +51,6 @@ main .quy-cach-button:hover {
 main .quy-cach-button.active {
     border-color: hsl(85, 44%, 40%);
     background-color: hsl(85, 44%, 40%, 50%);
-}
-
-main .align-items-center {
-    align-items: center;
 }
 
 main .chon-so-luong {
@@ -96,14 +103,6 @@ main p:last-child {
 main .mo-ta-san-pham .title {
     border-bottom: 2px solid hsl(0, 0%, 83%);
     padding-bottom: 5px;
-}
-
-main .display-flex {
-    display: flex;
-}
-
-main .justify-content-center {
-    justify-content: center;
 }
 
 main .mo-ta-image {

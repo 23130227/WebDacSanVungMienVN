@@ -1,0 +1,78 @@
+main {
+    background-color: hsl(206, 19%, 93%);
+}
+
+main .display-flex {
+    display: flex;
+}
+
+main .justify-content-center {
+    justify-content: center;
+}
+
+main .justify-content-right {
+    justify-content: right;
+}
+
+main .justify-content-space-between {
+    justify-content: space-between;
+}
+
+main .flex-direction-column {
+    flex-direction: column;
+}
+
+main .align-items-center {
+    align-items: center;
+}
+
+main .title-panel {
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+main .don-hang-list {
+    gap: 10px;
+}
+
+main .don-hang {
+    background-color: white;
+    padding: 0 17px 17px 17px;
+    border-radius: 10px;
+}
+
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+main .trang-thai {
+    color: green;
+    font-weight: bold;
+}
+
+main img {
+    width: 150px;
+    height: 150px;
+}
+
+main .anh-san-pham {
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #cccccc;
+}
+
+main .mua-lai-button {
+    background-color: hsl(85, 44%, 40%);
+    opacity: 0.75;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main .mua-lai-button:hover {
+    opacity: 1;
+}
