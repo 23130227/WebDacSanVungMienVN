@@ -34,7 +34,7 @@ body {
 .left-panel {
     flex: 2;
     padding: 30px;
-    border-right: 1px solid #e0e0e0;
+    
 }
 .left-panel h2 {
     font-size: 20px;
@@ -44,21 +44,7 @@ body {
     padding-bottom: 8px;
 }
 
-/* Avatar upload */
-.avatar-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.avatar-section img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #9cc07f;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
+
 .upload-btn {
     display: block;
     margin: 10px auto 0;
@@ -88,7 +74,6 @@ select {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
-    outline: none;
     transition: 0.2s ease;
     margin-bottom: 15px;
 }
@@ -150,77 +135,3 @@ select:focus {
     background: #164927;
 }
 
-/* Cột phải */
-.right-panel {
-    flex: 1;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px ;
-    
-}
-
-.info-block {
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 25px;
-    
-}
-
-.info-block h3 {
-    color: #222;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-}
-
-.info-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 12px 0;
-}
-
-.info-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    font-size: 20px;
-}
-
-.label {
-    font-weight: 500;
-    color: #333;
-}
-
-.desc {
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Nút cập nhật */
-.btn-gray {
-    background: #1e5631;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 18px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 18px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.btn-gray:hover {
-    background: #164927;
-}
-.placeholder{
-    color: #ccc;
-    font-style: italic;
-}
