@@ -15,7 +15,7 @@
             <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
             <form method="get">
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit">
+                <button type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
@@ -33,9 +33,8 @@
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="">
+                <a class="title title6" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
-
                     Giỏ hàng
                 </a>
             </div>
@@ -50,7 +49,9 @@
                     <div class="item">
                         Danh mục sản phẩm
                         <div class="sub">
-                            <a href="" class="subItem">Tất cả sản phẩm</a>
+                            <a href="DanhSachSanPhamTheoDanhMuc.html" class="subItem">Tất cả sản phẩm</a>
+                            <a class="subItem">Sản phẩm mới</a>
+                            <a class="subItem">Sản phẩm bán chạy</a>
                             <a href="" class="subItem">Đặc sản miền Bắc</a>
                             <a href="" class="subItem">Đặc sản miền Trung</a>
                             <a href="" class="subItem">Đặc sản miền Nam</a>
@@ -69,7 +70,7 @@
 </header>
 
 <main>
-    <section class="section sectionPanel">
+    <section class="section sectionBanner">
         <div class="container">
             <img src="images/banner.png"/>
         </div>
@@ -80,14 +81,14 @@
             <h1>Khuyến mãi</h1>
             <div class="itemList">
                 <div class="item">
-                    <a class="itemImage" href="">
+                    <a class="itemImage" href="ChiTietSanPham.html">
                         <img src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="itemName" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
                     <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
                 <div class="item">
                     <a class="itemImage" href="">
@@ -216,7 +217,7 @@
                 <span class="dot"></span>
             </div>
 
-            <a class="showAll" href="">
+            <a class="showAll" href="DanhSachSanPhamTheoDanhMuc.html">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
@@ -493,51 +494,62 @@
     <section class="section sectionTinTuc">
         <div class="container">
             <h1>Tin tức / blog</h1>
-
             <div class="tinTucList">
                 <div class="tinTuc">
                     <a class="tinTucImage" href="">
                         <img src="images/blog_1.png"/>
                     </a>
-                    <a class="tinTucTitle" href="">
-                        <h3>Mùa hoa súng ở Ninh Bình 2025 hút hồn du khách</h3>
-                    </a>
-                    <p class="tinTucCaption">Mùa hoa súng Ninh Bình đang là tâm điểm của giới mê xê dịch thời điểm cuối
-                        thu đầu đông 2025.
-                        Cánh đồn...</p>
+                    <div class="tinTucText">
+                        <a class="tinTucTitle" href="">
+                            <h3>Mùa hoa súng ở Ninh Bình 2025 hút hồn du khách</h3>
+                        </a>
+                        <p class="tinTucCaption">Mùa hoa súng Ninh Bình đang là tâm điểm của giới mê xê dịch thời điểm
+                            cuối
+                            thu đầu đông 2025.
+                            Cánh đồn...</p>
+                    </div>
                 </div>
                 <div class="tinTuc">
                     <a class="tinTucImage" href="">
                         <img src="images/blog_2.png"/>
                     </a>
-                    <a class="tinTucTitle" href="">
-                        <h3>Cách làm thịt xá xíu tại nhà: công thức đơn giản, mềm mọng, đậm đà</h3>
-                    </a>
-                    <p class="tinTucCaption">Thịt xá xíu là một món ăn được yêu thích bởi lớp vỏ ngoài bóng bẩy, đậm đà
-                        cùng phần thịt bên
-                        trong mềm mọn...</p>
+                    <div class="tinTucText">
+                        <a class="tinTucTitle" href="">
+                            <h3>Cách làm thịt xá xíu tại nhà: công thức đơn giản, mềm mọng, đậm đà</h3>
+                        </a>
+                        <p class="tinTucCaption">Thịt xá xíu là một món ăn được yêu thích bởi lớp vỏ ngoài bóng bẩy, đậm
+                            đà
+                            cùng phần thịt bên
+                            trong mềm mọn...</p>
+                    </div>
                 </div>
                 <div class="tinTuc">
                     <a class="tinTucImage" href="">
                         <img src="images/blog_3.png"/>
                     </a>
-                    <a class="tinTucTitle" href="">
-                        <h3>Cách làm thịt xiên nướng mềm mọng, thơm nức tại nhà</h3>
-                    </a>
-                    <p class="tinTucCaption">Thịt xiên nướng thơm mùi sả, vị đậm đà mặn ngọt, mềm mọng tan chảy, chấm
-                        thêm chút tương ớt cay
-                        cay. Đ...</p>
+                    <div class="tinTucText">
+                        <a class="tinTucTitle" href="">
+                            <h3>Cách làm thịt xiên nướng mềm mọng, thơm nức tại nhà</h3>
+                        </a>
+                        <p class="tinTucCaption">Thịt xiên nướng thơm mùi sả, vị đậm đà mặn ngọt, mềm mọng tan chảy,
+                            chấm
+                            thêm chút tương ớt cay
+                            cay. Đ...</p>
+                    </div>
                 </div>
                 <div class="tinTuc">
                     <a class="tinTucImage" href="">
                         <img src="images/blog_4.png"/>
                     </a>
-                    <a class="tinTucTitle" href="">
-                        <h3>5 công thức soda vừa ngon vừa đẹp mắt, uống là mê</h3>
-                    </a>
-                    <p class="tinTucCaption">Công thức soda tạo nên thức uống có màu sắc bắt mắt và hương vị hấp dẫn.
-                        Hãy tham khảo những
-                        hướng dẫn tron...</p>
+                    <div class="tinTucText">
+                        <a class="tinTucTitle" href="">
+                            <h3>5 công thức soda vừa ngon vừa đẹp mắt, uống là mê</h3>
+                        </a>
+                        <p class="tinTucCaption">Công thức soda tạo nên thức uống có màu sắc bắt mắt và hương vị hấp
+                            dẫn.
+                            Hãy tham khảo những
+                            hướng dẫn tron...</p>
+                    </div>
                 </div>
             </div>
             <a class="showAll" href="">

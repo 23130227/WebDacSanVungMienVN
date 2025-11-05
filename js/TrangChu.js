@@ -35,10 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // tự động chạy
-        setInterval(() => {
-            index = (index + 1) % totalSlides;
-            updateCarousel();
-        }, 5000);
     });
 });

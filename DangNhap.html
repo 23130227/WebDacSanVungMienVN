@@ -14,7 +14,7 @@
             <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
             <form method="get">
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit">
+                <button type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
@@ -32,9 +32,8 @@
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="">
+                <a class="title title6" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
-
                     Giỏ hàng
                 </a>
             </div>
@@ -49,7 +48,9 @@
                     <div class="item">
                         Danh mục sản phẩm
                         <div class="sub">
-                            <a href="" class="subItem">Tất cả sản phẩm</a>
+                            <a href="DanhSachSanPhamTheoDanhMuc.html" class="subItem">Tất cả sản phẩm</a>
+                            <a class="subItem">Sản phẩm mới</a>
+                            <a class="subItem">Sản phẩm bán chạy</a>
                             <a href="" class="subItem">Đặc sản miền Bắc</a>
                             <a href="" class="subItem">Đặc sản miền Trung</a>
                             <a href="" class="subItem">Đặc sản miền Nam</a>
@@ -67,11 +68,11 @@
     </section>
 </header>
 
-<main id ="sign_in">
+<main>
     <div id="login">Đăng Nhập</div>
     <div class="form-group">
-        <label for="username" class="account">Tài Khoản:</label>
-        <input type="text" id="username" placeholder="Tên đăng nhập">
+        <label for="username" class="account">Gmail:</label>
+        <input type="text" id="username" placeholder="Nhập gmail">
     </div>
     <div class="form-group">
         <label for="pass" class="pass">Mật khẩu:</label>
@@ -79,8 +80,10 @@
     </div>
     <div class="remember-register">
         <label>
-            <input type="checkbox" id="nhomatkhau"> Nhớ mật khẩu</label>
-            <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
+            <input type="checkbox" id="nhomatkhau">
+                Nhớ mật khẩu
+        </label>
+        <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
     </div>
     <button type="button" id="login-btn">Đăng nhập</button>
     <div class="forget">

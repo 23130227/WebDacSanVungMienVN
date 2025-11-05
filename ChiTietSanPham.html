@@ -14,7 +14,7 @@
             <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
             <form method="get">
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit">
+                <button type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
@@ -32,7 +32,7 @@
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="">
+                <a class="title title6" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
                     Giỏ hàng
                 </a>
@@ -48,7 +48,9 @@
                     <div class="item">
                         Danh mục sản phẩm
                         <div class="sub">
-                            <a href="" class="subItem">Tất cả sản phẩm</a>
+                            <a href="DanhSachSanPhamTheoDanhMuc.html" class="subItem">Tất cả sản phẩm</a>
+                            <a class="subItem">Sản phẩm mới</a>
+                            <a class="subItem">Sản phẩm bán chạy</a>
                             <a href="" class="subItem">Đặc sản miền Bắc</a>
                             <a href="" class="subItem">Đặc sản miền Trung</a>
                             <a href="" class="subItem">Đặc sản miền Nam</a>
@@ -69,7 +71,7 @@
 <main>
     <section class="section-mua-hang">
         <div class="container">
-            <div class="anh-va-tuy-chon-mua-hang">
+            <div class="anh-va-tuy-chon-mua-hang display-flex">
                 <img src="images/lacxuong.png"/>
                 <div class="tuy-chon-mua-hang">
                     <h2 class="product-name">Lạp xưởng</h2>
@@ -101,6 +103,10 @@
                     <button class="them-vao-gio-hang" type="submit">Thêm vào giỏ hàng</button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section-mo-ta-san-pham">
+        <div class="container">
             <div class="mo-ta-san-pham">
                 <h2 class="title">Mô tả sản phẩm</h2>
                 <p>Lạp xưởng tươi truyền thống được làm từ thịt heo nạc vai chọn lọc, kết hợp cùng mỡ heo hảo hạng, rượu

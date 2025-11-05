@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="css/DangKy.css">
+    <title>Giỏ Hàng</title>
     <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/GioHang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/GioHang.js"></script>
 </head>
 <body>
 <header>
@@ -68,17 +70,63 @@
 </header>
 
 <main>
-    <div id="title">Đăng ký</div>
-    <nav>
-        <label class="account">Gmail:</label>
-        <input type="account" placeholder="Nhập gmail">
-        <label class="pass" id>Mật khẩu:</label>
-        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-        <label class="pass" id>Nhập lại mật khẩu:</label>
-        <input type="password" id="pass_Nhaplai" name="password" placeholder="Nhập lại mật khẩu">
-        <button type="button">Đăng ký</button>
-    </nav>
+    <section class="cart-section">
+        <h1>Giỏ hàng của bạn</h1>
+        <div class="cart-container">
+            <div class="cart-item">
+                <div class="item-left">
+                    <img src="images/keodua.png" alt="Kẹo dừa" />
+                    <button class="remove-btn">Xóa</button>
+                </div>
+
+                <div class="item-middle">Kẹo dừa</div>
+
+                <div class="item-right">
+                    <p class="price">40.000đ</p>
+                    <div class="tang-giam-so-luong">
+                        <button class="giam-button">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" class="so-luong" value="1" readonly>
+                        <button class="tang-button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="item-left">
+                    <img src="images/banhpia.png" alt="Bánh pía" />
+                    <button class="remove-btn">Xóa</button>
+                </div>
+                <div class="item-middle">Bánh pía</div>
+                <div class="item-right">
+                    <p class="price">30.000đ</p>
+                    <div class="tang-giam-so-luong">
+                        <button class="giam-button">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" class="so-luong" value="1" readonly>
+                        <button class="tang-button">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-total">
+                <p>Tổng cộng: <span id="total-price">75.000đ</span></p>
+                <button class="order-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Đặt hàng
+                </button>
+            </div>
+
+        </div>
+    </section>
 </main>
+
 
 <footer>
     <section class="section section1">

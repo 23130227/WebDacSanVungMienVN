@@ -1,3 +1,39 @@
+main .categoryItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .categoryItem .categoryList {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(86, 41%, 63%);
+    border-radius: 5px;
+    width: 225px;
+}
+
+main .categoryItem .categoryList .danh-muc-button {
+    border: none;
+    background: none;
+    border-bottom: 1px solid hsl(0, 0%, 83%);
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+main .categoryItem .categoryList button:last-child {
+    border: none;
+}
+
+main .categoryItem .navItemList {
+    display: flex;
+    flex-direction: column;
+    width: 955px;
+}
+
 main .itemImage img {
     width: 200px;
     height: 200px;
@@ -5,11 +41,6 @@ main .itemImage img {
 
 main a {
     text-decoration: none;
-}
-
-main .navItemList {
-    display: flex;
-    flex-direction: column;
 }
 
 main .itemList {
@@ -60,9 +91,19 @@ main nav {
     gap: 10px;
 }
 
-main button {
+main .categoryItem .navItemList nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .categoryItem .navItemList nav button {
     border: 2px solid hsl(0, 0%, 83%);
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+main .categoryItem .categoryList .danh-muc-button.active {
+    opacity: 1;
 }
