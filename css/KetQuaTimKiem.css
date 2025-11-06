@@ -1,4 +1,4 @@
-main .itemImage img {
+main .product-image {
     width: 200px;
     height: 200px;
 }
@@ -7,19 +7,19 @@ main a {
     text-decoration: none;
 }
 
-main .navItemList {
+main .nav-product-list {
     display: flex;
     flex-direction: column;
 }
 
-main .itemList {
+main .product-list {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
     gap: 25px;
 }
 
-main .item {
+main .product {
     border: 1px solid hsl(0, 0%, 83%);
     padding: 10px;
     background-color: white;
@@ -29,11 +29,11 @@ main .item {
     box-sizing: border-box;
 }
 
-main .itemName {
+main .product-name {
     color: black;
 }
 
-main h4 {
+main .price {
     color: red;
 }
 

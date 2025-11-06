@@ -1,35 +1,33 @@
 main a {
     text-decoration: none;
-    color: black;
 }
 
-main .sectionBanner img {
+main .section-banner img {
     width: 100%;
     height: 450px;
 }
 
-main .sectionItem {
+main .section-product {
+    display: flex;
     margin-top: 50px;
 }
 
-main .sectionItem .container {
+main .section-product .container {
     background-color: hsl(86, 41%, 63%);
     border-radius: 10px;
 }
 
-main .sectionItem .container .itemImage img {
+main .section-product .product-image {
     width: 200px;
     height: 200px;
-    display: block;
-    margin: 0 auto;
 }
 
-main .sectionItem .container h1 {
+main .section-product .title {
     text-align: center;
     color: white;
 }
 
-main .sectionItem .container .itemList {
+main .section-product .product-list {
     display: flex;
     gap: 15px;
     overflow: hidden;
@@ -38,15 +36,17 @@ main .sectionItem .container .itemList {
     width: 1150px;
     margin: 0 auto;
 }
-main .sectionItem .container .itemList .item {
+
+main .section-product .product {
     flex: 0 0 220px;
 }
-main .carousel-dots {
+
+main .section-product .carousel-dots {
     text-align: center;
     margin-top: 10px;
 }
 
-main .sectionItem .container .carousel-dots span {
+main .section-product .carousel-dots span {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -55,11 +55,12 @@ main .sectionItem .container .carousel-dots span {
     background-color: #ccc;
     cursor: pointer;
 }
-main .sectionItem .container .carousel-dots span:hover {
+
+main .section-product .carousel-dots span:hover {
     background-color: slategray;
 }
 
-main .sectionItem .container .item {
+main .section-product .product {
     padding: 10px;
     background-color: white;
     border-radius: 10px;
@@ -68,11 +69,15 @@ main .sectionItem .container .item {
     box-sizing: border-box;
 }
 
-main .sectionItem .container .item h4 {
+main .section-product .product-name{
+    color: black;
+}
+
+main .section-product .price {
     color: red;
 }
 
-main .item .buy {
+main .section-product .buy {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,16 +90,16 @@ main .item .buy {
     border-radius: 5px;
 }
 
-main .item .buy:hover {
+main .section-product .buy:hover {
     opacity: 1;
 }
 
-main .sectionItem .container .showAll {
+main .section-product .show-all {
     text-align: center;
     color: white;
 }
 
-main .sectionItem .container .labelImage {
+main .section-product .label-image {
     position: absolute;
     margin-left: -50px;
     padding-top: 25px;
@@ -102,34 +107,39 @@ main .sectionItem .container .labelImage {
     height: 80px;
 }
 
-main .sectionTinTuc img{
+main .section-news img {
     width: 100%;
     height: 200px;
 }
 
-main .sectionTinTuc .container .tinTucList {
+main .section-news .news-list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-main .sectionTinTuc .container .tinTucList .tinTuc {
+main .section-news .news {
     display: flex;
     flex-direction: column;
     height: 425px;
     width: 290px;
 }
 
-main .sectionTinTuc .container .showAll {
+main .section-news .news-title {
+    color: black;
+}
+
+main .section-news .show-all {
+    color: black;
     display: flex;
     justify-content: right;
 }
 
-main .sectionTinTuc .container .showAll h4 {
+main .section-news .show-all h4 {
     margin: 0;
 }
 
-main .tinTucText {
+main .section-news .news-text {
     height: 100%;
     border: 1px solid #cccccc;
     padding: 10px;
