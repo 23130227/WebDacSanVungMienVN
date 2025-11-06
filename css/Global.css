@@ -34,47 +34,38 @@ header {
     z-index: 1000;
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-}
-
 header a {
     text-decoration: none;
 }
 
-header .section1 {
+header .section-top {
     background-color: hsl(85, 41%, 56%);
     height: 75px;
 }
 
-header .section1 .container {
+header .section-top .container {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 75px;
-    padding-right: 75px;
 }
 
-header .section1 .container img {
-    display: block;
-}
-
-header .section1 .container .title {
+header .section-top .text {
     color: white;
     font-weight: bold;
 }
 
-header .section1 .container .title1 {
+header .section-top .text-logo {
     font-size: 25px;
 }
 
-header .section1 .container form {
+header .section-top .search-bar {
     display: flex;
     align-items: center;
 }
 
-header .section1 .container form input {
+header .section-top .search-input {
     box-sizing: border-box;
-    width: 400px;
+    width: 450px;
     height: 40px;
     border: none;
     border-radius: 20px;
@@ -82,103 +73,105 @@ header .section1 .container form input {
     padding-right: 40px;
 }
 
-header .section1 .container form button {
+header .section-top .search-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     position: absolute;
-    margin-left: 365px;
+    margin-left: 415px;
 }
 
-header .section1 .container .group {
+header .section-top .group {
     display: flex;
     gap: 15px;
 }
 
-header .section1 .container .group .title {
+header .section-top .sub-group {
     display: flex;
     align-items: center;
-    font-size: 15px;
     gap: 5px;
 }
 
-header .section2 {
+header .section-top .group .text {
+    font-size: 15px;
+}
+
+header .section-bottom {
     background-color: hsl(85, 44%, 40%);
 }
 
-header .section2 nav {
-    width: 100%;
-}
-
-header .section2 nav .container {
+header .section-bottom .container {
+    display: flex;
     justify-content: center;
 }
 
-header .section2 nav .container .item {
+header .section-bottom .container nav {
+    display: flex;
+}
+
+header .section-bottom .item {
     display: flex;
     align-items: center;
     color: white;
-    gap: 5px;
-    height: 100%;
     padding: 15px 30px;
 }
 
-header .section2 nav .container .item .sub {
+header .section-bottom .sub {
     display: none;
     position: absolute;
     top: 123px;
     margin-left: -30px;
-    border: 1px solid hsl(0, 0%, 87%);
+    border: 1px solid #cccccc;
     width: 230px;
     background-color: white;
 }
 
-header .section2 nav .container .item:hover {
+header .section-bottom .item:hover {
     background-color: white;
     color: black;
 }
 
-header .section2 nav .container .item:hover .sub {
+header .section-bottom .item:hover .sub {
     display: block;
 }
 
-header .section2 nav .container .item .sub .subItem {
+header .section-bottom .sub-item {
     padding: 15px 30px;
     display: block;
     color: black;
 }
 
-header .section2 nav .container .item .sub .subItem:hover {
-    background-color: lightgray;
+header .section-bottom .sub-item:hover {
+    background-color: #cccccc;
 }
 
-footer .section1 {
+footer .section-top {
     background-color: hsl(85, 41%, 56%);
     color: white;
 }
 
-footer .section1 a{
-    color: white;
-}
-
-footer .section .container {
+footer .section-top .container {
     display: flex;
     justify-content: space-between;
 }
 
-footer .section .container .hoTroKhachHang{
+footer .section-top a {
+    color: white;
+}
+
+footer .section-top .ho-tro-khach-hang {
     display: flex;
     flex-direction: column;
 }
 
-footer .section .container .social {
+footer .section-top .social {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
-footer .section2 {
+footer .section-bottom {
     background-color: hsl(85, 44%, 40%);
     color: white;
 }

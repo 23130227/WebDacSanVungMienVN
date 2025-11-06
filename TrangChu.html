@@ -6,553 +6,589 @@
     <link rel="stylesheet" href="css/Global.css">
     <link rel="stylesheet" href="css/TrangChu.css">
     <script src="js/TrangChu.js"></script>
-
 </head>
 <body>
 <header>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
-            <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
-            <form method="get">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="button" onclick="location.href='KetQuaTimKiem.html'">
+            <a class="text text-logo" href="TrangChu.html">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
             <div class="group">
-                <div class="title title2">
+                <p class="text">
                     Hotline: 0921955395
-                </div>
-                <div class="title title3">
+                </p>
+                <div class="sub-group">
                     <img src="images/user.png" height="24" width="24"/>
-                    <a class="title title3" href="DangNhap.html">
+                    <a class="text" href="DangNhap.html">
                         Đăng nhập
                     </a>
-                    <div class="title title4">/</div>
-                    <a class="title title5" href="DangKy.html">
+                    <p class="text">/</p>
+                    <a class="text" href="DangKy.html">
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="GioHang.html">
+                <a class="sub-group" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
-                    Giỏ hàng
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
                 </a>
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <nav>
-                <div class="container">
-                    <a href="" class="item">Trang chủ</a>
-                    <a href="" class="item">Giới thiệu</a>
-                    <div class="item">
-                        Danh mục sản phẩm
-                        <div class="sub">
-                            <a href="DanhSachSanPhamTheoDanhMuc.html" class="subItem">Tất cả sản phẩm</a>
-                            <a class="subItem">Sản phẩm mới</a>
-                            <a class="subItem">Sản phẩm bán chạy</a>
-                            <a href="" class="subItem">Đặc sản miền Bắc</a>
-                            <a href="" class="subItem">Đặc sản miền Trung</a>
-                            <a href="" class="subItem">Đặc sản miền Nam</a>
-                            <a href="" class="subItem">Mứt</a>
-                            <a href="" class="subItem">Trà</a>
-                            <a href="" class="subItem">Bánh</a>
-                            <a href="" class="subItem">Lạp xưởng</a>
-                        </div>
+                <a class="item" href="">Trang chủ</a>
+                <a class="item" href="">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="">Sản phẩm mới</a>
+                        <a class="sub-item" href="">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="">Mứt</a>
+                        <a class="sub-item" href="">Trà</a>
+                        <a class="sub-item" href="">Bánh</a>
+                        <a class="sub-item" href="">Lạp xưởng</a>
                     </div>
-                    <a href="" class="item">Khuyến mãi / ưu đãi</a>
-                    <a href="" class="item">Tin tức / blog</a>
                 </div>
+                <a class="item" href="">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="">Tin tức / blog</a>
             </nav>
         </div>
     </section>
 </header>
 
 <main>
-    <section class="section sectionBanner">
+    <section class="section-banner">
         <div class="container">
             <img src="images/banner.png"/>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <img class="labelImage" src="images/sale-tag.png"/>
-            <h1>Khuyến mãi</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="ChiTietSanPham.html">
-                        <img src="images/lacxuong.png"/>
+            <img class="label-image" src="images/sale-tag.png"/>
+            <h1 class="title">Khuyến mãi</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="ChiTietSanPham.html">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
+                    <h4 class="price">55.000đ</h4>
                     <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/mamChauDoc.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Mắm Châu Đốc</h3>
                     </a>
-                    <h4>100.000đ</h4>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <img class="labelImage" src="images/new.png"/>
-            <h1>Sản phẩm mới</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/lacxuong.png"/>
+            <img class="label-image" src="images/new.png"/>
+            <h1 class="title">Sản phẩm mới</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <h4 class="price">55.000đ</h4>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
+                    <a class="buy" href="">Mua hàng</a>
+                </div>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
+                    </a>
+                    <a class="product-name" href="">
+                        <h3>Mắm Châu Đốc</h3>
+                    </a>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-            <a class="showAll" href="DanhSachSanPhamTheoDanhMuc.html">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <img class="labelImage" src="images/best-seller.png"/>
-            <h1>Sản phẩm bán chạy</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/lacxuong.png"/>
+            <img class="label-image" src="images/best-seller.png"/>
+            <h1 class="title">Sản phẩm bán chạy</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <h4 class="price">55.000đ</h4>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
+                    <a class="buy" href="">Mua hàng</a>
+                </div>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
+                    </a>
+                    <a class="product-name" href="">
+                        <h3>Mắm Châu Đốc</h3>
+                    </a>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <h1>Đặc sản miền Bắc</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/lacxuong.png"/>
+            <h1 class="title">Đặc sản miền Bắc</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <h4 class="price">55.000đ</h4>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
+                    <a class="buy" href="">Mua hàng</a>
+                </div>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
+                    </a>
+                    <a class="product-name" href="">
+                        <h3>Mắm Châu Đốc</h3>
+                    </a>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <h1>Đặc sản miền Trung</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/lacxuong.png"/>
+            <h1 class="title">Đặc sản miền Trung</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <h4 class="price">55.000đ</h4>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
+                    <a class="buy" href="">Mua hàng</a>
+                </div>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
+                    </a>
+                    <a class="product-name" href="">
+                        <h3>Mắm Châu Đốc</h3>
+                    </a>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionItem">
+    <section class="section-product">
         <div class="container">
-            <h1>Đặc sản miền Nam</h1>
-            <div class="itemList">
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/lacxuong.png"/>
+            <h1 class="title">Đặc sản miền Nam</h1>
+            <div class="product-list">
+                <div class="product">
+                    <a href="ChiTietSanPham.html">
+                        <img class="product-image" src="images/lacxuong.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="ChiTietSanPham.html">
                         <h3>Lạp xưởng</h3>
                     </a>
-                    <h4>55.000đ</h4>
-                    <a class="buy" href="">Mua hàng</a>
+                    <h4 class="price">55.000đ</h4>
+                    <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhmen.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhmen.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh men</h3>
                     </a>
-                    <h4>30.000đ</h4>
+                    <h4 class="price">30.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhpia.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhpia.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh pía</h3>
                     </a>
-                    <h4>35.000đ</h4>
+                    <h4 class="price">35.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphongsua.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphongsua.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh tráng sữa</h3>
                     </a>
-                    <h4>20.000đ</h4>
+                    <h4 class="price">20.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
-                <div class="item">
-                    <a class="itemImage" href="">
-                        <img src="images/banhphuthe.png"/>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/banhphuthe.png"/>
                     </a>
-                    <a class="itemName" href="">
+                    <a class="product-name" href="">
                         <h3>Bánh phu thê</h3>
                     </a>
-                    <h4>10.000đ</h4>
+                    <h4 class="price">10.000đ</h4>
+                    <a class="buy" href="">Mua hàng</a>
+                </div>
+                <div class="product">
+                    <a href="">
+                        <img class="product-image" src="images/mamChauDoc.png"/>
+                    </a>
+                    <a class="product-name" href="">
+                        <h3>Mắm Châu Đốc</h3>
+                    </a>
+                    <h4 class="price">100.000đ</h4>
                     <a class="buy" href="">Mua hàng</a>
                 </div>
             </div>
-
             <div class="carousel-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
     </section>
-    <section class="section sectionTinTuc">
+    <section class="section-news">
         <div class="container">
             <h1>Tin tức / blog</h1>
-            <div class="tinTucList">
-                <div class="tinTuc">
-                    <a class="tinTucImage" href="">
-                        <img src="images/blog_1.png"/>
+            <div class="news-list">
+                <div class="news">
+                    <a href="">
+                        <img class="news-image" src="images/blog_1.png"/>
                     </a>
-                    <div class="tinTucText">
-                        <a class="tinTucTitle" href="">
+                    <div class="news-text">
+                        <a class="news-title" href="">
                             <h3>Mùa hoa súng ở Ninh Bình 2025 hút hồn du khách</h3>
                         </a>
-                        <p class="tinTucCaption">Mùa hoa súng Ninh Bình đang là tâm điểm của giới mê xê dịch thời điểm
+                        <p class="news-caption">Mùa hoa súng Ninh Bình đang là tâm điểm của giới mê xê dịch thời điểm
                             cuối
                             thu đầu đông 2025.
                             Cánh đồn...</p>
                     </div>
                 </div>
-                <div class="tinTuc">
-                    <a class="tinTucImage" href="">
-                        <img src="images/blog_2.png"/>
+                <div class="news">
+                    <a href="">
+                        <img class="news-image" src="images/blog_2.png"/>
                     </a>
-                    <div class="tinTucText">
-                        <a class="tinTucTitle" href="">
+                    <div class="news-text">
+                        <a class="news-title" href="">
                             <h3>Cách làm thịt xá xíu tại nhà: công thức đơn giản, mềm mọng, đậm đà</h3>
                         </a>
-                        <p class="tinTucCaption">Thịt xá xíu là một món ăn được yêu thích bởi lớp vỏ ngoài bóng bẩy, đậm
+                        <p class="news-caption">Thịt xá xíu là một món ăn được yêu thích bởi lớp vỏ ngoài bóng bẩy, đậm
                             đà
                             cùng phần thịt bên
                             trong mềm mọn...</p>
                     </div>
                 </div>
-                <div class="tinTuc">
-                    <a class="tinTucImage" href="">
-                        <img src="images/blog_3.png"/>
+                <div class="news">
+                    <a href="">
+                        <img class="news-image" src="images/blog_3.png"/>
                     </a>
-                    <div class="tinTucText">
-                        <a class="tinTucTitle" href="">
+                    <div class="news-text">
+                        <a class="news-title" href="">
                             <h3>Cách làm thịt xiên nướng mềm mọng, thơm nức tại nhà</h3>
                         </a>
-                        <p class="tinTucCaption">Thịt xiên nướng thơm mùi sả, vị đậm đà mặn ngọt, mềm mọng tan chảy,
+                        <p class="news-caption">Thịt xiên nướng thơm mùi sả, vị đậm đà mặn ngọt, mềm mọng tan chảy,
                             chấm
                             thêm chút tương ớt cay
                             cay. Đ...</p>
                     </div>
                 </div>
-                <div class="tinTuc">
-                    <a class="tinTucImage" href="">
-                        <img src="images/blog_4.png"/>
+                <div class="news">
+                    <a href="">
+                        <img class="news-image" src="images/blog_4.png"/>
                     </a>
-                    <div class="tinTucText">
-                        <a class="tinTucTitle" href="">
+                    <div class="news-text">
+                        <a class="news-title" href="">
                             <h3>5 công thức soda vừa ngon vừa đẹp mắt, uống là mê</h3>
                         </a>
-                        <p class="tinTucCaption">Công thức soda tạo nên thức uống có màu sắc bắt mắt và hương vị hấp
+                        <p class="news-caption">Công thức soda tạo nên thức uống có màu sắc bắt mắt và hương vị hấp
                             dẫn.
                             Hãy tham khảo những
                             hướng dẫn tron...</p>
                     </div>
                 </div>
             </div>
-            <a class="showAll" href="">
+            <a class="show-all" href="">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
@@ -560,7 +596,7 @@
 </main>
 
 <footer>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
             <div class="info">
                 <h3>Thông tin liên hệ</h3>
@@ -573,7 +609,7 @@
                     <li>Website: dacsanvungmien.com</li>
                 </ul>
             </div>
-            <div class="hoTroKhachHang">
+            <div class="ho-tro-khach-hang">
                 <h4>Hỗ trợ khách hàng</h4>
                 <a href="">Câu hỏi thường gặp</a>
                 <a href="">Hướng dẫn đạt hàng và thanh toán</a>
@@ -593,7 +629,7 @@
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <p>Copyright 2025 ©. Designed by Nhóm 13</p>
         </div>
