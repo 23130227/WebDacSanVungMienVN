@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const carousels = document.querySelectorAll(".sectionItem .container");
+    const carousels = document.querySelectorAll(".section-product .container");
 
     carousels.forEach(container => {
-        const itemList = container.querySelector(".itemList");
+        const productList = container.querySelector(".product-list");
         const dots = container.querySelectorAll(".carousel-dots .dot");
 
-        if (!itemList || dots.length === 0) return;
+        if (!productList || dots.length === 0) return;
 
-        const items = itemList.querySelectorAll(".item");
+        const items = productList.querySelectorAll(".product");
         const totalItems = items.length;
         const itemsPerSlide = 5; // mỗi lần hiển thị 5 sản phẩm
         const totalSlides = Math.ceil(totalItems / itemsPerSlide);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const itemWidth = items[0].offsetWidth + 15;
             const scrollAmount = index * itemWidth * itemsPerSlide;
 
-            itemList.scrollTo({
+            productList.scrollTo({
                 left: scrollAmount,
                 behavior: "smooth"
             });

@@ -10,7 +10,7 @@ main img {
 
 main .anh-va-tuy-chon-mua-hang {
     display: flex;
-    gap: 15px;
+    gap: 30px;
 }
 
 main .product-name {
@@ -18,6 +18,8 @@ main .product-name {
 }
 
 main .quy-cach-dong-goi {
+    display: flex;
+    align-items: center;
     margin-bottom: 16px;
     gap: 5px;
 }
@@ -42,11 +44,9 @@ main .quy-cach-button.active {
     background-color: hsl(85, 44%, 40%, 50%);
 }
 
-main .align-items-center {
-    align-items: center;
-}
-
 main .chon-so-luong {
+    display: flex;
+    align-items: center;
     gap: 5px;
 }
 
@@ -60,6 +60,10 @@ main .so-luong {
     border-left: none;
     border-right: none;
     font-size: 15px;
+}
+
+main .tang-giam-so-luong {
+    display: flex;
 }
 
 main .tang-giam-so-luong button {
@@ -98,11 +102,8 @@ main .mo-ta-san-pham .title {
     padding-bottom: 5px;
 }
 
-main .display-flex {
+main .mo-ta-image-panel {
     display: flex;
-}
-
-main .justify-content-center {
     justify-content: center;
 }
 
