@@ -69,12 +69,43 @@ main .section-product .product {
     box-sizing: border-box;
 }
 
-main .section-product .product-name{
+main .sale-percent {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+main .sale-tag {
+    background-color: red;
+    width: 50px;
+    height: fit-content;
+    border-top-right-radius: 10px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 159px;
+}
+
+main .product-name {
     color: black;
 }
 
-main .section-product .price {
+main .product-name h3 {
+    margin-bottom: 0;
+}
+
+main .product-price {
+    display: flex;
+    justify-content: center;
+    gap: 5px
+}
+
+main .new-price {
     color: red;
+}
+
+main .old-price {
+    font-weight: normal;
+    text-decoration: line-through;
 }
 
 main .section-product .buy {
