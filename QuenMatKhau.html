@@ -68,16 +68,26 @@
 </header>
 
 
-<main id="forget_password">
-    <div id="title">Nhập lại mật khẩu</div>
-    <nav>
-        <label for="email">Nhập tên tài khoản:</label>
-        <input type="text" id="email" name="email" placeholder="Nhập lại tên đăng nhập">
+<main>
+    <div id="title">Quên mật khẩu</div>
+    <div class = "table-forget_password">
+        <div class = "comfirm">
+            <label for="email">Nhập tên tài khoản:</label>
+            <input type="text" id="email" name="email" placeholder="Nhập email">
 
-        <label for="pass">Nhập lại mật khẩu:</label>
-        <input type="password" id="pass" name="pass" placeholder="Nhập lại mật khẩu">
-        <button type ="button">Xác nhận</button>
-    </nav>
+            <button type ="button">Gửi OTP</button>
+            <label for="email">Nhập OTP:</label>
+            <input type="text" name="OTP" placeholder="Nhập OTP">
+        </div>
+
+        <div class = "Rewrite-pass">
+            <label for="pass">Nhập mật khẩu:</label>
+            <input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu mới">
+            <label for="pass">Nhập lại mật khẩu:</label>
+            <input type="password" id="rewritewpass" name="pass" placeholder="Nhập lại mật khẩu">
+        </div>
+    </div>
+    <button class = "comfirm-button" type ="button">Xác nhận</button>
 </main>
 
 <footer>
