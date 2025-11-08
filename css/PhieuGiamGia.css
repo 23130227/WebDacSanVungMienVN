@@ -1,0 +1,87 @@
+main {
+    background-color: hsl(206, 19%, 93%);
+}
+
+main .container {
+    width: 800px;
+}
+
+main .title-panel {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+main .voucher-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    padding: 17px;
+    gap: 15px;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .enter-voucher {
+    width: 342px;
+    height: 42px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 83px;
+    border: 1px solid #cccccc;
+}
+
+main .enter-voucher-button {
+    border: 1px solid hsl(85, 44%, 40%);
+    color: hsl(85, 44%, 40%);
+    background-color: white;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 350px;
+}
+
+main .voucher-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 753.2px;
+}
+
+main .voucher-image {
+    width: 64px;
+    height: 64px;
+}
+
+main .voucher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main .select-button {
+    display: none;
+    background-color: hsl(85, 44%, 40%);
+    color: white;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+main .select-button:hover {
+    opacity: 1;
+}

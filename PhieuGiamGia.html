@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lịch sử mua hàng</title>
+    <title>Phiếu giảm giá</title>
     <link rel="stylesheet" href="css/Global.css">
-    <link rel="stylesheet" href="css/LichSuMuaHang.css">
+    <link rel="stylesheet" href="css/PhieuGiamGia.css">
 </head>
 <body>
 <header>
@@ -68,91 +68,50 @@
 </header>
 
 <main>
-    <section class="section-lich-su-mua-hang">
+    <section>
         <div class="container">
             <div class="title-panel">
-                <h2>Lịch sử mua hàng</h2>
+                <h2>Phiếu giảm giá</h2>
             </div>
-            <div class="don-hang-list">
-                <div class="don-hang">
-                    <a href="ChiTietDonHang.html">
-                        <div class="thong-tin-don-hang">
-                            <div class="ma-don-hang-xem-chi-tiet">
-                                <h3>Đơn hàng #103327357747</h3>
-                                <p>Xem chi tiết ></p>
-                            </div>
-                            <div class="ngay-dat-trang-thai">
-                                <p>Ngày đặt: 03/11/2025</p>
-                                <p class="trang-thai">Giao thành công</p>
-                            </div>
-                            <div class="anh-san-pham">
-                                <img src="images/lacxuong.png">
-                                <img src="images/banhdake.png">
-                                <img src="images/banhmexat.png">
-                            </div>
+            <div class="voucher-panel">
+                <form method="get">
+                    <input class="enter-voucher" name="enter-voucher" type="text"
+                           placeholder="Nhập mã phiếu giảm giá...">
+                    <button class="enter-voucher-button" type="submit">Áp dụng</button>
+                </form>
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 10%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 199k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
                         </div>
-                    </a>
-                    <div class="tong-tien-panel">
-                        <p>Tổng tiền: 145.100đ</p>
-                    </div>
-                    <div class="button-panel">
-                        <button class="mua-lai-button" onclick="location.href='GioHang.html';">
-                            Mua lại
-                        </button>
-                    </div>
-                </div>
-                <div class="don-hang">
-                    <a href="ChiTietDonHang.html">
-                        <div class="thong-tin-don-hang">
-                            <div class="ma-don-hang-xem-chi-tiet">
-                                <h3>Đơn hàng #100627512400</h3>
-                                <p>Xem chi tiết ></p>
-                            </div>
-                            <div class="ngay-dat-trang-thai">
-                                <p>Ngày đặt: 02/11/2025</p>
-                                <p class="trang-thai">Giao thành công</p>
-                            </div>
-                            <div class="anh-san-pham">
-                                <img src="images/bakhiatron.png">
-                                <img src="images/banhpia.png">
-                                <img src="images/duasap.png">
-                                <img src="images/comdep.png">
-                            </div>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
                         </div>
-                    </a>
-                    <div class="tong-tien-panel">
-                        <p>Tổng tiền: 200.900đ</p>
                     </div>
-                    <div class="button-panel">
-                        <button class="mua-lai-button" onclick="location.href='GioHang.html';">
-                            Mua lại
-                        </button>
-                    </div>
-                </div>
-                <div class="don-hang">
-                    <a href="ChiTietDonHang.html">
-                        <div class="thong-tin-don-hang">
-                            <div class="ma-don-hang-xem-chi-tiet">
-                                <h3>Đơn hàng #100627512395</h3>
-                                <p>Xem chi tiết ></p>
-                            </div>
-                            <div class="ngay-dat-trang-thai">
-                                <p>Ngày đặt: 01/11/2025</p>
-                                <p class="trang-thai">Giao thành công</p>
-                            </div>
-                            <div class="anh-san-pham">
-                                <img src="images/keodua.png">
-                                <img src="images/mamChauDoc.png">
-                            </div>
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 20%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 299k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
                         </div>
-                    </a>
-                    <div class="tong-tien-panel">
-                        <p>Tổng tiền: 112.600đ</p>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
+                        </div>
                     </div>
-                    <div class="button-panel">
-                        <button class="mua-lai-button" onclick="location.href='GioHang.html';">
-                            Mua lại
-                        </button>
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 30%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 399k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
+                        </div>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
+                        </div>
                     </div>
                 </div>
             </div>
