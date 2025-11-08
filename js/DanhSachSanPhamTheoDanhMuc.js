@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll(".danh-muc-button");
+const buttons = document.querySelectorAll(".category-button");
 
 buttons.forEach(button => {
     button.addEventListener("click", (e) => {

@@ -9,241 +9,339 @@
 </head>
 <body>
 <header>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
-            <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
-            <form method="get">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="button" onclick="location.href='KetQuaTimKiem.html'">
+            <a class="text text-logo" href="TrangChu.html">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
             <div class="group">
-                <div class="title title2">
+                <p class="text">
                     Hotline: 0921955395
-                </div>
-                <div class="title title3">
+                </p>
+                <div class="sub-group">
                     <img src="images/user.png" height="24" width="24"/>
-                    <a class="title title3" href="DangNhap.html">
+                    <a class="text" href="DangNhap.html">
                         Đăng nhập
                     </a>
-                    <div class="title title4">/</div>
-                    <a class="title title5" href="DangKy.html">
+                    <p class="text">/</p>
+                    <a class="text" href="DangKy.html">
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="GioHang.html">
+                <a class="sub-group" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
-                    Giỏ hàng
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
                 </a>
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <nav>
-                <div class="container">
-                    <a href="" class="item">Trang chủ</a>
-                    <a href="" class="item">Giới thiệu</a>
-                    <div class="item">
-                        Danh mục sản phẩm
-                        <div class="sub">
-                            <a href="DanhSachSanPhamTheoDanhMuc.html" class="subItem">Tất cả sản phẩm</a>
-                            <a class="subItem">Sản phẩm mới</a>
-                            <a class="subItem">Sản phẩm bán chạy</a>
-                            <a href="" class="subItem">Đặc sản miền Bắc</a>
-                            <a href="" class="subItem">Đặc sản miền Trung</a>
-                            <a href="" class="subItem">Đặc sản miền Nam</a>
-                            <a href="" class="subItem">Mứt</a>
-                            <a href="" class="subItem">Trà</a>
-                            <a href="" class="subItem">Bánh</a>
-                            <a href="" class="subItem">Lạp xưởng</a>
-                        </div>
+                <a class="item" href="TrangChu.html">Trang chủ</a>
+                <a class="item" href="">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm mới</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Mứt</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Trà</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Bánh</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Lạp xưởng</a>
                     </div>
-                    <a href="" class="item">Khuyến mãi / ưu đãi</a>
-                    <a href="" class="item">Tin tức / blog</a>
                 </div>
+                <a class="item" href="KhuyenMaiUuDai.html">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="">Tin tức / blog</a>
             </nav>
         </div>
     </section>
 </header>
 
 <main>
-    <section class="section">
+    <section class="section-category">
         <div class="container">
             <h2>Danh mục sản phẩm</h2>
-            <div class="categoryItem">
-                <div class="categoryList">
-                    <button class="danh-muc-button active">Tất cả sản phẩm</button>
-                    <button class="danh-muc-button">Đặc sản miền Bắc</button>
-                    <button class="danh-muc-button">Đặc sản miền Trung</button>
-                    <button class="danh-muc-button">Đặc sản miền Nam</button>
-                    <button class="danh-muc-button">Mứt</button>
-                    <button class="danh-muc-button">Trà</button>
-                    <button class="danh-muc-button">Bánh</button>
-                    <button class="danh-muc-button">Lạp xưởng</button>
+            <div class="category-product">
+                <div class="category-list">
+                    <button class="category-button active">Tất cả sản phẩm</button>
+                    <button class="category-button">Sản phẩm mới</button>
+                    <button class="category-button">Sản phẩm bán chạy</button>
+                    <button class="category-button">Đặc sản miền Bắc</button>
+                    <button class="category-button">Đặc sản miền Trung</button>
+                    <button class="category-button">Đặc sản miền Nam</button>
+                    <button class="category-button">Mứt</button>
+                    <button class="category-button">Trà</button>
+                    <button class="category-button">Bánh</button>
+                    <button class="category-button">Lạp xưởng</button>
                 </div>
-                <div class="navItemList">
-                    <div class="itemList">
-                        <div class="item">
-                            <a class="itemImage" href="ChiTietSanPham.html">
-                                <img src="images/lacxuong.png"/>
+                <div class="nav-product-list">
+                    <div class="product-list">
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="ChiTietSanPham.html">
+                            <a class="product-name" href="ChiTietSanPham.html">
                                 <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>55.000đ</h4>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
                             <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhmen.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh men</h3>
-                            </a>
-                            <h4>30.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhpia.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh pía</h3>
-                            </a>
-                            <h4>35.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhphongsua.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh tráng sữa</h3>
-                            </a>
-                            <h4>20.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/lacxuong.png"/>
-                            </a>
-                            <a class="itemName" href="ChiTietSanPham.html">
+                            <a class="product-name" href="ChiTietSanPham.html">
                                 <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>55.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhmen.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh men</h3>
-                            </a>
-                            <h4>30.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhpia.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh pía</h3>
-                            </a>
-                            <h4>35.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhphongsua.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh tráng sữa</h3>
-                            </a>
-                            <h4>20.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/lacxuong.png"/>
-                            </a>
-                            <a class="itemName" href="ChiTietSanPham.html">
+                            <a class="product-name" href="ChiTietSanPham.html">
                                 <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>55.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhmen.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh men</h3>
-                            </a>
-                            <h4>30.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhpia.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh pía</h3>
-                            </a>
-                            <h4>35.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhphongsua.png"/>
-                            </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh tráng sữa</h3>
-                            </a>
-                            <h4>20.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
-                        </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/lacxuong.png"/>
-                            </a>
-                            <a class="itemName" href="ChiTietSanPham.html">
+                            <a class="product-name" href="ChiTietSanPham.html">
                                 <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>55.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhmen.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh men</h3>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>30.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhpia.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh pía</h3>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>35.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
-                        <div class="item">
-                            <a class="itemImage" href="">
-                                <img src="images/banhphongsua.png"/>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
                             </a>
-                            <a class="itemName" href="">
-                                <h3>Bánh tráng sữa</h3>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
                             </a>
-                            <h4>20.000đ</h4>
-                            <a class="buy" href="">Mua hàng</a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
+                        </div>
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-30%</p>
+                            </div>
+                            <a href="ChiTietSanPham.html">
+                                <img class="product-image" src="images/lacxuong.png"/>
+                            </a>
+                            <a class="product-name" href="ChiTietSanPham.html">
+                                <h3>Lạp xưởng</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">70.000đ</h4>
+                                <h4 class="old-price">100.000đ</h4>
+                            </div>
+                            <a class="buy" href="ChiTietSanPham.html">Mua hàng</a>
                         </div>
                     </div>
                     <nav>
@@ -260,7 +358,7 @@
 </main>
 
 <footer>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
             <div class="info">
                 <h3>Thông tin liên hệ</h3>
@@ -273,7 +371,7 @@
                     <li>Website: dacsanvungmien.com</li>
                 </ul>
             </div>
-            <div class="hoTroKhachHang">
+            <div class="ho-tro-khach-hang">
                 <h4>Hỗ trợ khách hàng</h4>
                 <a href="">Câu hỏi thường gặp</a>
                 <a href="">Hướng dẫn đạt hàng và thanh toán</a>
@@ -293,7 +391,7 @@
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <p>Copyright 2025 ©. Designed by Nhóm 13</p>
         </div>

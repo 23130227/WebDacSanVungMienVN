@@ -1,31 +1,29 @@
 main {
     font-family: Arial, sans-serif;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 125px;
-    margin: 0;
+    padding: 20px;
 }
-main div{
+main #title{
     font-size: 40px;
     text-align: center;
     font-weight: bold;
 }
 
-main nav{
+main .signup{
     text-align: left;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
 }
-main nav label{
+main .signup label{
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
 }
-main nav input{
+main .signup input{
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -33,7 +31,7 @@ main nav input{
     margin-bottom: 15px;
     box-sizing: border-box;
 }
-main nav button {
+main .signup button {
     display: block;
     width: 100%;
     padding: 12px;
@@ -45,6 +43,6 @@ main nav button {
     cursor: pointer;
     margin-top: 5px;
 }
-main nav button:hover {
+main .signup button:hover {
     background-color: dodgerblue;
 }
