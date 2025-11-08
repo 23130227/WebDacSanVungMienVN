@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="css/DangNhap.css">
+    <title>Phiếu giảm giá</title>
     <link rel="stylesheet" href="css/Global.css">
-
+    <link rel="stylesheet" href="css/PhieuGiamGia.css">
+    <script src="js/PhieuMuaHang.js" defer></script>
 </head>
 <body>
 <header>
@@ -69,26 +69,55 @@
 </header>
 
 <main>
-    <div id="login">Đăng Nhập</div>
-    <div class="form-group">
-        <label for="username" class="account">Email:</label>
-        <input type="text" id="username" placeholder="Nhập Email">
-    </div>
-    <div class="form-group">
-        <label for="pass" class="pass">Mật khẩu:</label>
-        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-    </div>
-    <div class="remember-register">
-        <label>
-            <input type="checkbox" id="nhomatkhau">
-                Nhớ mật khẩu
-        </label>
-        <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
-    </div>
-    <button type="button" id="login-btn">Đăng nhập</button>
-    <div class="forget">
-        <a href="http://localhost:63342/Project_LTW/QuenMatKhau.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE" title="Quên mật khẩu">Quên mật khẩu</a>
-    </div>
+    <section>
+        <div class="container">
+            <div class="title-panel">
+                <h2>Phiếu giảm giá</h2>
+            </div>
+            <div class="voucher-panel">
+                <form method="get">
+                    <input class="enter-voucher" name="enter-voucher" type="text"
+                           placeholder="Nhập mã phiếu giảm giá...">
+                    <button class="enter-voucher-button" type="submit">Áp dụng</button>
+                </form>
+                <div class="voucher-list">
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 10%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 199k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
+                        </div>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
+                        </div>
+                    </div>
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 20%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 299k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
+                        </div>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
+                        </div>
+                    </div>
+                    <div class="voucher">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <div class="voucher-text">
+                            <p><strong>Phiếu giảm giá 30%</strong></p>
+                            <p>Áp dụng cho các đơn hàng có tống giá trị trên 399k</p>
+                            <p>Hạn sử dụng: 08/11/2025</p>
+                        </div>
+                        <div class="voucher-button">
+                            <button class="select-button">Chọn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>

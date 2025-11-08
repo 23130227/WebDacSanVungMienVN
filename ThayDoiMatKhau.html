@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="css/DangNhap.css">
+    <title>Thay Đổi Mật Khẩu</title>
     <link rel="stylesheet" href="css/Global.css">
+    <link rel="stylesheet" href="css/ThayDoiMatKhau.css">
 
 </head>
 <body>
@@ -69,26 +69,16 @@
 </header>
 
 <main>
-    <div id="login">Đăng Nhập</div>
-    <div class="form-group">
-        <label for="username" class="account">Email:</label>
-        <input type="text" id="username" placeholder="Nhập Email">
+    <div id="title">Thay đổi mật khẩu</div>
+    <div class = "change-pass">
+        <label for="pass">Nhập mật khẩu:</label>
+        <input type="password" id="oldpass" name="pass" placeholder="Nhập mật khẩu cũ">
+        <label for="pass">Nhập mật khẩu:</label>
+        <input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu mới">
+        <label for="pass">Nhập lại mật khẩu:</label>
+        <input type="password" id="rewritewpass" name="pass" placeholder="Nhập lại mật khẩu">
     </div>
-    <div class="form-group">
-        <label for="pass" class="pass">Mật khẩu:</label>
-        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-    </div>
-    <div class="remember-register">
-        <label>
-            <input type="checkbox" id="nhomatkhau">
-                Nhớ mật khẩu
-        </label>
-        <a href="http://localhost:63342/Project_LTW/DangKy.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE   " title="Đăng ký tài khoản">Đăng ký tài khoản</a>
-    </div>
-    <button type="button" id="login-btn">Đăng nhập</button>
-    <div class="forget">
-        <a href="http://localhost:63342/Project_LTW/QuenMatKhau.html?_ijt=beucv0tq5hol6knigucsv0v98c&_ij_reload=RELOAD_ON_SAVE" title="Quên mật khẩu">Quên mật khẩu</a>
-    </div>
+    <button class = "comfirm-button" type ="button">Xác nhận</button>
 </main>
 
 <footer>
