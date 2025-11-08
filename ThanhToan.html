@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="row">
-                    <select class = "local">
+                    <select class="local">
                         <option value="">Tỉnh/Thành *</option>
                         <option value="tuyen_quang">Tuyên Quang</option>
                         <option value="lao_cai">Lào Cai</option>
@@ -128,10 +128,10 @@
                         <option value="cao_bang">Cao Bằng</option>
                     </select>
 
-                    <select class = "local">
+                    <select class="local">
                         <option value="">Quận/Huyện *</option>
                     </select>
-                    <select class = "local">
+                    <select class="local">
                         <option value="">Phường/Xã *</option>
                     </select>
                 </div>
@@ -143,23 +143,16 @@
 
                 <div class="row">
                     <i class="fa-solid fa-comment"></i>
-                    <textarea id="message" name="message" rows="4"  placeholder="Lưu ý cho người bán"></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Lưu ý cho người bán"></textarea>
                 </div>
 
-                <div class="voucher-section">
-                    <label><b>Chọn phiếu giảm giá:</b></label>
-                    <div class="voucher-combo">
-                        <i class="fa-solid fa-ticket"></i>
-                        <select id="voucher-select">
-                            <option value="">-- Chọn voucher --</option>
-                            <option value="A">Phiếu A - Giảm 10%</option>
-                            <option value="B">Phiếu B - Giảm 20%</option>
-                            <option value="C">Phiếu C - Giảm 50%</option>
-                        </select>
-                        <button id="remove-voucher">Xóa</button>
+                <a class="voucher-section" href="PhieuGiamGia.html?mode=select">
+                    <div class="voucher-panel">
+                        <img class="voucher-image" src="images/coupon.png"/>
+                        <p class="voucher-text">Sử dụng <strong>Phiếu giảm giá</strong></p>
                     </div>
-                    <p id="voucher-message" style="margin-top: 8px; color: green; font-weight: bold;"></p>
-                </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
             </div>
             <button type="button">Thanh toán</button>
         </div>

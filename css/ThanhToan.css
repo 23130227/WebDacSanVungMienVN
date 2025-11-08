@@ -40,7 +40,8 @@ main .section-thanh-toan .information .table-information .row {
     gap: 10px;
     margin-bottom: 15px;
 }
-main .section-thanh-toan .information .table-information .row textarea{
+
+main .section-thanh-toan .information .table-information .row textarea {
     border-radius: 6px;
     width: 100%;
     border: 1px solid #ccc;
@@ -54,9 +55,28 @@ main .section-thanh-toan .information .table-information input, main .section-th
     border-radius: 6px;
     font-size: 15px;
 }
-main .section-thanh-toan .information .table-information .voucher-section {
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+main .voucher-section {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main .voucher-image {
+    width: 16px;
+    height: 16px;
+}
+
+main .voucher-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 main .section-thanh-toan .information .table-information .voucher-section .voucher-combo {
@@ -127,6 +147,7 @@ main .section-thanh-toan .listItem .listbuy {
     gap: 15px;
     margin-bottom: 20px;
 }
+
 main .section-thanh-toan .listItem .listbuy .listbuyItem {
     display: flex;
     align-items: center;
