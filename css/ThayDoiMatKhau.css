@@ -1,0 +1,45 @@
+main{
+    padding-top: 140px;
+    max-width: 720px;
+    margin: 10px auto;
+    text-align: center;
+}
+main #title{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+main .change-pass {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 10px
+}
+main .change-pass label{
+    text-align: right;
+    padding-right: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+main .change-pass input{
+    width: 300px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 35px;
+}
+main .comfirm-button{
+    margin-top: 18px;
+    width: 160px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    background: blue;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+main .comfirm-button:hover{
+    background: dodgerblue;
+}
