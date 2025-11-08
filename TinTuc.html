@@ -8,58 +8,60 @@
 </head>
 <body>
 <header>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
-            <a class="title title1" href="TrangChu.html">DacSanVungMien</a>
-            <form method="get">
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button type="submit">
+            <a class="text text-logo" href="TrangChu.html">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='KetQuaTimKiem.html'">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
             <div class="group">
-                <div class="title title2">
+                <p class="text">
                     Hotline: 0921955395
-                </div>
-                <div class="title title3">
+                </p>
+                <div class="sub-group">
                     <img src="images/user.png" height="24" width="24"/>
-                    <a class="title title3" href="DangNhap.html">
+                    <a class="text" href="DangNhap.html">
                         Đăng nhập
                     </a>
-                    <div class="title title4">/</div>
-                    <a class="title title5" href="DangKy.html">
+                    <p class="text">/</p>
+                    <a class="text" href="DangKy.html">
                         Đăng ký
                     </a>
                 </div>
-                <a class="title title6" href="">
+                <a class="sub-group" href="GioHang.html">
                     <img src="images/grocery-store.png" height="24" width="24"/>
-                    Giỏ hàng
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
                 </a>
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <nav>
-                <div class="container">
-                    <a href="" class="item">Trang chủ</a>
-                    <a href="" class="item">Giới thiệu</a>
-                    <div class="item">
-                        Danh mục sản phẩm
-                        <div class="sub">
-                            <a href="" class="subItem">Tất cả sản phẩm</a>
-                            <a href="" class="subItem">Đặc sản miền Bắc</a>
-                            <a href="" class="subItem">Đặc sản miền Trung</a>
-                            <a href="" class="subItem">Đặc sản miền Nam</a>
-                            <a href="" class="subItem">Mứt</a>
-                            <a href="" class="subItem">Trà</a>
-                            <a href="" class="subItem">Bánh</a>
-                            <a href="" class="subItem">Lạp xưởng</a>
-                        </div>
+                <a class="item" href="TrangChu.html">Trang chủ</a>
+                <a class="item" href="">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm mới</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Mứt</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Trà</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Bánh</a>
+                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Lạp xưởng</a>
                     </div>
-                    <a href="" class="item">Khuyến mãi / ưu đãi</a>
-                    <a href="" class="item">Tin tức / blog</a>
                 </div>
+                <a class="item" href="KhuyenMaiUuDai.html">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="">Tin tức / blog</a>
             </nav>
         </div>
     </section>
@@ -69,39 +71,54 @@
     <section class="section-tin-tuc">
         <div class="news-container">
             <h2 class="blog-title">Tin tức & Blog mới nhất</h2>
-            <div class="blog-list">
-                <div class="blog-item">
-                    <img src="https://cdn.tgdd.vn/Files/2021/12/28/1407483/cach-lam-lap-xuong-tai-nha-chi-tiet-nhat-an-tha-ga-ma-khong-lo-doc-hai-202112281129498919.jpg" alt="">
-                    <div class="blog-content">
-                        <h3>Cách làm lạp xưởng ngon tại nhà</h3>
-                        <p>Bật mí công thức làm lạp xưởng truyền thống chuẩn vị miền Tây,  không cần máy móc vẫn ngon và bảo quản được lâu.</p>
-                        <a href="#">Đọc thêm</a>
+
+            
+            <div class="blog-slider">
+                <button class="blog-nav blog-prev">&#8249;</button>
+
+                <div class="blog-list">
+                    <div class="blog-item active">
+                        <img src="https://cdn.tgdd.vn/Files/2020/10/20/1300396/cach-lam-lap-xuong-tuoi-can-duoc-tai-nha-chua-ngot-chuan-vi-202202221426155824.jpg" alt="">
+                        <div class="blog-content">
+                            <h3>Cách làm lạp xưởng ngon tại nhà</h3>
+                            <p>Bật mí công thức làm lạp xưởng truyền thống chuẩn vị miền Tây,  không cần máy móc vẫn ngon và bảo quản được lâu.</p>
+                            <a href="#">Đọc thêm</a>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-item">
-                    <img src="https://cdn.tgdd.vn/2021/09/CookRecipe/GalleryStep/thanh-pham-1200x676.jpg" alt="">
-                    <div class="blog-content">
-                        <h3>Mẹo chọn đặc sản vùng miền đúng vị</h3>
-                        <p>Hướng dẫn ccahs chọn đặc sản vùng miền uy tín, đảm bảo nguồn gốc và chất lượng khi mua hàng online.</p>
-                        <a href="#">Đọc thêm</a>
+
+                    <div class="blog-item">
+                        <img src="https://huongvietmart.vn/wp-content/uploads/2022/09/dac-san-Viet-Nam-lam-qua-1.jpg" alt="">
+                        <div class="blog-content">
+                            <h3>Mẹo chọn đặc sản vùng miền đúng vị</h3>
+                            <p>Hướng dẫn cách chọn đặc sản vùng miền uy tín, đảm bảo nguồn gốc và chất lượng khi mua hàng online.</p>
+                            <a href="#">Đọc thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-item">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/750x0/filters:format(webp):quality(75)/Dac_san_mien_Tay_1_c20c915fc2.jpg" alt="">
+                        <div class="blog-content">
+                            <h3>Khám phá đặc sản miền tây</h3>
+                            <p>Miền Tây không chỉ nổi tiếng với cảnh sông nước hữu tình mà còn là thiên đường của những món ăn khó quên.</p>
+                            <a href="#">Đọc thêm</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="blog-item">
-                    <img src="https://cdn.tgdd.vn/2021/10/content/dac-san-mien-tay-800x450-1.jpg" alt="">
-                    <div class="blog-content">
-                        <h3>Khám phá đặc sản miền tây</h3>
-                        <p>Miền Tây không chỉ nổi tiếng với cảnh sông nước hữu tình mà còn là thiên đường của những món ăn khó quên. </p>
-                        <a href="#">Đọc thêm</a>
-                    </div>
-                </div>
+                <button class="blog-nav blog-next">&#8250;</button>
+            </div>
+            <div class="blog-dots">
+                <span class="blog-dot active"></span>
+                <span class="blog-dot"></span>
+                <span class="blog-dot"></span>
             </div>
 
         </div>
     </section>
 </main>
+
 <footer>
-    <section class="section section1">
+    <section class="section-top">
         <div class="container">
             <div class="info">
                 <h3>Thông tin liên hệ</h3>
@@ -114,7 +131,7 @@
                     <li>Website: dacsanvungmien.com</li>
                 </ul>
             </div>
-            <div class="hoTroKhachHang">
+            <div class="ho-tro-khach-hang">
                 <h4>Hỗ trợ khách hàng</h4>
                 <a href="">Câu hỏi thường gặp</a>
                 <a href="">Hướng dẫn đạt hàng và thanh toán</a>
@@ -134,7 +151,7 @@
             </div>
         </div>
     </section>
-    <section class="section section2">
+    <section class="section-bottom">
         <div class="container">
             <p>Copyright 2025 ©. Designed by Nhóm 13</p>
         </div>
