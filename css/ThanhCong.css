@@ -1,0 +1,54 @@
+main {
+    padding:20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .success-container {
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 80px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main .success-container .success-icon {
+    color: #3cb371;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+main .success-container h1 {
+    color: #3cb371;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+main .success-container .order-info {
+    font-size: 18px;
+    color: dimgray;
+    margin-bottom: 8px;
+}
+
+main .success-container .payment-type {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+main .success-container .back-btn {
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+main .success-container .back-btn:hover {
+    background-color: dodgerblue;
+}
