@@ -75,8 +75,8 @@
     
     <div class="address-layout">
         <section class="address-header">
-        <h2>Thông tin giao hàng</h2>
             <form id="address-form" class="address-form">
+                <h2 class="form-title">Thông tin giao hàng</h2>
                 <div class="row">
                     <div class="form-group">
                         <label><i class="fa fa-user"></i></label>
@@ -93,7 +93,7 @@
                     <input type="email" id="email" placeholder="Địa chỉ gmail người nhận">
                 </div>
 
-                <div class="row">
+                <div class="row-selects">
                     <select id="province">
                         <option>Tỉnh/Thành *</option>
                     </select>
@@ -110,14 +110,15 @@
                     <input type="text" id="address" placeholder="Địa chỉ cụ thể">
                 </div>
 
-                <button type="button" id="save-btn">Cập nhật</button>
+                <div class="actions">
+                    <button type="button" id="save-btn">Cập nhật</button>
+                </div>
             </form>
         </section>
         <section class="address-list" id="address-list">
             <p class="placeholder">Chưa có địa chỉ nào. Hãy nhập thông tin phía trên và bấm “Cập nhật”.</p>
         </section>
     </div>
-
     
 </main>
 
