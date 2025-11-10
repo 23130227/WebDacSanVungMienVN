@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Giỏ Hàng</title>
+    <title>Thanh toán online</title>
     <link rel="stylesheet" href="css/Global.css">
-    <link rel="stylesheet" href="css/GioHang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="js/GioHang.js"></script>
+    <link rel="stylesheet" href="css/ThanhToanOnline.css">
 </head>
 <body>
 <header>
@@ -70,63 +69,23 @@
 </header>
 
 <main>
-    <section class="cart-section">
-        <h1>Giỏ hàng của bạn</h1>
-        <div class="cart-container">
-            <div class="cart-item">
-                <div class="item-left">
-                    <img src="images/keodua.png" alt="Kẹo dừa" />
-                    <button class="remove-btn">Xóa</button>
-                </div>
-
-                <div class="item-middle">Kẹo dừa</div>
-
-                <div class="item-right">
-                    <p class="price">40.000đ</p>
-                    <div class="tang-giam-so-luong">
-                        <button class="giam-button">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <input type="text" class="so-luong" value="1" readonly>
-                        <button class="tang-button" >
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="item-left">
-                    <img src="images/banhpia.png" alt="Bánh pía" />
-                    <button class="remove-btn">Xóa</button>
-                </div>
-                <div class="item-middle">Bánh pía</div>
-                <div class="item-right">
-                    <p class="price">30.000đ</p>
-                    <div class="tang-giam-so-luong">
-                        <button class="giam-button">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <input type="text" class="so-luong" value="1" readonly>
-                        <button class="tang-button">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart-total">
-                <p>Tổng cộng: <span id="total-price">75.000đ</span></p>
-                <button class="order-btn" onclick="location.href='ThanhToan.html'">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Đặt hàng
-                </button>
-            </div>
-
+    <div class="title">Thanh toán Online</div>
+    <div class ="payonline">
+        <div class="textqr">
+            <h1>Quét mã bằng ngân hàng bạn chọn</h1 >
+            <h2>Thanh toán qua bất kỳ ngân hàng hoặc ví điện tử nào</h2>
         </div>
-    </section>
+        <div class="qr">
+            <img src="images/qrcode_273266081_b62d8ebe95ba10a0757d30a9dbeea78b.png"/>
+            <div class="information-qr">
+                <p>BIDV</p>
+                <p>0123456789</p>
+                <p>Nguyễn Văn A</p>
+            </div>
+        </div>
+        <button type="button" onclick="location.href='ThanhCong.html?mode=select'">Thanh toán đã hoàn tất</button>
+    </div>
 </main>
-
 
 <footer>
     <section class="section-top">
