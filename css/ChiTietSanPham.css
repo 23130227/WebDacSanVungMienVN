@@ -33,33 +33,6 @@ main .old-price {
     margin-bottom: 0;
 }
 
-main .quy-cach-dong-goi {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    gap: 5px;
-}
-
-main .quy-cach-button {
-    background: none;
-    width: 75px;
-    height: 35px;
-    border: 2px solid #cccccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    border-radius: 5px;
-}
-
-main .quy-cach-button:hover {
-    border: 2px solid #888;
-}
-
-main .quy-cach-button.active {
-    border-color: hsl(85, 44%, 40%);
-    background-color: hsl(85, 44%, 40%, 50%);
-}
-
 main .chon-so-luong {
     display: flex;
     align-items: center;
@@ -114,7 +87,7 @@ main p:last-child {
 }
 
 main .mo-ta-san-pham .title {
-    border-bottom: 2px solid hsl(0, 0%, 83%);
+    border-bottom: 2px solid #cccccc;
     padding-bottom: 5px;
 }
 
