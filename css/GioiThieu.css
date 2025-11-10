@@ -1,0 +1,60 @@
+.gioi-thieu {
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.gioi-thieu .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gioi-thieu h1 {
+    text-align: left;
+    font-size: 2.4rem;
+}
+
+.gioi-thieu .intro-text {
+    text-align: left;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.gioi-thieu .section {
+    background: #fff;
+    padding: 30px 40px;
+    margin-bottom: 10px;
+}
+
+.gioi-thieu .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.gioi-thieu figcaption{
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 15px;
+    font-style: italic;
+}
+.gioi-thieu .section p, 
+.gioi-thieu .section li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.gioi-thieu ul {
+    padding-left: 20px;
+}
+
+.intro-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
