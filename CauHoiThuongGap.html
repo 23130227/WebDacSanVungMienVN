@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thông tin cá nhân</title>
+    <title>Câu hỏi thường gặp</title>
     <link rel="stylesheet" href="css/Global.css">
-    <link rel="stylesheet" href="css/ThongTinCaNhan.css">
+    <link rel="stylesheet" href="css/CauHoiThuongGap.css">
+    <script src="js/CauHoiThuongGap.js" defer></script>
+
 </head>
 <body>
 <header>
@@ -66,40 +68,62 @@
         </div>
     </section>
 </header>
-
-<main class="account-page">
-  <div class="account-container">
-    <div class="left-panel">
-        <h2>Thông tin tài khoản</h2>
-        <form>
-            <label for="email">Email</label>
-            <input type="email" id="email" value="Email" disabled>
-            <label for="fullname">Họ và tên</label>
-            <input type="text" id="name" placeholder="Nhập họ và tên">
-            <label for="phone">Số điện thoại</label>
-            <input type="number"  id="phone" value="Nhập số điện thoại" placeholder="Nhập số điện thoại">
-
-            <label for="gender">Giới tính</label>
-            <div class="gender">
-                <label><input type="radio" name="gender" value="Nam"> Nam</label>
-                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
-                <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
+<main>
+    <section class="faq-section">
+        <div class="faq-title">
+            <h1>Câu hỏi thường gặp</h1>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">1. Web bán đặc sản này có đảm bảo hàng thật không?</div>
+            <div class="faq-answer">
+                Chúng tôi chỉ hợp tác với các cơ sở sản xuất uy tín tại từng vùng miền, cam kết **đặc sản chính gốc**. 
+                Mỗi sản phẩm đều có hình ảnh thực tế, thông tin xuất xứ và hướng dẫn sử dụng.  
+                <div class="warning">Cảnh báo: Tránh mua hàng từ các website không rõ nguồn gốc hoặc giá rẻ bất thường, nguy cơ lừa đảo rất cao.</div>
             </div>
-            <label for="dob">Ngày sinh</label>
-            <div class="dob">
-                <select id="day"><option>Ngày</option></select>
-                <select id="month"><option>Tháng</option></select>
-                <select id="year"><option>Năm</option></select>
-            </div>
+        </div>
 
-            <div class="checkbox">
-                <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
+        <div class="faq-item">
+            <div class="faq-question">2. Tôi có thể thanh toán bằng những hình thức nào?</div>
+            <div class="faq-answer">
+                Chúng tôi hỗ trợ các hình thức thanh toán:  
+                - Chuyển khoản ngân hàng  
+                - Thanh toán qua thẻ tín dụng/thẻ ghi nợ  
+                - Ví điện tử (Momo, ZaloPay, VNPay)  
+                - COD (nhận hàng trả tiền trực tiếp)  
+                <div class="warning">Cảnh báo: Không chuyển tiền trực tiếp cho người bán ngoài hệ thống của chúng tôi, tránh bị lừa đảo.</div>
             </div>
-            <button class="btn-update" type="submit">Cập nhật</button>
-        </form>
-    </div>
-   </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">3. Làm sao để biết sản phẩm còn hàng?</div>
+            <div class="faq-answer">
+                Trên mỗi trang sản phẩm sẽ hiển thị tình trạng kho: “Còn hàng” hoặc “Hết hàng”.  
+                Nếu sản phẩm gần hết, bạn sẽ thấy thông báo số lượng còn lại để đặt mua kịp thời.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">4. Tôi muốn kiểm tra chất lượng khi nhận hàng, có được không?</div>
+            <div class="faq-answer">
+                Hoàn toàn được. Bạn có thể mở gói hàng, kiểm tra sản phẩm và **kiểm tra tem, hạn sử dụng, nhãn mác** trước khi thanh toán nếu chọn hình thức COD.  
+                <div class="warning">Cảnh báo: Không ký nhận nếu sản phẩm bị hư hỏng hoặc không đúng cam kết. Ghi lại hình ảnh để khiếu nại.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">5. Web có hỗ trợ giao hàng đi các tỉnh không?</div>
+            <div class="faq-answer">
+                Chúng tôi giao hàng trên toàn quốc thông qua các đơn vị vận chuyển uy tín. Thời gian vận chuyển thường từ 1-5 ngày tùy tỉnh thành.  
+                Đơn hàng sẽ có **mã vận đơn để theo dõi** trực tuyến.
+            </div>
+        </div>
+
+    </section>
+
+
 </main>
+
 <footer>
     <section class="section-top">
         <div class="container">

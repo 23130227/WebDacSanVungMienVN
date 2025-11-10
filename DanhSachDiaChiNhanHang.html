@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thông tin cá nhân</title>
+    <title>Danh sách địa chỉ nhận hàng</title>
     <link rel="stylesheet" href="css/Global.css">
-    <link rel="stylesheet" href="css/ThongTinCaNhan.css">
+    <link rel="stylesheet" href="css/DanhSachDiaChiNhanHang.css">
 </head>
 <body>
 <header>
@@ -43,63 +43,87 @@
     <section class="section-bottom">
         <div class="container">
             <nav>
-                <a class="item" href="TrangChu.html">Trang chủ</a>
+                <a class="item" href="">Trang chủ</a>
                 <a class="item" href="">Giới thiệu</a>
                 <div class="item">
                     Danh mục sản phẩm
                     <div class="sub">
                         <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm mới</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm bán chạy</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Bắc</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Trung</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Nam</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Mứt</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Trà</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Bánh</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Lạp xưởng</a>
+                        <a class="sub-item" href="">Sản phẩm mới</a>
+                        <a class="sub-item" href="">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="">Mứt</a>
+                        <a class="sub-item" href="">Trà</a>
+                        <a class="sub-item" href="">Bánh</a>
+                        <a class="sub-item" href="">Lạp xưởng</a>
                     </div>
                 </div>
-                <a class="item" href="KhuyenMaiUuDai.html">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="">Khuyến mãi / ưu đãi</a>
                 <a class="item" href="">Tin tức / blog</a>
             </nav>
         </div>
     </section>
 </header>
+<main class="address-page">
 
-<main class="account-page">
-  <div class="account-container">
-    <div class="left-panel">
-        <h2>Thông tin tài khoản</h2>
-        <form>
-            <label for="email">Email</label>
-            <input type="email" id="email" value="Email" disabled>
-            <label for="fullname">Họ và tên</label>
-            <input type="text" id="name" placeholder="Nhập họ và tên">
-            <label for="phone">Số điện thoại</label>
-            <input type="number"  id="phone" value="Nhập số điện thoại" placeholder="Nhập số điện thoại">
-
-            <label for="gender">Giới tính</label>
-            <div class="gender">
-                <label><input type="radio" name="gender" value="Nam"> Nam</label>
-                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
-                <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
-            </div>
-            <label for="dob">Ngày sinh</label>
-            <div class="dob">
-                <select id="day"><option>Ngày</option></select>
-                <select id="month"><option>Tháng</option></select>
-                <select id="year"><option>Năm</option></select>
-            </div>
-
-            <div class="checkbox">
-                <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
-            </div>
-            <button class="btn-update" type="submit">Cập nhật</button>
-        </form>
+    <div class="page-header">
+        <h1>📦 Danh sách địa chỉ nhận hàng</h1>
+        <p>Quản lý thông tin giao hàng của bạn tại đây — chỉnh sửa hoặc cập nhật địa chỉ nhanh chóng và tiện lợi.</p>
     </div>
-   </div>
+    
+    <div class="address-layout">
+        <section class="address-header">
+            <form id="address-form" class="address-form">
+                <h2 class="form-title">Thông tin giao hàng</h2>
+                <div class="row">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i></label>
+                        <input type="text" id="name" placeholder="Tên người nhận">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-phone"></i></label>
+                        <input type="text" id="phone" placeholder="Số điện thoại người nhận">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-envelope"></i></label>
+                    <input type="email" id="email" placeholder="Địa chỉ gmail người nhận">
+                </div>
+
+                <div class="row-selects">
+                    <select id="province">
+                        <option>Tỉnh/Thành *</option>
+                    </select>
+                    <select id="district">
+                        <option>Quận/Huyện *</option>
+                    </select>
+                    <select id="ward">
+                        <option>Phường/Xã *</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-map-marker"></i></label>
+                    <input type="text" id="address" placeholder="Địa chỉ cụ thể">
+                </div>
+
+                <div class="actions">
+                    <button type="button" id="save-btn">Cập nhật</button>
+                </div>
+            </form>
+        </section>
+        <section class="address-list" id="address-list">
+            <p class="placeholder">Chưa có địa chỉ nào. Hãy nhập thông tin phía trên và bấm “Cập nhật”.</p>
+        </section>
+    </div>
+    
 </main>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 <footer>
     <section class="section-top">
         <div class="container">
