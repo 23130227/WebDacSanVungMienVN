@@ -1,10 +1,4 @@
-body{
-    font-family: 'Inter', sans-serif;
-    background: #fff;
-    color: #333;
-    margin: 0;
-}
-.news-detail {
+main .news-detail {
     max-width: 100%;
     margin: auto;
     max-height: 100%;
@@ -12,35 +6,36 @@ body{
     border-radius: 12px;
     
 }
-.news-detail h1 {
+main .news-detail h1 {
     font-size: 32px;
     color: #222;
     margin-bottom: 10px;
 }
-.news-meta {
+main .news-meta {
     color: #777;
     font-size: 14px;
     margin-bottom: 20px;
 }
-.news-detail img {
-    width: 100%;
+main .container img {
+    display: block;
+    margin: 0 auto 25px;
+    width: 80%;
     border-radius: 10px;
-    margin-bottom: 25px;
 }
-.news-content p {
+main .news-content p {
     line-height: 1.7;
     margin-bottom: 16px;
 }
-.news-content h2 {
+main .news-content h2 {
     margin-top: 30px;
     color: #111;
 }
-.news-tags {
+main .news-tags {
     margin-top: 40px;
     border-top: 1px solid #eee;
     padding-top: 15px;
 }
-.news-tags span {
+main .news-tags span {
     background: #f3f4f6;
     color: #555;
     padding: 6px 10px;
@@ -48,12 +43,12 @@ body{
     margin-right: 10px;
     font-size: 14px;
 }
-.news-navigation {
+main .news-navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
-.news-navigation a {
+main .news-navigation a {
     color: #e67e22;
     text-decoration: none;
     font-weight: 500;

@@ -1,11 +1,10 @@
-.address-page {
-    flex: 1;
-    padding: 0 0 5px;
-    background-color: #f9f9f9;
-    font-family: 'Inter', sans-serif;
+main{
+    padding: 10px;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 .page-header {
     width: 100%;
@@ -19,7 +18,7 @@
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .page-header p {
@@ -72,7 +71,6 @@
     flex: 1;
     padding: 7px 9px;
     font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
@@ -86,8 +84,6 @@
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
 }
 
-
-
 .form-group {
     display: flex;
     align-items: center;
@@ -98,7 +94,6 @@
 }
 
 .form-group i {
-    color: #444;
     font-size: 16px;
     width: 36px;
     height: 15px;
@@ -135,8 +130,8 @@
     display: flex;
     justify-content: flex-start;
 }
-#save-btn {
-     display: block;
+main .address-header .address-form button {
+    display: block;
     width: 100%;
     background: forestgreen;
     color: white;
@@ -148,58 +143,38 @@
     margin-top: 10px;
 }
 
-#save-btn:hover {
+main .address-header .address-form button:hover {
     background-color: #1e7e34;
 }
 
 /* Danh sách địa chỉ */
 .address-list {
     flex: 1;
-    align-self: flex-start;
     min-width: 320px;
-}
-.placeholder {
-    text-align: center;
-    color: #888;
-    font-style: italic;
-    background: #fff;
-    padding: 14px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.address-item {
-    background: #fff;
-    border-radius: 12px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.3s ease;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
 }
 
+.address-item {
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    color: #333;
+}
+.address-item:hover {
+
+    background-color: #f9fff9;
+    color: #1e7e34;
+}
 .address-info {
-    color: #444;
-    line-height: 1.4;
     font-size: 14px;
-    max-width: calc(100% - 120px);
+    line-height: 1.5;
 }
 
-.edit-btn {
-    background-color: #f39c12;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.edit-btn:hover {
-    background-color: #d68a0c;
-}
 
 
 

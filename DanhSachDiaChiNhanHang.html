@@ -5,6 +5,7 @@
     <title>Danh sách địa chỉ nhận hàng</title>
     <link rel="stylesheet" href="css/Global.css">
     <link rel="stylesheet" href="css/DanhSachDiaChiNhanHang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -66,13 +67,13 @@
         </div>
     </section>
 </header>
-<main class="address-page">
+<main>
 
     <div class="page-header">
         <h1>📦 Danh sách địa chỉ nhận hàng</h1>
         <p>Quản lý thông tin giao hàng của bạn tại đây — chỉnh sửa hoặc cập nhật địa chỉ nhanh chóng và tiện lợi.</p>
     </div>
-    
+
     <div class="address-layout">
         <section class="address-header">
             <form id="address-form" class="address-form">
@@ -86,11 +87,6 @@
                         <label><i class="fa fa-phone"></i></label>
                         <input type="text" id="phone" placeholder="Số điện thoại người nhận">
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label><i class="fa fa-envelope"></i></label>
-                    <input type="email" id="email" placeholder="Địa chỉ gmail người nhận">
                 </div>
 
                 <div class="row-selects">
@@ -111,15 +107,23 @@
                 </div>
 
                 <div class="actions">
-                    <button type="button" id="save-btn">Cập nhật</button>
+                    <button type="button">Cập nhật</button>
                 </div>
             </form>
         </section>
-        <section class="address-list" id="address-list">
-            <p class="placeholder">Chưa có địa chỉ nào. Hãy nhập thông tin phía trên và bấm “Cập nhật”.</p>
+        <section class="address-list">
+            <p>Danh sách địa chỉ giao hàng</p>
+            <a href="ThanhToan.html" class="address-item">
+                <div class="address-info">
+                    <strong>Nguyễn Văn A</strong><br>
+                    0123456789<br>
+                    Linh Trung, Thủ Đức, TP.HCM<br>
+                    Cư xá A, Đại học Nông Lâm
+                </div>
+            </a>
         </section>
     </div>
-    
+
 </main>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
