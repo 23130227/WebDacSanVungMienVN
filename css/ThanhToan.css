@@ -154,7 +154,6 @@ main .choosepay .payment-option input[type="radio"] {
     cursor: pointer;
     flex: 0 0 auto;
 }
-
 main .section-thanh-toan .information button{
     display: block;
     width: 100%;
