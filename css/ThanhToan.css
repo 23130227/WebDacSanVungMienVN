@@ -71,7 +71,6 @@ main .table-information .row .address-info {
     font-size: 15px;
 }
 
-
 .address-container .change {
     display: flex;
     flex-direction: column;
@@ -79,7 +78,9 @@ main .table-information .row .address-info {
     gap: 8px;
     margin-left: 20px;
 }
-
+main .section-thanh-toan .information .table-information .address-container a{
+    text-decoration: none;
+}
 main .section-thanh-toan .information .table-information .address-container .change .change-btn {
     display: flex;
     align-items: center;
