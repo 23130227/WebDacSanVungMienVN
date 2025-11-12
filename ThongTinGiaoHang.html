@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thanh toán</title>
-    <link rel="stylesheet" href="css/ThanhToan.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Thông tin giao hàng</title>
     <link rel="stylesheet" href="css/Global.css">
-    <script src="js/ThanhToan.js"></script>
-
+    <link rel="stylesheet" href="css/ThongTinGiaoHang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -51,7 +49,7 @@
                 <div class="item">
                     Danh mục sản phẩm
                     <div class="sub">
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
                         <a class="sub-item" href="">Sản phẩm mới</a>
                         <a class="sub-item" href="">Sản phẩm bán chạy</a>
                         <a class="sub-item" href="">Đặc sản miền Bắc</a>
@@ -69,90 +67,70 @@
         </div>
     </section>
 </header>
-
 <main>
-    <h1 class="title">Thanh toán đơn hàng</h1>
-    <section class="section-thanh-toan">
-        <div class="information">
-            <h2>Thông tin giao hàng</h2>
 
-            <div class="table-information">
+    <div class="page-header">
+        <h1>📦 Thông tin giao hàng</h1>
+        <p>Quản lý thông tin giao hàng của bạn tại đây — chỉnh sửa hoặc cập nhật địa chỉ nhanh chóng và tiện lợi.</p>
+    </div>
+
+    <div class="address-layout">
+        <section class="address-header">
+            <form id="address-form" class="address-form">
+                <h2 class="form-title">Thêm thông tin giao hàng</h2>
                 <div class="row">
-                    <div class="address-container">
-                        <div class="address-info">
-                            <p><strong>Nguyễn Văn A</strong> | 0123456789</p>
-                            <p>123 Đường Linh Trung, Phường Linh Trung</p>
-                            <p>Thành phố Thủ Đức, TP. Hồ Chí Minh</p>
-                        </div>
-                        <a href="DanhSachDiaChiNhanHang.html">
-                            <div class="change">
-                                <button class="change-btn"><i class="fa-solid fa-arrows-rotate"></i>Thay đổi</button>
-                            </div>
-                        </a>
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i></label>
+                        <input type="text" id="name" placeholder="Tên người nhận">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-phone"></i></label>
+                        <input type="text" id="phone" placeholder="Số điện thoại người nhận">
                     </div>
                 </div>
 
-
-                <div class="row">
-                    <textarea id="message" name="message" rows="4" placeholder="Lưu ý cho người bán"></textarea>
+                <div class="row-selects">
+                    <select id="province">
+                        <option>Tỉnh/Thành *</option>
+                    </select>
+                    <select id="district">
+                        <option>Quận/Huyện *</option>
+                    </select>
+                    <select id="ward">
+                        <option>Phường/Xã *</option>
+                    </select>
                 </div>
 
-                <a class="voucher-section" href="PhieuGiamGia.html?mode=select">
-                    <div class="voucher-panel">
-                        <img class="voucher-image" src="images/coupon.png"/>
-                        <p class="voucher-text">Sử dụng <strong>Phiếu giảm giá</strong></p>
+                <div class="form-group">
+                    <label><i class="fa fa-map-marker"></i></label>
+                    <input type="text" id="address" placeholder="Địa chỉ cụ thể">
+                </div>
+
+                <div class="actions">
+                    <button type="button">Thêm</button>
+                </div>
+            </form>
+        </section>
+        <section class="address-list">
+            <p>Danh sách địa chỉ giao hàng</p>
+            <div class = "address-list-container">
+                <a href="ThanhToan.html" class="address-item">
+                    <div class="address-info">
+                        <strong>Nguyễn Văn A</strong><br>
+                        0123456789<br>
+                        Linh Trung, Thủ Đức, TP.HCM<br>
+                        Cư xá A, Đại học Nông Lâm
                     </div>
-                    <i class="fa-solid fa-angle-right"></i>
                 </a>
 
-                <div class="choosepay">
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="Thanh toán sau khi nhận hàng" checked>
-                        <span class="custom-radio"></span>
-                        <span class="text">Thanh toán sau khi nhận hàng</span>
-                    </label>
-
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="Chuyển khoản ngân hàng">
-                        <span class="custom-radio"></span>
-                        <span class="text">Chuyển khoản ngân hàng</span>
-                    </label>
-                </div>
-
+                <button type="button" class ="delete-address">Xóa</button>
             </div>
-            <button type="button">Thanh toán</button>
-        </div>
-        <div class="listItem">
-            <h>Danh sách đơn hàng</h>
-            <div class="listbuy">
-                <div class="listbuyItem">
-                    <img src="images/keodua.png"/>
-                    <span>Kẹo dừa x 1</span>
-                    <span class="price">40.000 đ</span>
-                </div>
-                <div class="listbuyItem">
-                    <img src="images/banhpia.png"/>
-                    <span>Bánh pía x 1</span>
-                    <span class="price">30.000 đ</span>
-                </div>
-            </div>
-            <table>
-                <thead>
-                <tr>
-                    <th>Sản phẩm</th>
-                    <th>Giá</th>
-                </tr>
-                </thead>
-                <tfoot>
-                <tr>
-                    <th>Tổng số tiền</th>
-                    <th>70.000 đ</th>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
-    </section>
+        </section>
+    </div>
+
 </main>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <footer>
     <section class="section-top">

@@ -1,21 +1,23 @@
-main{
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+main {
+    padding: 45px;
+    max-width: 720px;
+    margin: 10px auto;
+    text-align: center;
 }
-main #title{
+
+main #title {
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 30px;
 }
-main .table-forget_password{
+
+main .table-forget_password {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: stretch;
 }
+
 main .table-forget_password .comfirm {
     display: grid;
     grid-template-columns: 180px 1fr 120px;
@@ -33,7 +35,8 @@ main .table-forget_password .comfirm label {
     color: #374151;
     display: block;
 }
-main .table-forget_password .comfirm input{
+
+main .table-forget_password .comfirm input {
     width: 100%;
     padding: 10px 12px;
     font-size: 14px;
@@ -41,34 +44,39 @@ main .table-forget_password .comfirm input{
     box-sizing: border-box;
     height: 35px;
 }
+
 main .table-forget_password .comfirm button {
     padding: 9px 12px;
     border-radius: 8px;
     border: none;
-    background: blue;
+    background-color: deepskyblue;
     color: white;
     font-weight: 600;
     cursor: pointer;
     justify-self: stretch;
-    box-shadow: 0 6px 18px rgba(37,99,235,0.12);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
     width: 79px;
 }
-main .table-forget_password .comfirm button:hover{
-    background: dodgerblue;
+
+main .table-forget_password .comfirm button:hover {
+    background-color: dodgerblue;
 }
+
 main .table-forget_password .Rewrite-pass {
     display: grid;
     grid-template-columns: 180px 1fr;
     align-items: center;
-    gap:10px
+    gap: 10px
 }
+
 main .table-forget_password .Rewrite-pass label {
     text-align: right;
     padding-right: 8px;
     font-size: 14px;
     color: #374151;
 }
-main .table-forget_password .Rewrite-pass input{
+
+main .table-forget_password .Rewrite-pass input {
     width: 300px;
     padding: 10px 12px;
     font-size: 14px;
@@ -76,19 +84,21 @@ main .table-forget_password .Rewrite-pass input{
     box-sizing: border-box;
     height: 35px;
 }
+
 main .comfirm-button {
     margin-top: 18px;
     width: 160px;
     padding: 12px 14px;
     border-radius: 10px;
     border: none;
-    background: blue;
-    color: #fff;
+    background-color: deepskyblue;
+    color: white;
     font-weight: 700;
     cursor: pointer;
 }
-main .comfirm-button:hover{
-    background: dodgerblue;
+
+main .comfirm-button:hover {
+    background-color: dodgerblue;
 }
 
 
