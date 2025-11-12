@@ -1,9 +1,9 @@
 main {
+    padding:20px;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 main .success-container {
     border-radius: 10px;

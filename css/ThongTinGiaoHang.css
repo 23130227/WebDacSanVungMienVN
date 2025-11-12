@@ -147,61 +147,32 @@ main .address-header .address-form button:hover {
     background-color: #1e7e34;
 }
 
+/* Danh sách địa chỉ */
 .address-list {
     flex: 1;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    background: #fff;
+    gap: 5px;
     justify-content: flex-start;
 }
-.address-list .address-list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
-    width: 100%;
-}
 
-.address-list .address-list-container .address-item {
-    position: relative;
+.address-item {
     display: block;
-    width: 90%;
+    text-decoration: none;
     border-radius: 12px;
-    padding: 16px 25px;
+    padding: 16px 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     color: #333;
-    text-decoration: none;
-    background-color: #fff;
 }
-
 .address-item:hover {
+
     background-color: #f9fff9;
     color: #1e7e34;
 }
 .address-info {
     font-size: 14px;
     line-height: 1.5;
-}
-main .address-list .delete-address {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #ff4d4f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 13px;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-main .address-list  .delete-address:hover {
-    background-color: red;
 }
 
 

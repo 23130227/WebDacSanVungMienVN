@@ -48,16 +48,16 @@
                 <div class="item">
                     Danh mục sản phẩm
                     <div class="sub">
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm mới</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Sản phẩm bán chạy</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Bắc</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Trung</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Đặc sản miền Nam</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Mứt</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Trà</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Bánh</a>
-                        <a class="sub-item" href="DanhSachSanPhamTheoDanhMuc.html">Lạp xưởng</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Sản phẩm mới</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Mứt</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Trà</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Bánh</a>
+                        <a class="sub-item" href="SanPhamTheoDanhMuc.html">Lạp xưởng</a>
                     </div>
                 </div>
                 <a class="item" href="KhuyenMaiUuDai.html">Khuyến mãi / ưu đãi</a>
@@ -67,38 +67,46 @@
     </section>
 </header>
 
-<main class="account-page">
+<main>
     <section>
         <div class="container">
-            <div class="account-container">
-                <div class="left-panel">
-                    <h2>Thông tin tài khoản</h2>
-                    <form>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" value="Email" disabled>
-                        <label for="name">Họ và tên</label>
-                        <input type="text" id="name" placeholder="Nhập họ và tên">
-                        <label for="phone">Số điện thoại</label>
-                        <input type="number"  id="phone" value="Nhập số điện thoại" placeholder="Nhập số điện thoại">
+            <div class="account-page">
+                <div class="account-container">
+                    <div class="left-panel">
+                        <h2>Thông tin cá nhân</h2>
+                        <form>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="Email" disabled>
+                            <label for="fullname">Họ và tên</label>
+                            <input type="text" id="name" placeholder="Nhập họ và tên">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="number" id="phone" value="Nhập số điện thoại" placeholder="Nhập số điện thoại">
 
-                        <label>Giới tính</label>
-                        <div class="gender">
-                            <label><input type="radio" name="gender" value="Nam"> Nam</label>
-                            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
-                            <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
-                        </div>
-                        <label>Ngày sinh</label>
-                        <div class="dob">
-                            <select id="day"><option>Ngày</option></select>
-                            <select id="month"><option>Tháng</option></select>
-                            <select id="year"><option>Năm</option></select>
-                        </div>
+                            <label for="gender">Giới tính</label>
+                            <div class="gender">
+                                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                                <label><input type="radio" name="gender" value="Khác" checked> Không xác định</label>
+                            </div>
+                            <label for="dob">Ngày sinh</label>
+                            <div class="dob">
+                                <select id="day">
+                                    <option>Ngày</option>
+                                </select>
+                                <select id="month">
+                                    <option>Tháng</option>
+                                </select>
+                                <select id="year">
+                                    <option>Năm</option>
+                                </select>
+                            </div>
 
-                        <div class="checkbox">
-                            <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
-                        </div>
-                        <button class="btn-update" type="submit">Cập nhật</button>
-                    </form>
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Tôi đồng ý với chính sách xử lý dữ liệu cá nhân</label>
+                            </div>
+                            <button class="btn-update" type="submit">Cập nhật</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
