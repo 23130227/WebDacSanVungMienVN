@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Phiếu giảm giá</title>
+    <link rel="stylesheet" href="css/AdminGlobal.css">
+    <link rel="stylesheet" href="css/AdminPhieuGiamGia.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <h3>Admin - DacSanVungMien</h3>
+            <p>Quản trị nội dung trang</p>
+        </div>
+        <div class="text-button">
+            <p>Xin chào, Admin</p>
+            <button>Đăng xuất</button>
+        </div>
+    </div>
+</header>
+<main>
+    <nav>
+        <div class="container-nav">
+            <a href="AdminTongQuan.html">Tổng quan</a>
+            <a href="AdminDanhMucSanPham.html">Danh mục sản phẩm</a>
+            <a href="AdminSanPham.html">Sản phẩm</a>
+            <a href="AdminKhuyenMai.html">Khuyến mãi</a>
+            <a href="AdminPhieuGiamGia.html" class="active">Phiếu giảm giá</a>
+            <a href="AdminTinTuc.html">Tin tức</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel-phieu-giam-gia">
+            <div class="panel-tao-phieu-giam-gia">
+                <h3>Tạo phiếu giảm giá</h3>
+                <form action="">
+                    <label>Mã phiếu giảm giá:<input type="text" placeholder="Nhập mã phiếu giảm giá..."></label>
+                    <label>Tên phiếu giảm giá:<input type="text" placeholder="Nhập tên phiếu giảm giá..."></label>
+                    <label>Phần trăm giảm giá:<input type="number" placeholder="Nhập phần trăm giảm giá..."></label>
+                    <label>Mô tả:<textarea placeholder="Nhập mô tả..."></textarea></label>
+                    <label>Đơn giá áp dụng:<input type="number" placeholder="Nhập đơn giá áp dụng..."></label>
+                    <label>Số lượng:<input type="number" placeholder="Nhập số lượng..."></label>
+                    <label>Ngày bắt đầu - kết thúc:
+                        <div class="two-col">
+                            <input type="date" name="start">
+                            <input type="date" name="end">
+                        </div>
+                    </label>
+                    <button>Tạo</button>
+                </form>
+            </div>
+            <div class="panel-danh-sach-phieu-giam-gia">
+                <h3>Danh sách phiếu giảm giá</h3>
+                <form class="search-bar">
+                    <label>Tìm kiếm phiếu giảm giá:<input type="text"
+                                                          placeholder="Nhập thông tin phiếu giảm giá..."></label>
+                    <button>Tìm kiếm</button>
+                </form>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Mã phiếu giảm giá</th>
+                        <th>Tên phiếu giảm giá</th>
+                        <th>Phần trăm giảm giá</th>
+                        <th>Đơn giá áp dụng</th>
+                        <th>Số lượng</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Hàng động</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>GMAHMHW</td>
+                        <td>Phiếu giảm giá 20%</td>
+                        <td>20%</td>
+                        <td>100.000đ</td>
+                        <td>15</td>
+                        <td>10/11/2025</td>
+                        <td>15/11/2025</td>
+                        <td>
+                            <button class="sua-button">Sửa</button>
+                            <button class="xoa-button">Xóa</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

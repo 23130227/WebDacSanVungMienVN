@@ -1,10 +1,10 @@
-main .panel-san-pham {
+main .panel-khuyen-mai {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-main .panel-them-san-pham {
+main .panel-them-khuyen-mai {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -20,35 +20,50 @@ main form {
     gap: 10px;
 }
 
-main label {
+main .khuyen-mai-san-pham {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
-main input {
+main .khuyen-mai-danh-muc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .label-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .khuyen-mai-san-pham input {
     height: 38px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding-left: 10px;
 }
 
-main select {
+main .khuyen-mai-danh-muc input, select {
     height: 38px;
     border: 1px solid #cccccc;
+    border-radius: 5px;
     padding-left: 10px;
-    border-radius: 5px;
 }
 
-main .choose-file {
-    border: none;
+main .two-col {
+    display: flex;
+    gap: 10px;
 }
 
-main textarea {
-    padding: 10px;
-    height: 50px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
+main .two-col input {
+    width: 100%;
+    padding-right: 10px;
+}
+
+main button {
+    cursor: pointer;
 }
 
 main form button {
@@ -61,7 +76,35 @@ main form button {
     border-radius: 5px;
 }
 
-main .panel-danh-sach-san-pham {
+main .search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+main .search-bar input {
+    height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+main .search-bar label {
+    width: 100%;
+}
+
+main .search-bar button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: hsl(211, 61%, 43%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+main .panel-danh-sach-khuyen-mai {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -102,23 +145,4 @@ main .xoa-button {
     font-weight: bold;
     border-radius: 5px;
     height: 30px;
-}
-
-main button {
-    cursor: pointer;
-}
-
-main .search-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-main .search-bar label {
-    width: 100%;
-}
-
-main .search-bar button {
-    width: 100px;
-    height: 40px;
 }

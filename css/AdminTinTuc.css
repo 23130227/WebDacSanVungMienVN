@@ -1,10 +1,10 @@
-main .panel-san-pham {
+main .panel-tin-tuc {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-main .panel-them-san-pham {
+main .panel-them-tin-tuc {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -61,7 +61,7 @@ main form button {
     border-radius: 5px;
 }
 
-main .panel-danh-sach-san-pham {
+main .panel-danh-sach-tin-tuc {
     display: flex;
     flex-direction: column;
     gap: 15px;

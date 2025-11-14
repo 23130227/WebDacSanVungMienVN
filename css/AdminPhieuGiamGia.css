@@ -1,10 +1,10 @@
-main .panel-san-pham {
+main .panel-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-main .panel-them-san-pham {
+main .panel-tao-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -33,22 +33,21 @@ main input {
     padding-left: 10px;
 }
 
-main select {
-    height: 38px;
-    border: 1px solid #cccccc;
-    padding-left: 10px;
-    border-radius: 5px;
-}
-
-main .choose-file {
-    border: none;
-}
-
 main textarea {
     padding: 10px;
     height: 50px;
     border-radius: 5px;
     border: 1px solid #cccccc;
+}
+
+main .two-col {
+    display: flex;
+    gap: 10px;
+}
+
+main .two-col input {
+    width: 100%;
+    padding-right: 10px;
 }
 
 main form button {
@@ -61,7 +60,7 @@ main form button {
     border-radius: 5px;
 }
 
-main .panel-danh-sach-san-pham {
+main .panel-danh-sach-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 15px;
