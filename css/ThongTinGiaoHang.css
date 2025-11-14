@@ -187,6 +187,16 @@ main .address-header .address-form button:hover {
     font-size: 14px;
     line-height: 1.5;
 }
+main .address-list i{
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    top: 25%;
+    left: 200px;
+}
+main .address-list i:hover{
+    color: #1e7e34;
+}
 main .address-list .delete-address {
     position: absolute;
     top: 50%;
