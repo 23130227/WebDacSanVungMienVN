@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Tin tức</title>
+    <link rel="stylesheet" href="css/AdminGlobal.css">
+    <link rel="stylesheet" href="css/AdminTinTuc.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <h3>Admin - DacSanVungMien</h3>
+            <p>Quản trị nội dung trang</p>
+        </div>
+        <div class="text-button">
+            <p>Xin chào, Admin</p>
+            <button>Đăng xuất</button>
+        </div>
+    </div>
+</header>
+<main>
+    <nav>
+        <div class="container-nav">
+            <a href="AdminTongQuan.html">Tổng quan</a>
+            <a href="AdminDanhMucSanPham.html">Danh mục sản phẩm</a>
+            <a href="AdminSanPham.html"">Sản phẩm</a>
+            <a href="AdminKhuyenMai.html">Khuyến mãi</a>
+            <a href="AdminPhieuGiamGia.html">Phiếu giảm giá</a>
+            <a href="AdminTinTuc.html" class="active">Tin tức</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel-tin-tuc">
+            <h2>Tin tức</h2>
+            <div class="panel-them-tin-tuc">
+                <h3>Thêm tin tức</h3>
+                <form action="" method="post">
+                    <label>Tiêu đề:<input type="text" placeholder="Nhập tiêu đề..."></label>
+                    <label>Tên tác giả:<input type="text" placeholder="Nhập tên tác giả..."></label>
+                    <label>Ảnh tin tức:<input class="choose-file" type="file"></label>
+                    <label>Nội dung:<textarea placeholder="Viết nội dung tin tức..."></textarea></label>
+                    <button>Thêm</button>
+                </form>
+            </div>
+            <div class="panel-danh-sach-tin-tuc">
+                <h3>Danh sách tin tức</h3>
+                <form class="search-bar">
+                    <label>Tìm kiếm tin tức:<input type="text" placeholder="Nhập thông tin tin tức..."></label>
+                    <button>Tìm kiếm</button>
+                </form>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Mã tin tức</th>
+                        <th>Tiêu đề</th>
+                        <th>Tác giả</th>
+                        <th>Ngày đăng</th>
+                        <th>Hành động</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Mùa hoa súng ở Ninh Bình 2025 hút hồn du khách</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>10/11/2025</td>
+                        <td>
+                            <button class="sua-button">Sửa</button>
+                            <button class="xoa-button">Xóa</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

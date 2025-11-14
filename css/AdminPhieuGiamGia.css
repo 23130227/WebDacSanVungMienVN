@@ -1,10 +1,10 @@
-main .panel-khuyen-mai {
+main .panel-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-main .panel-them-khuyen-mai {
+main .panel-tao-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -20,36 +20,24 @@ main form {
     gap: 10px;
 }
 
-main .khuyen-mai-san-pham {
+main label {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
-main .khuyen-mai-danh-muc {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-main .label-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-main .khuyen-mai-san-pham input {
+main input {
     height: 38px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding-left: 10px;
 }
 
-main .khuyen-mai-danh-muc input, select {
-    height: 38px;
-    border: 1px solid #cccccc;
+main textarea {
+    padding: 10px;
+    height: 50px;
     border-radius: 5px;
-    padding-left: 10px;
+    border: 1px solid #cccccc;
 }
 
 main .two-col {
@@ -62,10 +50,6 @@ main .two-col input {
     padding-right: 10px;
 }
 
-main button {
-    cursor: pointer;
-}
-
 main form button {
     width: 60px;
     height: 30px;
@@ -76,35 +60,7 @@ main form button {
     border-radius: 5px;
 }
 
-main .search-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-main .search-bar input {
-    height: 38px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding-left: 10px;
-}
-
-main .search-bar label {
-    width: 100%;
-}
-
-main .search-bar button {
-    width: 100px;
-    height: 40px;
-    border: none;
-    background-color: hsl(211, 61%, 43%);
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-main .panel-danh-sach-khuyen-mai {
+main .panel-danh-sach-phieu-giam-gia {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -145,4 +101,23 @@ main .xoa-button {
     font-weight: bold;
     border-radius: 5px;
     height: 30px;
+}
+
+main button {
+    cursor: pointer;
+}
+
+main .search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+main .search-bar label {
+    width: 100%;
+}
+
+main .search-bar button {
+    width: 100px;
+    height: 40px;
 }
