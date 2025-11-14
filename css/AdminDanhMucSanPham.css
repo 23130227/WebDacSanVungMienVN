@@ -16,14 +16,15 @@ main .panel-them-danh-muc {
 
 main .panel-them-danh-muc input {
     width: 225px;
-    height: 28px;
+    height: 38px;
     border-radius: 5px;
     border: 1px solid #cccccc;
+    padding-left: 10px;
 }
 
 main .panel-them-danh-muc button {
     width: 60px;
-    height: 30px;
+    height: 40px;
     background-color: hsl(211, 61%, 43%);
     border: none;
     color: white;
