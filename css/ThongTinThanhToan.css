@@ -73,7 +73,9 @@ main .table-information .row .address-info {
     color: #333;
     font-size: 15px;
 }
-
+main .section-thanh-toan .information .table-information .address-container a{
+    text-decoration: none;
+}
 .address-container .change {
     display: flex;
     flex-direction: column;
