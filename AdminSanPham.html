@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Sản phẩm</title>
+    <link rel="stylesheet" href="css/AdminGlobal.css">
+    <link rel="stylesheet" href="css/AdminSanPham.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <h3>Admin - DacSanVungMien</h3>
+            <p>Quản trị nội dung trang</p>
+        </div>
+        <div class="text-button">
+            <p>Xin chào, Admin</p>
+            <button>Đăng xuất</button>
+        </div>
+    </div>
+</header>
+<main>
+    <nav>
+        <div class="container-nav">
+            <a href="AdminTongQuan.html">Tổng quan</a>
+            <a href="AdminDanhMucSanPham.html">Danh mục sản phẩm</a>
+            <a href="AdminSanPham.html" class="active">Sản phẩm</a>
+            <a href="">Khuyến mãi</a>
+            <a href="">Phiếu giảm giá</a>
+            <a href="">Tin tức</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel-san-pham">
+            <h2>Sản phẩm</h2>
+            <div class="panel-them-san-pham">
+                <h3>Thêm sản phẩm</h3>
+                <form action="" method="post">
+                    <label>Tên sản phẩm:<input type="text" placeholder="Nhập tên sản phẩm..."></label>
+                    <label>Danh mục:
+                        <select>
+                            <option value="Chọn danh mục">Chọn danh mục</option>
+                            <option value="Ăn vặt">Ăn vặt</option>
+                            <option value="Gia vị">Gia vị</option>
+                        </select>
+                    </label>
+                    <label>Đơn giá (VNĐ):<input type="number" placeholder="Nhập đơn giá..."></label>
+                    <label>Ảnh sản phẩm:<input class="choose-file" type="file"></label>
+                    <label>Số lượng: <input type="number" placeholder="Nhập số lượng..."></label>
+                    <label>Thương hiệu:<input type="text" placeholder="Nhập thương hiệu..."></label>
+                    <label>Thành phần:<input type="text" placeholder="Nhập thành phần..."></label>
+                    <label>Bảo quản:<input type="text" placeholder="Nhập cách bảo quản..."></label>
+                    <label>Cách dùng:<input type="text" placeholder="Nhập cách dùng..."></label>
+                    <label>Quy cách:<input type="text" placeholder="Nhập quy cách..."></label>
+                    <label>Mô tả:<textarea placeholder="Nhập mô tả..."></textarea></label>
+                    <button>Thêm</button>
+                </form>
+            </div>
+            <div class="panel-danh-sach-san-pham">
+                <h3>Danh sách sản phẩm</h3>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Danh mục</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Hàng động</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Nước mắm phú quốc</td>
+                        <td>Gia vị</td>
+                        <td>100.000đ</td>
+                        <td>15</td>
+                        <td>
+                            <button class="sua-button">Sửa</button>
+                            <button class="xoa-button">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Bánh men</td>
+                        <td>Ăn vặt</td>
+                        <td>50.000đ</td>
+                        <td>20</td>
+                        <td>
+                            <button class="sua-button">Sửa</button>
+                            <button class="xoa-button">Xóa</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
