@@ -1,10 +1,11 @@
 main {
-    padding:20px;
+    padding: 20px;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 main .success-container {
     border-radius: 10px;
     text-align: center;
@@ -27,16 +28,10 @@ main .success-container h1 {
     margin-bottom: 16px;
 }
 
-main .success-container .order-info {
+main .success-container .info {
     font-size: 18px;
     color: dimgray;
-    margin-bottom: 8px;
-}
-
-main .success-container .payment-type {
-    font-size: 16px;
-    color: gray;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 main .success-container .back-btn {
@@ -49,6 +44,7 @@ main .success-container .back-btn {
     cursor: pointer;
 
 }
+
 main .success-container .back-btn:hover {
     background-color: dodgerblue;
 }
