@@ -86,6 +86,35 @@ header .section-top .group {
     display: flex;
     gap: 15px;
 }
+header .section-top .sub-group{
+    position: relative;
+    cursor: pointer;
+}
+header .section-top .sub-group .text-login{
+    color: white;
+}
+header .section-top .sub-group .text-login .sub-login{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 180px;
+}
+header .section-top .sub-group .text-login .sub-login .sub-item{
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border: black solid 1px;
+
+}
+header .section-top .sub-group .text-login .sub-login .sub-item:hover{
+    background-color: #dddddd;
+}
+header .section-top .sub-group:hover .text-login .sub-login {
+    display: block;
+}
 
 header .section-top .sub-group {
     display: flex;

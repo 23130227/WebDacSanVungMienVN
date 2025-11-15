@@ -3,18 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartItems = document.querySelectorAll(".cart-item");
     const totalPriceElement = document.getElementById("total-price");
 
-    // Hàm tính tổng
-    function updateTotal() {
-        let total = 0;
-        cartItems.forEach(item => {
-            const priceText = item.querySelector(".price").textContent;
-            const quantity = parseInt(item.querySelector(".so-luong").value);
-            const price = parseInt(priceText.replace(/[^\d]/g, "")); // bỏ ký tự 'đ' và '.'
-            total += price * quantity;
-        });
-        totalPriceElement.textContent = total.toLocaleString("vi-VN") + "đ";
-    }
-
     // Gán sự kiện tăng/giảm cho từng sản phẩm
     cartItems.forEach(item => {
         const minusBtn = item.querySelector(".giam-button");
@@ -35,7 +23,4 @@ document.addEventListener("DOMContentLoaded", () => {
             updateTotal();
         });
     });
-
-    // Tính tổng lúc mới tải trang
-    updateTotal();
 });
