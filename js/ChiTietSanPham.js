@@ -13,3 +13,17 @@ tangButton.addEventListener("click", () => {
     let currentSoLuong = parseInt(soLuong.value);
     soLuong.value = currentSoLuong + 1;
 })
+
+const themVaoGioHangBtn = document.querySelector(".them-vao-gio-hang");
+themVaoGioHangBtn.addEventListener("click", () => {
+    addToCart()
+})
+
+let count = 0;
+
+function addToCart() {
+    count++;
+    const badge = document.getElementById('cart-count');
+    badge.textContent = count;
+    badge.style.display = "inline-block";
+}
