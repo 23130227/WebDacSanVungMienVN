@@ -92,9 +92,11 @@ header .section-top .sub-group{
 }
 header .section-top .sub-group .text-login{
     color: white;
+    font-weight: bold;
 }
 header .section-top .sub-group .text-login .sub-login{
     display: none;
+    font-weight: normal;
     position: absolute;
     top: 100%;
     left: 0;
