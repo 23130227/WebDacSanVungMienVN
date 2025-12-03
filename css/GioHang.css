@@ -77,10 +77,10 @@ main .cart-section .cart-container .cart-item .item-right .price {
     font-size: 17px;
     font-weight: bold;
 }
-main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong{
+main .cart-section .cart-container .cart-item .item-right .quantity-controls{
     display: flex;
 }
-main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong button{
+main .cart-section .cart-container .cart-item .item-right .quantity-controls button{
     display: flex;
     width: 35px;
     height: 35px;
@@ -91,7 +91,7 @@ main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong bu
     justify-content: center;
     align-items: center;
 }
-main .cart-section .cart-container .cart-item .item-right .tang-giam-so-luong input{
+main .cart-section .cart-container .cart-item .item-right .quantity-controls input{
     width: 35px;
     text-align: center;
 }

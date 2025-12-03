@@ -13,13 +13,13 @@ main .title-panel {
     margin-bottom: 15px;
 }
 
-main .don-hang-list {
+main .order-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-main .don-hang {
+main .order {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -27,17 +27,17 @@ main .don-hang {
     border-radius: 10px;
 }
 
-main .thong-tin-don-hang {
+main .order-info {
     display: flex;
     flex-direction: column;
 }
 
-main .ma-don-hang-xem-chi-tiet {
+main .order-header {
     display: flex;
     justify-content: space-between;
 }
 
-main .ngay-dat-trang-thai {
+main .order-meta {
     display: flex;
     justify-content: space-between;
 }
@@ -57,14 +57,14 @@ main img {
     height: 125px;
 }
 
-main .anh-san-pham {
+main .order-images {
     display: flex;
     gap: 20px;
     padding-bottom: 25px;
     border-bottom: 1px solid #cccccc;
 }
 
-main .tong-tien-panel {
+main .order-total {
     display: flex;
     justify-content: right;
 }
@@ -74,7 +74,7 @@ main .button-panel {
     justify-content: right;
 }
 
-main .mua-lai-button {
+main .reorder-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +90,6 @@ main .mua-lai-button {
     border: none;
 }
 
-main .mua-lai-button:hover {
+main .reorder-button:hover {
     opacity: 1;
 }

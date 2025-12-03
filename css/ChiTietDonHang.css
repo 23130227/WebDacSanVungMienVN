@@ -13,13 +13,13 @@ main .title-panel {
     margin-bottom: 15px;
 }
 
-main .thong-tin-product-list {
+main .order-details {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-main .thong-tin-panel {
+main .info-panel {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -27,12 +27,12 @@ main .thong-tin-panel {
     border-radius: 10px;
 }
 
-main .thong-tin {
+main .info-row {
     display: flex;
     justify-content: space-between;
 }
 
-main .thong-tin-title {
+main .info-title {
     border-bottom: 2px solid #cccccc;
     margin-bottom: 0;
     padding-bottom: 5px;
@@ -95,7 +95,7 @@ main .button-panel{
     position: sticky;
 }
 
-main .mua-lai-button {
+main .reorder-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +111,6 @@ main .mua-lai-button {
     cursor: pointer;
 }
 
-main .mua-lai-button:hover {
+main .reorder-button:hover {
     opacity: 1;
 }

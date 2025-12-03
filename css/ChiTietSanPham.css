@@ -1,4 +1,4 @@
-main .section-mua-hang {
+main .section-product-detail {
     margin-top: 50px;
 }
 
@@ -8,7 +8,7 @@ main img {
     border-radius: 5px;
 }
 
-main .anh-va-tuy-chon-mua-hang {
+main .product-wrapper {
     display: flex;
     gap: 30px;
 }
@@ -33,13 +33,13 @@ main .old-price {
     margin-bottom: 0;
 }
 
-main .chon-so-luong {
+main .quantity-selector {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-main .so-luong {
+main .quantity-input {
     width: 75px;
     text-align: center;
     height: 33px;
@@ -51,11 +51,11 @@ main .so-luong {
     font-size: 15px;
 }
 
-main .tang-giam-so-luong {
+main .quantity-controls {
     display: flex;
 }
 
-main .tang-giam-so-luong button {
+main .quantity-controls button {
     width: 35px;
     height: 35px;
     border: none;
@@ -64,7 +64,7 @@ main .tang-giam-so-luong button {
     font-size: 20px;
 }
 
-main .them-vao-gio-hang {
+main .add-to-cart-button {
     margin-top: 30px;
     width: 200px;
     height: 50px;
@@ -78,7 +78,7 @@ main .them-vao-gio-hang {
     border-radius: 5px;
 }
 
-main .them-vao-gio-hang:hover {
+main .add-to-cart-button:hover {
     opacity: 1;
 }
 
@@ -86,17 +86,17 @@ main p:last-child {
     margin-bottom: 0;
 }
 
-main .mo-ta-san-pham .title {
+main .product-description .title {
     border-bottom: 2px solid #cccccc;
     padding-bottom: 5px;
 }
 
-main .mo-ta-image-panel {
+main .description-image-panel {
     display: flex;
     justify-content: center;
 }
 
-main .mo-ta-image {
+main .description-image {
     width: 600px;
     height: 350px;
 }

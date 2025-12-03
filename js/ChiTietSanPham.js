@@ -1,6 +1,6 @@
-const giamButton = document.querySelector(".giam-button");
-const tangButton = document.querySelector(".tang-button");
-const soLuong = document.querySelector(".so-luong");
+const giamButton = document.querySelector(".decrease-button");
+const tangButton = document.querySelector(".increase-button");
+const soLuong = document.querySelector(".quantity-input");
 
 giamButton.addEventListener("click", () => {
     let currentSoLuong = parseInt(soLuong.value);
@@ -14,7 +14,7 @@ tangButton.addEventListener("click", () => {
     soLuong.value = currentSoLuong + 1;
 })
 
-const themVaoGioHangBtn = document.querySelector(".them-vao-gio-hang");
+const themVaoGioHangBtn = document.querySelector(".add-to-cart-button");
 themVaoGioHangBtn.addEventListener("click", () => {
     addToCart()
 })

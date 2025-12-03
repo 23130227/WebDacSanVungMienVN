@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Gán sự kiện tăng/giảm cho từng sản phẩm
     cartItems.forEach(item => {
-        const minusBtn = item.querySelector(".giam-button");
-        const plusBtn = item.querySelector(".tang-button");
-        const quantityInput = item.querySelector(".so-luong");
+        const minusBtn = item.querySelector(".decrease-button");
+        const plusBtn = item.querySelector(".increase-button");
+        const quantityInput = item.querySelector(".quantity-input");
 
         minusBtn.addEventListener("click", () => {
             let current = parseInt(quantityInput.value);
