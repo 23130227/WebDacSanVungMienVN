@@ -78,6 +78,7 @@
                     <th>Giá</th>
                     <th>Thương hiệu</th>
                     <th>Danh mục</th>
+                    <th>Vùng miền</th>
                     <th>Tồn kho</th>
                     <th>Đã bán</th>
                     <th>Thao tác</th>
@@ -90,6 +91,7 @@
                     <td>Lạp xưởng Đà Lạt</td>
                     <td>120,000đ</td>
                     <td>Đặc sản Đà Lạt</td>
+                    <td>Thực phẩm chế biến</td>
                     <td>Miền Nam</td>
                     <td>50</td>
                     <td>120</td>
@@ -108,6 +110,7 @@
                     <td>85,000đ</td>
                     <td>Tân Huê Viên</td>
                     <td>Bánh</td>
+                    <td>Miền Nam</td>
                     <td>100</td>
                     <td>250</td>
                     <td class="actions">
@@ -122,6 +125,7 @@
                     <td>Nước mắm Phú Quốc</td>
                     <td>95,000đ</td>
                     <td>Phú Quốc</td>
+                    <td>Gia vị</td>
                     <td>Miền Nam</td>
                     <td>80</td>
                     <td>180</td>
@@ -137,6 +141,7 @@
                     <td>Nem chua Thanh Hóa</td>
                     <td>75,000đ</td>
                     <td>Thanh Hóa</td>
+                    <td>Thực phẩm chế biến</td>
                     <td>Miền Bắc</td>
                     <td>60</td>
                     <td>95</td>
@@ -153,6 +158,7 @@
                     <td>180,000đ</td>
                     <td>Sơn La</td>
                     <td>Trà</td>
+                    <td>Miền Bắc</td>
                     <td>40</td>
                     <td>75</td>
                     <td class="actions">
@@ -193,7 +199,8 @@
                     <p style="margin-bottom: 10px;"><strong>ID:</strong> 1</p>
                     <p style="margin-bottom: 10px;"><strong>Giá:</strong> <span style="color: #e74c3c; font-size: 18px; font-weight: bold;">120,000đ</span></p>
                     <p style="margin-bottom: 10px;"><strong>Thương hiệu:</strong> Đặc sản Đà Lạt</p>
-                    <p style="margin-bottom: 10px;"><strong>Danh mục:</strong> Miền Nam</p>
+                    <p style="margin-bottom: 10px;"><strong>Danh mục:</strong> Thực phẩm chế biến</p>
+                    <p style="margin-bottom: 10px;"><strong>Vùng miền:</strong> Miền Nam</p>
                     <p style="margin-bottom: 10px;"><strong>Quy cách:</strong> 500g</p>
                     <p style="margin-bottom: 10px;"><strong>Tồn kho:</strong> <span class="badge badge-success">50</span></p>
                     <p style="margin-bottom: 10px;"><strong>Đã bán:</strong> 120</p>
@@ -259,17 +266,28 @@
                         <label>Danh mục *</label>
                         <select name="category" required>
                             <option value="">-- Chọn danh mục --</option>
-                            <option value="1">Miền Bắc</option>
-                            <option value="2">Miền Trung</option>
-                            <option value="3">Miền Nam</option>
-                            <option value="4">Bánh</option>
-                            <option value="5">Trà</option>
+                            <option value="1">Bánh</option>
+                            <option value="2">Trà</option>
+                            <option value="3">Gia vị</option>
+                            <option value="4">Thực phẩm chế biến</option>
+                            <option value="5">Đồ khô</option>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Quy cách</label>
-                    <input type="text" name="specification" placeholder="VD: 500g, 1kg, Hộp 10 cái...">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vùng miền *</label>
+                        <select name="region" required>
+                            <option value="">-- Chọn vùng miền --</option>
+                            <option value="Miền Bắc">Miền Bắc</option>
+                            <option value="Miền Trung">Miền Trung</option>
+                            <option value="Miền Nam">Miền Nam</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quy cách</label>
+                        <input type="text" name="specification" placeholder="VD: 500g, 1kg, Hộp 10 cái...">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Mô tả sản phẩm</label>
@@ -333,17 +351,28 @@
                         <label>Danh mục *</label>
                         <select name="category" required>
                             <option value="">-- Chọn danh mục --</option>
-                            <option value="1">Miền Bắc</option>
-                            <option value="2">Miền Trung</option>
-                            <option value="3" selected>Miền Nam</option>
-                            <option value="4">Bánh</option>
-                            <option value="5">Trà</option>
+                            <option value="1">Bánh</option>
+                            <option value="2">Trà</option>
+                            <option value="3">Gia vị</option>
+                            <option value="4" selected>Thực phẩm chế biến</option>
+                            <option value="5">Đồ khô</option>
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Quy cách</label>
-                    <input type="text" name="specification" value="500g">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vùng miền *</label>
+                        <select name="region" required>
+                            <option value="">-- Chọn vùng miền --</option>
+                            <option value="Miền Bắc">Miền Bắc</option>
+                            <option value="Miền Trung">Miền Trung</option>
+                            <option value="Miền Nam" selected>Miền Nam</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quy cách</label>
+                        <input type="text" name="specification" value="500g">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Mô tả sản phẩm</label>
@@ -363,4 +392,3 @@
 <script src="js/Admin.js"></script>
 </body>
 </html>
-
