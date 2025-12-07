@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Giỏ hàng - Admin</title>
+    <link rel="stylesheet" href="css/Admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="logo">
+            <h2><i class="fas fa-store"></i> DacSanVungMien</h2>
+            <p>Quản trị hệ thống</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="AdminDashboard.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+
+                <p class="menu-section">Quản lý sản phẩm</p>
+                <li><a href="AdminSanPham.html"><i class="fas fa-box"></i> <span>Sản phẩm</span></a></li>
+                <li><a href="AdminDanhMuc.html"><i class="fas fa-tags"></i> <span>Danh mục</span></a></li>
+                <li><a href="AdminThuongHieu.html"><i class="fas fa-trademark"></i> <span>Thương hiệu</span></a></li>
+                <li><a href="AdminBanner.html"><i class="fas fa-image"></i> <span>Banner</span></a></li>
+
+                <p class="menu-section">Khuyến mãi</p>
+                <li><a href="AdminKhuyenMaiSanPham.html"><i class="fas fa-percent"></i> <span>KM Sản phẩm</span></a></li>
+                <li><a href="AdminKhuyenMaiDanhMuc.html"><i class="fas fa-tag"></i> <span>KM Danh mục</span></a></li>
+                <li><a href="AdminPhieuGiamGia.html"><i class="fas fa-ticket-alt"></i> <span>Phiếu giảm giá</span></a></li>
+
+                <p class="menu-section">Đơn hàng</p>
+                <li><a href="AdminDonHang.html"><i class="fas fa-shopping-cart"></i> <span>Đơn hàng</span></a></li>
+                <li><a href="AdminGioHang.html" class="active"><i class="fas fa-cart-plus"></i> <span>Giỏ hàng</span></a></li>
+
+                <p class="menu-section">Người dùng</p>
+                <li><a href="AdminNguoiDung.html"><i class="fas fa-users"></i> <span>Người dùng</span></a></li>
+                <li><a href="AdminDiaChiGiao.html"><i class="fas fa-map-marker-alt"></i> <span>Địa chỉ giao</span></a></li>
+                <li><a href="AdminDanhGia.html"><i class="fas fa-star"></i> <span>Đánh giá</span></a></li>
+
+                <p class="menu-section">Nội dung</p>
+                <li><a href="AdminTinTuc.html"><i class="fas fa-newspaper"></i> <span>Tin tức</span></a></li>
+
+                <p class="menu-section">Hệ thống</p>
+                <li><a href="TrangChu.html"><i class="fas fa-external-link-alt"></i> <span>Xem Website</span></a></li>
+                <li><a href="DangNhap.html"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1>Quản lý Giỏ hàng</h1>
+            <div class="user-info">
+                <span>Xin chào, Admin</span>
+                <img src="images/user.png" alt="Admin">
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h2><i class="fas fa-cart-plus"></i> Danh sách giỏ hàng của khách hàng</h2>
+                    <div class="table-actions">
+                        <input type="text" class="search-box" placeholder="Tìm kiếm theo email hoặc tên...">
+                    </div>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID Giỏ</th>
+                            <th>Người dùng</th>
+                            <th>Email</th>
+                            <th>Số sản phẩm</th>
+                            <th>Tổng giá trị</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>nguyenvana@gmail.com</td>
+                            <td>3</td>
+                            <td>450,000đ</td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem chi tiết" onclick="openModal('detailModal')"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>tranthib@gmail.com</td>
+                            <td>5</td>
+                            <td>780,000đ</td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem chi tiết"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lê Văn C</td>
+                            <td>levanc@gmail.com</td>
+                            <td>2</td>
+                            <td>215,000đ</td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem chi tiết"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Phạm Thị D</td>
+                            <td>phamthid@gmail.com</td>
+                            <td>1</td>
+                            <td>120,000đ</td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem chi tiết"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Hoàng Văn E</td>
+                            <td>hoangvane@gmail.com</td>
+                            <td>4</td>
+                            <td>560,000đ</td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem chi tiết"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-eye"></i> Chi tiết giỏ hàng - Nguyễn Văn A</h3>
+                <button class="modal-close" onclick="closeModal('detailModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Email:</strong> nguyenvana@gmail.com</p>
+                </div>
+                <h4 style="margin-bottom: 10px; color: #2c3e50;">Sản phẩm trong giỏ</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/lapxuong-chitiet-1.png" alt="Lạp xưởng"></td>
+                            <td>Lạp xưởng Đà Lạt</td>
+                            <td>120,000đ</td>
+                            <td>2</td>
+                            <td>240,000đ</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/banhpia.png" alt="Bánh pía"></td>
+                            <td>Bánh pía Sóc Trăng</td>
+                            <td>85,000đ</td>
+                            <td>1</td>
+                            <td>85,000đ</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/trataxua.png" alt="Trà"></td>
+                            <td>Trà Tà Xùa</td>
+                            <td>125,000đ</td>
+                            <td>1</td>
+                            <td>125,000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="text-align: right; margin-top: 20px;">
+                    <p style="font-size: 18px; color: #8bc34a;"><strong>Tổng cộng:</strong> 450,000đ</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeModal('detailModal')">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Admin.js"></script>
+</body>
+</html>
+
