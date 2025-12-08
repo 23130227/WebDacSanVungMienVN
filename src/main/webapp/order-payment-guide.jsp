@@ -1,0 +1,148 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hướng dẫn đặt hàng và thanh toán</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/order-payment-guide.css">
+</head>
+<body>
+<header>
+    <section class="section-top">
+        <div class="container">
+            <a class="text text-logo" href="index.jsp">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='search-results.jsp'">
+                    <img src="images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="group">
+                <p class="text">
+                    Hotline: 0921955395
+                </p>
+                <div class="sub-group">
+                    <img src="images/user.png" height="24" width="24"/>
+                    <a class="text" href="login.jsp">
+                        Đăng nhập
+                    </a>
+                    <p class="text">/</p>
+                    <a class="text" href="register.jsp">
+                        Đăng ký
+                    </a>
+                </div>
+                <a class="sub-group" href="shopping-cart.jsp">
+                    <img src="images/grocery-store.png" height="24" width="24"/>
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
+                    <span id="cart-count" class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <nav>
+                <a class="item" href="index.jsp">Trang chủ</a>
+                <a class="item" href="about-us.jsp">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="category-products.jsp">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm mới</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="category-products.jsp">Mứt</a>
+                        <a class="sub-item" href="category-products.jsp">Trà</a>
+                        <a class="sub-item" href="category-products.jsp">Bánh</a>
+                        <a class="sub-item" href="category-products.jsp">Lạp xưởng</a>
+                    </div>
+                </div>
+                <a class="item" href="promotions.jsp">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="blog-news.jsp">Tin tức / blog</a>
+            </nav>
+        </div>
+    </section>
+</header>
+<main>
+    <section class="Huong-dan">
+        <div class="container">
+            <h1>Hướng dẫn đặt hàng & thanh toán</h1>
+            <p>Chúng tôi mang đến trải nghiệm mua sắm đặc sản vùng miền dễ dàng, tiện lợi. Dưới đây là các bước hướng dẫn cụ thể để bạn có thể đặt hàng nhanh chóng nhất. </p>
+
+            <div class="step">
+                <h2>Bước 1: Chọn sản phẩm bạn yêu thích</h2>
+                <p>Truy cập vào danh mục sản phẩm và chọn món đặc sản bạn muốn mua. Bạn có thể xem thông tin chi tiết, giá cả và đánh giá của từng sản phẩm.</p>
+                <img src="https://i.postimg.cc/kXNB63y3/danhmucsanpham.png" alt="Chọn sản phẩm" class="guide-image"/>
+            </div>
+            <div class="step">
+                <h2>Bước 2: Thêm sản phẩm vào giỏ hàng</h2>
+                <p>Nhấn nút <strong>“Thêm vào giỏ hàng”</strong> để lưu sản phẩm. Bạn có thể tiếp tục mua sắm hoặc vào giỏ hàng để kiểm tra lại đơn hàng.</p>
+                <img src="https://i.postimg.cc/sgp9gNMV/chitiecsanpham.png" alt="Thêm vào giỏ hàng" class="guide-image"/>
+            </div>
+            <div class="step">
+                <h2>Bước 3: Đặt đơn hàng</h2>
+                <p>Sau khi kiểm tra giỏ hàng, bạn chọn <strong>“Đặt hàng”</strong></p>
+                <img src="https://i.postimg.cc/zvFRTVgT/giohang.png" alt="Đặt đơn hàng" class="guide-image"/>
+                
+            </div>
+            <div class="step">
+                <h2>Bước 4: Thanh toán đơn hàng</h2>
+                <p>Sau khi bấm đặt hàng, bạn kiểm tra xem đủ sản phẩm bạn muốn mua hay chưa. Nếu đã đủ, bạn vui lòng điển đầy đủ thông tin nhận hàng và chọn hình thức thanh toán. Sau đó hãy nhấm nút <strong>"Thanh toán</strong> để hoàn tất đơn hàng</p>
+                <img src="https://i.postimg.cc/4xsR8nh6/thanhtoan.png" alt="Thanh toán đơn hàng" class="guide-image"/>
+
+            </div>
+            <div class="step">
+                <h2>Bước 5: Xác nhận & nhận hàng</h2>
+                <p>Nhân viên của chúng tôi sẽ liên hệ xác nhận đơn hàng. Đơn hàng sẽ được giao tận nơi theo thời gian dự kiến.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <section class="section-top">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+            <div class="ho-tro-khach-hang">
+                <h4>Hỗ trợ khách hàng</h4>
+                <a href="faq.jsp">Câu hỏi thường gặp</a>
+                <a href="HuongDanDatHangVaThanhToan.html">Hướng dẫn đạt hàng và thanh toán</a>
+                <a href="shipping-policy.jsp">Chính sách giao hàng</a>
+                <a href="return-policy.jsp">Chính sách đổi trả</a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <img src="images/facebook.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/tik-tok.png" height="64" width="64"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <p>Copyright 2025 ©. Designed by Nhóm 13</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

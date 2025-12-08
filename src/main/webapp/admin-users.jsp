@@ -1,0 +1,354 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Người dùng - Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="logo">
+            <h2><i class="fas fa-store"></i> DacSanVungMien</h2>
+            <p>Quản trị hệ thống</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.jsp"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+
+                <p class="menu-section">Quản lý sản phẩm</p>
+                <li><a href="admin-products.jsp"><i class="fas fa-box"></i> <span>Sản phẩm</span></a></li>
+                <li><a href="admin-categories.jsp"><i class="fas fa-tags"></i> <span>Danh mục</span></a></li>
+                <li><a href="admin-brands.jsp"><i class="fas fa-trademark"></i> <span>Thương hiệu</span></a></li>
+                <li><a href="admin-banners.jsp"><i class="fas fa-image"></i> <span>Banner</span></a></li>
+
+                <p class="menu-section">Khuyến mãi</p>
+                <li><a href="admin-product-promotions.jsp"><i class="fas fa-percent"></i> <span>KM Sản phẩm</span></a></li>
+                <li><a href="admin-category-promotions.jsp"><i class="fas fa-tag"></i> <span>KM Danh mục</span></a></li>
+                <li><a href="admin-discount-vouchers.jsp"><i class="fas fa-ticket-alt"></i> <span>Phiếu giảm giá</span></a></li>
+
+                <p class="menu-section">Đơn hàng</p>
+                <li><a href="admin-orders.jsp"><i class="fas fa-shopping-cart"></i> <span>Đơn hàng</span></a></li>
+
+                <p class="menu-section">Người dùng</p>
+                <li><a href="AdminNguoiDung.html" class="active"><i class="fas fa-users"></i> <span>Người dùng</span></a></li>
+                <li><a href="admin-shipping-info.jsp"><i class="fas fa-map-marker-alt"></i> <span>Địa chỉ giao</span></a></li>
+                <li><a href="admin-reviews.jsp"><i class="fas fa-star"></i> <span>Đánh giá</span></a></li>
+
+                <p class="menu-section">Nội dung</p>
+                <li><a href="admin-news.jsp"><i class="fas fa-newspaper"></i> <span>Tin tức</span></a></li>
+
+                <p class="menu-section">Hệ thống</p>
+                <li><a href="index.jsp"><i class="fas fa-external-link-alt"></i> <span>Xem Website</span></a></li>
+                <li><a href="login.jsp"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1>Quản lý Người dùng</h1>
+            <div class="user-info">
+                <span>Xin chào, Admin</span>
+                <img src="images/user.png" alt="Admin">
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h2><i class="fas fa-users"></i> Danh sách người dùng</h2>
+                    <div class="table-actions">
+                        <select class="search-box" style="width: 150px;">
+                            <option value="">Tất cả</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                        <input type="text" class="search-box" placeholder="Tìm kiếm người dùng...">
+                        <button class="btn btn-primary" onclick="openModal('addModal')">
+                            <i class="fas fa-plus"></i> Thêm mới
+                        </button>
+                    </div>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>SĐT</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>Vai trò</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Admin</td>
+                            <td>admin@dacsanvungmien.com</td>
+                            <td>0921955395</td>
+                            <td>Nam</td>
+                            <td>01/01/1990</td>
+                            <td><span class="badge badge-danger">Admin</span></td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem" onclick="openModal('viewModal')"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>nguyenvana@gmail.com</td>
+                            <td>0901234567</td>
+                            <td>Nam</td>
+                            <td>15/05/1995</td>
+                            <td><span class="badge badge-info">User</span></td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem" onclick="openModal('viewModal')"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" title="Xóa" onclick="confirmDelete()"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Trần Thị B</td>
+                            <td>tranthib@gmail.com</td>
+                            <td>0912345678</td>
+                            <td>Nữ</td>
+                            <td>20/08/1998</td>
+                            <td><span class="badge badge-info">User</span></td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem" onclick="openModal('viewModal')"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" title="Xóa" onclick="confirmDelete()"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Lê Văn C</td>
+                            <td>levanc@gmail.com</td>
+                            <td>0923456789</td>
+                            <td>Nam</td>
+                            <td>10/12/1992</td>
+                            <td><span class="badge badge-info">User</span></td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem" onclick="openModal('viewModal')"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" title="Xóa" onclick="confirmDelete()"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Phạm Thị D</td>
+                            <td>phamthid@gmail.com</td>
+                            <td>0934567890</td>
+                            <td>Nữ</td>
+                            <td>25/03/2000</td>
+                            <td><span class="badge badge-info">User</span></td>
+                            <td class="actions">
+                                <button class="btn btn-info btn-sm" title="Xem" onclick="openModal('viewModal')"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-danger btn-sm" title="Xóa" onclick="confirmDelete()"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- View Modal -->
+    <div class="modal" id="viewModal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-eye"></i> Chi tiết người dùng</h3>
+                <button class="modal-close" onclick="closeModal('viewModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee; width: 40%;"><strong>ID:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">2</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Họ tên:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">Nguyễn Văn A</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Email:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">nguyenvana@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Số điện thoại:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">0901234567</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Giới tính:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">Nam</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Ngày sinh:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;">15/05/1995</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Vai trò:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #eee;"><span class="badge badge-info">User</span></td>
+                    </tr>
+                </table>
+                <div style="margin-top: 20px;">
+                    <h4 style="color: #2c3e50; margin-bottom: 10px;"><i class="fas fa-shopping-bag"></i> Thống kê</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                            <p style="font-size: 24px; color: #8bc34a; font-weight: bold;">12</p>
+                            <p style="color: #666;">Đơn hàng</p>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+                            <p style="font-size: 24px; color: #3498db; font-weight: bold;">2.5M</p>
+                            <p style="color: #666;">Tổng chi tiêu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeModal('viewModal')">Đóng</button>
+                <button class="btn btn-warning" onclick="closeModal('viewModal'); openModal('editModal');">
+                    <i class="fas fa-edit"></i> Chỉnh sửa
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Modal -->
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Thêm người dùng mới</h3>
+                <button class="modal-close" onclick="closeModal('addModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addUserForm">
+                    <div class="form-group">
+                        <label>Họ tên *</label>
+                        <input type="text" name="full_name" required placeholder="Nhập họ tên">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required placeholder="Nhập email">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu *</label>
+                        <input type="password" name="password" required placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <input type="tel" name="phone_number" placeholder="Nhập SĐT">
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày sinh</label>
+                            <input type="date" name="date_of_birth">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Giới tính</label>
+                            <select name="gender">
+                                <option value="Không xác định">Không xác định</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Vai trò *</label>
+                            <select name="role" required>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeModal('addModal')">Hủy</button>
+                <button class="btn btn-primary" onclick="saveUser()">
+                    <i class="fas fa-save"></i> Lưu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Sửa thông tin người dùng</h3>
+                <button class="modal-close" onclick="closeModal('editModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <div class="form-group">
+                        <label>Họ tên *</label>
+                        <input type="text" name="full_name" required value="Nguyễn Văn A">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required value="nguyenvana@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu mới (để trống nếu không đổi)</label>
+                        <input type="password" name="password" placeholder="Nhập mật khẩu mới">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <input type="tel" name="phone_number" value="0901234567">
+                        </div>
+                        <div class="form-group">
+                            <label>Ngày sinh</label>
+                            <input type="date" name="date_of_birth" value="1995-05-15">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Giới tính</label>
+                            <select name="gender">
+                                <option value="Không xác định">Không xác định</option>
+                                <option value="Nam" selected>Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Vai trò *</label>
+                            <select name="role" required>
+                                <option value="user" selected>User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" onclick="closeModal('editModal')">Hủy</button>
+                <button class="btn btn-primary" onclick="updateUser()">
+                    <i class="fas fa-save"></i> Cập nhật
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
+

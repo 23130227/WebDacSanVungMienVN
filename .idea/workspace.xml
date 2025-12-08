@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0bf0ef8c-b490-4a7d-990a-0f3bcbefc31f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/webdacsanvungmienvn/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WebDacSanVungMienVN.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminBanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-banners.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminDanhGia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-reviews.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminDanhMuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-categories.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminDiaChiGiao.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-shipping-info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminDonHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminKhuyenMaiDanhMuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-category-promotions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminKhuyenMaiSanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-product-promotions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminNguoiDung.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminPhieuGiamGia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-discount-vouchers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminSanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminThuongHieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-brands.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminTinTuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CauHoiThuongGap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/faq.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChiTietDonHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChiTietSanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChiTietTinTucBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog-news-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChinhSachDoiTra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/return-policy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChinhSachGiaoHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shipping-policy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DangKy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DangNhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoiMatKhau.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/change-password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GioHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GioiThieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about-us.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HuongDanDatHangVaThanhToan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order-payment-guide.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KetQuaTimKiem.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/search-results.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KhuyenMaiUuDai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/promotions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LichSuMuaHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order-history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhieuGiamGia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/discount-vouchers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuenMatKhau.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forgot-password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SanPhamTheoDanhMuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/category-products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThanhCong.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThanhToanOnline.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/online-payment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThongTinCaNhan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personal-info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThongTinGiaoHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shipping-info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThongTinThanhToan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payment-info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TinTucBlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog-news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrangChu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrangChuLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index-login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/CauHoiThuongGap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/faq.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChiTietDonHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/order-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChiTietSanPham.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/product-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChiTietTinTucBlog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/blog-news-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChinhSachDoiTra.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/return-policy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ChinhSachGiaoHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/shipping-policy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/DangKy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/DangNhap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/DoiMatKhau.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/change-password.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/GioHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/shopping-cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/GioiThieu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/about-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/HuongDanDatHangVaThanhToan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/order-payment-guide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/KetQuaTimKiem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/search-results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/KhuyenMaiUuDai.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/promotions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/LichSuMuaHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/order-history.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/PhieuGiamGia.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/discount-vouchers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/QuenMatKhau.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/forgot-password.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/SanPhamTheoDanhMuc.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/category-products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ThanhCong.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/success.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ThanhToanOnline.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/online-payment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ThongTinCaNhan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/personal-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ThongTinGiaoHang.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/shipping-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ThongTinThanhToan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/payment-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/TinTucBlog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/blog-news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/TrangChu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Du-lich-mien-Nam-thang-1-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/Du-lich-mien-Nam-thang-1-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bakhiatron.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/bakhiatron.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhdake.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhdake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhmen.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhmen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhmexat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhmexat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhphongsua.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhphongsua.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhphuthe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhphuthe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banhpia.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banhpia.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banner1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banner2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/banner3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/best-seller.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/best-seller.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/blog_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/blog_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/blog_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/blog_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/blog_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/comdep.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/comdep.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/coupon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/coupon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/duasap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/duasap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/grocery-store.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/grocery-store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ho-hoan-kiem-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/ho-hoan-kiem-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/keodua.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/keodua.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lacxuong.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/lacxuong.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lapxuong-chitiet-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/lapxuong-chitiet-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mamChauDoc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/mamChauDoc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mamruocHue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/mamruocHue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mien-trung.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/mien-trung.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/muoitayninh.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/muoitayninh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nemchuaThanhHoa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nemchuaThanhHoa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/new.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/new.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nuocmamPhuQuoc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nuocmamPhuQuoc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nuoctuongNamDan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/nuoctuongNamDan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/qrcode_273266081_b62d8ebe95ba10a0757d30a9dbeea78b.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/qrcode_273266081_b62d8ebe95ba10a0757d30a9dbeea78b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sale-tag.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/sale-tag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sale.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/sale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tik-tok.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/tik-tok.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/trataxua.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/trataxua.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/traugacbep.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/traugacbep.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/trerom.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/trerom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/AdminKhuyenMai.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin-promotions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/CauHoiThuongGap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/faq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ChiTietSanPham.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/product-detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/DanhSachSanPhamTheoDanhMuc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/category-products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/GioHang.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shopping-cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/PhieuMuaHang.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/discount-vouchers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/TrangChu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "23130227"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/23130227/WebDacSanVungMienVN.git",
+    "accountId": "f096bfe4-802e-4a90-981a-82b6518e1400"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="36Z0v4iEzEIF9T0woLRZRzsFETg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "jakarta-ee",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ACER/IdeaProjects/WebDacSanVungMienVN",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0bf0ef8c-b490-4a7d-990a-0f3bcbefc31f" name="Changes" comment="" />
+      <created>1765199015624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765199015624</updated>
+      <workItem from="1765199017298" duration="339000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
