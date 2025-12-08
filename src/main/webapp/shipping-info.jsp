@@ -1,0 +1,181 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin giao hàng</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/shipping-info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <section class="section-top">
+        <div class="container">
+            <a class="text text-logo" href="index.jsp">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='KetQuaTimKiem.html'">
+                    <img src="images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="group">
+                <p class="text">
+                    Hotline: 0921955395
+                </p>
+                <div class="sub-group">
+                    <img src="images/user.png" height="24" width="24"/>
+                    <div class="text-login">
+                        Nguyễn Văn A
+                        <div class="sub-login">
+                            <a class="sub-item" href="personal-info.jsp">Thông tin cá nhân</a>
+                            <a class="sub-item" href="shipping-info.html">Thông giao hàng</a>
+                            <a class="sub-item" href="order-history.jsp">Lịch sử mua hàng</a>
+                            <a class="sub-item" href="change-password.jsp">Đổi mật khẩu</a>
+                            <a class="sub-item" href="index.jsp">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="sub-group" href="shopping-cart.jsp">
+                    <img src="images/grocery-store.png" height="24" width="24"/>
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
+                    <span id="cart-count" class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <nav>
+                <a class="item" href="index.jsp">Trang chủ</a>
+                <a class="item" href="about-us.jsp">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="category-products.jsp">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm mới</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="category-products.jsp">Mứt</a>
+                        <a class="sub-item" href="category-products.jsp">Trà</a>
+                        <a class="sub-item" href="category-products.jsp">Bánh</a>
+                        <a class="sub-item" href="category-products.jsp">Lạp xưởng</a>
+                    </div>
+                </div>
+                <a class="item" href="promotions.jsp">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="blog-news.jsp">Tin tức / blog</a>
+            </nav>
+        </div>
+    </section>
+</header>
+<main>
+
+    <div class="page-header">
+        <h1>📦 Thông tin giao hàng</h1>
+        <p>Quản lý thông tin giao hàng của bạn tại đây — chỉnh sửa hoặc cập nhật địa chỉ nhanh chóng và tiện lợi.</p>
+    </div>
+
+    <div class="address-layout">
+        <section class="address-header">
+            <form id="address-form" class="address-form">
+                <h2 class="form-title">Thêm thông tin giao hàng</h2>
+                <div class="row">
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i></label>
+                        <input type="text" id="name" placeholder="Tên người nhận">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-phone"></i></label>
+                        <input type="text" id="phone" placeholder="Số điện thoại người nhận">
+                    </div>
+                </div>
+
+                <div class="row-selects">
+                    <select id="province">
+                        <option>Tỉnh/Thành *</option>
+                    </select>
+                    <select id="district">
+                        <option>Quận/Huyện *</option>
+                    </select>
+                    <select id="ward">
+                        <option>Phường/Xã *</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-map-marker"></i></label>
+                    <input type="text" id="address" placeholder="Địa chỉ cụ thể">
+                </div>
+
+                <div class="actions">
+                    <button type="button">Thêm</button>
+                </div>
+            </form>
+        </section>
+        <section class="address-list">
+            <p>Danh sách địa chỉ giao hàng</p>
+            <div class = "address-list-container">
+                <a href="payment-info.jsp" class="address-item">
+                    <div class="address-info">
+                        <strong>Nguyễn Văn A</strong>
+                        <br>0123456789<br>
+                        Linh Trung, Thủ Đức, TP.HCM<br>
+                        Cư xá A, Đại học Nông Lâm
+                    </div>
+                </a>
+                <i class="fa-solid fa-pencil"></i>
+                <button type="button" class ="delete-address">Xóa</button>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<footer>
+    <section class="section-top">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+            <div class="ho-tro-khach-hang">
+                <h4>Hỗ trợ khách hàng</h4>
+                <a href="faq.jsp">Câu hỏi thường gặp</a>
+                <a href="order-payment-guide.jsp">Hướng dẫn đạt hàng và thanh toán</a>
+                <a href="shipping-policy.jsp">Chính sách giao hàng</a>
+                <a href="return-policy.jsp">Chính sách đổi trả</a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <img src="images/facebook.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/tik-tok.png" height="64" width="64"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <p>Copyright 2025 ©. Designed by Nhóm 13</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

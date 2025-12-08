@@ -1,0 +1,175 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about-us.css">
+</head>
+<body>
+<header>
+    <section class="section-top">
+        <div class="container">
+            <a class="text text-logo" href="index.jsp">DacSanVungMien</a>
+            <form class="search-bar" method="get">
+                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="button" onclick="location.href='search-results.jsp'">
+                    <img src="images/search.png" height="24" width="24"/>
+                </button>
+            </form>
+            <div class="group">
+                <p class="text">
+                    Hotline: 0921955395
+                </p>
+                <div class="sub-group">
+                    <img src="images/user.png" height="24" width="24"/>
+                    <a class="text" href="login.jsp">
+                        Đăng nhập
+                    </a>
+                    <p class="text">/</p>
+                    <a class="text" href="register.jsp">
+                        Đăng ký
+                    </a>
+                </div>
+                <a class="sub-group" href="shopping-cart.jsp">
+                    <img src="images/grocery-store.png" height="24" width="24"/>
+                    <p class="text">
+                        Giỏ hàng
+                    </p>
+                    <span id="cart-count" class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <nav>
+                <a class="item" href="index.jsp">Trang chủ</a>
+                <a class="item" href="GioiThieu.html">Giới thiệu</a>
+                <div class="item">
+                    Danh mục sản phẩm
+                    <div class="sub">
+                        <a class="sub-item" href="category-products.jsp">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm mới</a>
+                        <a class="sub-item" href="category-products.jsp">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
+                        <a class="sub-item" href="category-products.jsp">Mứt</a>
+                        <a class="sub-item" href="category-products.jsp">Trà</a>
+                        <a class="sub-item" href="category-products.jsp">Bánh</a>
+                        <a class="sub-item" href="category-products.jsp">Lạp xưởng</a>
+                    </div>
+                </div>
+                <a class="item" href="promotions.jsp">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="blog-news.jsp">Tin tức / blog</a>
+            </nav>
+        </div>
+    </section>
+</header>
+<main class="gioi-thieu">
+    <div class="container">
+        <h1>Giới thiệu về DacSanVungMien</h1>
+        <p class="intro-text">
+            Chào mừng bạn đến với <strong>DacSanVungMien</strong> -  nơi mang hương vị truyền thống của mọi miền đất nước đến tận tay bạn. 
+            Chúng tôi tự hào là cầu nối giữa người tiêu dùng và những cơ sở sản xuất đặc sản uy tín trên khắp Việt Nam.
+        </p>
+
+        <div class="section">
+            <h2>1. Câu chuyện thương hiệu</h2>
+            <p>
+                DacSanVungMien được thành lập với mong muốn giúp khách hàng dễ dàng tiếp cận các món đặc sản chính gốc, 
+                chuẩn hương vị quê nhà. Mỗi sản phẩm là một phần ký ức, một nét đẹp văn hóa vùng miền mà chúng tôi muốn gìn giữ và lan tỏa.
+            </p>
+            <img src="https://phunuvietnam.mediacdn.vn/media/news/315d4ba8b7d8ebed80d3eb3a913c684a/hang-vietstill007.jpg" alt="Câu chuyện thương hiệu" class="intro-image">
+            <figcaption>Hình 1. Câu chuyện thương hiệu (Hình ảnh chỉ mang tính chất minh họa)</figcaption>
+        </div>
+
+        <div class="section">
+            <h2>2. Sứ mệnh & Giá trị cốt lõi</h2>
+            <ul>
+                <li><strong>Chất lượng:</strong> Luôn chọn lựa kỹ càng từ nguồn nguyên liệu và đối tác sản xuất.</li>
+                <li><strong>Tận tâm:</strong> Lấy sự hài lòng của khách hàng làm kim chỉ nam.</li>
+                <li><strong>Bảo tồn văn hóa:</strong> Góp phần quảng bá đặc sản Việt đến mọi miền tổ quốc.</li>
+            </ul>
+            <img src="https://cakhohoangtho.vn/wp-content/uploads/2024/10/dac-san-vung-mien-tai-ha-noi-Dung-Ha.jpg" alt="Sứ mệnh và giá trị" class="intro-image">
+            <figcaption>Hình 2. Sứ mệnh và giá trị (Hình ảnh chỉ mang tính chất minh họa)</figcaption>
+        </div>
+
+        <div class="section">
+            <h2>3. Cam kết với khách hàng</h2>
+            <ul>
+                <li>100% sản phẩm chính gốc, có nguồn gốc rõ ràng.</li>
+                <li>Hỗ trợ đổi trả nếu sản phẩm lỗi hoặc không đúng mô tả.</li>
+                <li>Giao hàng nhanh - tận nơi - an toàn.</li>
+                <li>Bảo mật thông tin khách hàng tuyệt đối.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Đối tác & Nhà cung cấp</h2>
+            <p>
+                Chúng tôi hợp tác cùng nhiều làng nghề truyền thống và cơ sở sản xuất nổi tiếng như:
+                <strong>Làng mắm Phú Quốc, Làng kẹo dừa Bến Tre, Cơ sở trà Thái Nguyên...</strong>
+            </p>
+            <p>
+                Tất cả đều được kiểm tra chất lượng và chứng nhận an toàn thực phẩm trước khi đến tay người tiêu dùng.
+            </p>
+            <img src="https://nemnuonghungviet.com/nemhungviet/uploads/2024/10/nguon-cung-cap-dac-san-vung-mien.jpg" alt="Đối tác và nhà cung cấp" class="intro-image">
+            <figcaption>Hình 3. Đối tác và nhà cung cấp (Hình ảnh chỉ mang tính chất minh họa)</figcaption>
+        </div>
+
+        <div class="section contact-info">
+            <h2>5. Thông tin liên hệ</h2>
+            <p><strong>Địa chỉ:</strong> Trường Đại học Nông Lâm TP.HCM</p>
+            <p><strong>Hotline:</strong> 0921955395</p>
+            <p><strong>Email:</strong> 23130227@st.hcmuaf.edu.vn</p>
+            <p><strong>Facebook:</strong> DacSanVungMien</p>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <section class="section-top">
+        <div class="container">
+            <div class="info">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Công ty TNHH DacSanVungMien</li>
+                    <li>Địa chỉ: Trường Đại học Nông Lâm TP.HCM</li>
+                    <li>Hotline: 0921955395</li>
+                    <li>Email: 23130227@st.hcmuaf.edu.vn</li>
+                    <li>Facebook: DacSanVungMien</li>
+                    <li>Website: dacsanvungmien.com</li>
+                </ul>
+            </div>
+            <div class="ho-tro-khach-hang">
+                <h4>Hỗ trợ khách hàng</h4>
+                <a href="faq.jsp">Câu hỏi thường gặp</a>
+                <a href="order-payment-guide.jsp">Hướng dẫn đạt hàng và thanh toán</a>
+                <a href="shipping-policy.jsp">Chính sách giao hàng</a>
+                <a href="return-policy.jsp">Chính sách đổi trả</a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <img src="images/facebook.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/instagram.png" height="64" width="64"/>
+                </a>
+                <a href="">
+                    <img src="images/tik-tok.png" height="64" width="64"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section-bottom">
+        <div class="container">
+            <p>Copyright 2025 ©. Designed by Nhóm 13</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
