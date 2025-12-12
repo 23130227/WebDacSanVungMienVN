@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Banner" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,16 +19,24 @@
         <div class="container">
             <div class="slider">
                 <div class="slides">
-                    <div class="slide"><img src="images/banner1.png"/></div>
-                    <div class="slide"><img src="images/banner2.png"/></div>
-                    <div class="slide"><img src="images/banner3.png"/></div>
+                    <% List<Banner> banners = (List<Banner>) request.getAttribute("banners");
+                        if (banners != null && !banners.isEmpty()) {
+                            for (Banner b : banners) { %>
+                    <div class="slide"><img src="<%= b.getImage()%>"/></div>
+                    <% }
+                    } else { %>
+                    <div class="slide"><img src=""/></div>
+                    <% } %>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
                 <div class="dots" id="dots">
                     <button type="button" class="dot active" data-index="0" aria-label="Slide 1"></button>
-                    <button type="button" class="dot" data-index="1" aria-label="Slide 2"></button>
-                    <button type="button" class="dot" data-index="2" aria-label="Slide 3"></button>
+                    <% if (banners != null && !banners.isEmpty()) {
+                        for (int i = 1; i < banners.size(); i++) {%>
+                    <button type="button" class="dot" data-index="<%= i%>" aria-label="Slide <%= i%>"></button>
+                    <% }
+                    } %>
                 </div>
             </div>
         </div>

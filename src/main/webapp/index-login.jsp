@@ -78,9 +78,9 @@
         <div class="container">
             <div class="slider">
                 <div class="slides">
-                    <div class="slide"><img src="images/banner1.png"/></div>
-                    <div class="slide"><img src="images/banner2.png"/></div>
-                    <div class="slide"><img src="images/banner3.png"/></div>
+                    <div class="slide"><img src="images/banners/banner1.png"/></div>
+                    <div class="slide"><img src="images/banners/banner2.png"/></div>
+                    <div class="slide"><img src="images/banners/banner3.png"/></div>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
