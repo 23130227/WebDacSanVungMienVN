@@ -15,8 +15,8 @@ public class ProductServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Product> promotionProducts = productService.getTopPromotionProducts();
-        request.setAttribute("promotionProducts", promotionProducts);
+        List<Product> topDiscountProducts = productService.getTopDiscountProducts();
+        request.setAttribute("topDiscountProducts", topDiscountProducts);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 

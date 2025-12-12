@@ -38,23 +38,23 @@
             <h1 class="title">Khuyến mãi</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <% List<Product> promotionProducts = (List<Product>) request.getAttribute("promotionProducts");
-                        if (promotionProducts != null && !promotionProducts.isEmpty()) {
-                            for (Product p : promotionProducts) { %>
+                    <% List<Product> topDiscountProducts = (List<Product>) request.getAttribute("topDiscountProducts");
+                        if (topDiscountProducts != null && !topDiscountProducts.isEmpty()) {
+                            for (Product tdp : topDiscountProducts) { %>
                     <div class="product">
                         <div class="sale-tag">
-                            <p class="sale-percent">-<%= p.getDiscountPercentage()%>%</p>
+                            <p class="sale-percent">-<%= tdp.getDiscountPercentage()%>%</p>
                         </div>
                         <a href="product-detail.jsp">
-                            <img class="product-image" src="<%= p.getImage()%>"/>
+                            <img class="product-image" src="<%= tdp.getImage()%>"/>
                         </a>
                         <a class="product-name" href="product-detail.jsp">
-                            <h3><%= p.getName()%>
+                            <h3><%= tdp.getName()%>
                             </h3>
                         </a>
                         <div class="product-price">
-                            <h4 class="new-price"><%= p.getFormattedPrice(p.getDiscountPrice())%>đ</h4>
-                            <h4 class="old-price"><%= p.getFormattedPrice(p.getPrice())%>đ</h4>
+                            <h4 class="new-price"><%= tdp.getFormattedPrice(tdp.getDiscountPrice())%>đ</h4>
+                            <h4 class="old-price"><%= tdp.getFormattedPrice(tdp.getPrice())%>đ</h4>
                         </div>
                         <a class="buy" href="product-detail.jsp">Mua hàng</a>
                     </div>

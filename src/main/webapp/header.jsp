@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.ProductCategory" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header>
     <section class="section-top">
@@ -47,10 +49,14 @@
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
-                        <a class="sub-item" href="category-products.jsp">Mứt</a>
-                        <a class="sub-item" href="category-products.jsp">Trà</a>
-                        <a class="sub-item" href="category-products.jsp">Bánh</a>
-                        <a class="sub-item" href="category-products.jsp">Lạp xưởng</a>
+                        <% List<ProductCategory> topProductCategories = (List<ProductCategory>) application.getAttribute("topProductCategories");
+                            if (topProductCategories != null && !topProductCategories.isEmpty()) {
+                                for (ProductCategory tpc : topProductCategories) { %>
+                        <a class="sub-item" href="category-products.jsp"><%= tpc.getName()%>
+                        </a>
+                        <% }
+                        } %>
+                        <a class="sub-item" href="category-products.jsp">Xem thêm...</a>
                     </div>
                 </div>
                 <a class="item" href="promotions.jsp">Khuyến mãi / ưu đãi</a>

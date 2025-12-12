@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
-    public List<Product> getTopPromotionProducts(int limit) {
-        List<Product> products = new ArrayList<>();
+    public List<Product> getTopDiscountProducts(int limit) {
+        List<Product> topDiscountProducts = new ArrayList<>();
         String query = "SELECT p.id, p.name, p.price, p.image, " +
                 "COALESCE(pd.discount_percentage, cd.discount_percentage, 0) AS discount_percentage, " +
                 "p.price * (1 - COALESCE(pd.discount_percentage, cd.discount_percentage, 0)/100) AS discount_price " +
@@ -33,13 +33,11 @@ public class ProductDAO {
                 product.setImage(rs.getString("image"));
                 product.setDiscountPercentage(rs.getInt("discount_percentage"));
                 product.setDiscountPrice(rs.getDouble("discount_price"));
-                products.add(product);
+                topDiscountProducts.add(product);
             }
-            return products;
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return products;
+        return topDiscountProducts;
     }
 }
