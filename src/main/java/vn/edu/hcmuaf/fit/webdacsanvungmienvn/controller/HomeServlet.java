@@ -27,6 +27,9 @@ public class HomeServlet extends HttpServlet {
         List<Product> topNewProducts = productService.getTopNewProducts();
         request.setAttribute("topNewProducts", topNewProducts);
 
+        List<Product> topSoldProducts = productService.getTopSoldProducts();
+        request.setAttribute("topSoldProducts", topSoldProducts);
+
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 

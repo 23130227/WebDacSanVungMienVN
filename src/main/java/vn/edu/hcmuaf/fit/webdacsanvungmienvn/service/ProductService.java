@@ -15,4 +15,8 @@ public class ProductService {
     public List<Product> getTopNewProducts() {
         return productDAO.getTopNewProducts(10);
     }
+
+    public List<Product> getTopSoldProducts() {
+        return productDAO.getTopSoldProducts(10);
+    }
 }

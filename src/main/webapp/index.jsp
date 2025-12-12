@@ -134,86 +134,39 @@
             <h1 class="title">Sản phẩm bán chạy</h1>
             <div class="slider">
                 <div class="product-list slides">
+                    <% List<Product> topSoldProducts = (List<Product>) request.getAttribute("topSoldProducts");
+                        if (topSoldProducts != null && !topSoldProducts.isEmpty()) {
+                            for (Product tsp : topSoldProducts) { %>
                     <div class="product">
                         <div class="sale-tag">
+                            <% if (tsp.getDiscountPercentage() > 0) { %>
+                            <p class="sale-percent">-<%= tsp.getDiscountPercentage()%>%</p>
+                            <% } else {%>
                             <p class="sale-percent"></p>
+                            <% } %>
                         </div>
                         <a href="product-detail.jsp">
-                            <img class="product-image" src="images/nuoctuongNamDan.png"/>
+                            <img class="product-image" src="<%= tsp.getImage()%>"/>
                         </a>
                         <a class="product-name" href="product-detail.jsp">
-                            <h3>Nước tương Nam Đàn</h3>
+                            <h3><%= tsp.getName()%>
+                            </h3>
                         </a>
                         <div class="product-price">
-                            <h4 class="new-price">60.000đ</h4>
+                            <% if (tsp.getDiscountPercentage() > 0) { %>
+                            <h4 class="new-price"><%= tsp.format(tsp.getDiscountPrice())%>đ</h4>
+                            <h4 class="old-price"><%= tsp.format(tsp.getPrice())%>đ</h4>
+                            <% } else { %>
+                            <h4 class="new-price"><%= tsp.format(tsp.getPrice())%>đ</h4>
                             <h4 class="old-price"></h4>
+                            <% } %>
                         </div>
                         <a class="buy" href="product-detail.jsp">Mua hàng</a>
                     </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-22%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/trataxua.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Trà Tà Xùa</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">78.000đ</h4>
-                            <h4 class="old-price">100.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent"></p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/traugacbep.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Trâu gác bếp</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">200.000đ</h4>
-                            <h4 class="old-price"></h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent"></p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/trerom.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Tré rơm</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">50.000đ</h4>
-                            <h4 class="old-price"></h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-30%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/lacxuong.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Lạp xưởng</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">70.000đ</h4>
-                            <h4 class="old-price">100.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
+                    <% }
+                    } else { %>
+                    <p>Không có sản phẩm bán chạy nào.</p>
+                    <% } %>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
