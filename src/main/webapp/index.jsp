@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,166 +97,30 @@
             <h1 class="title">Khuyến mãi</h1>
             <div class="slider">
                 <div class="product-list slides">
+                    <% List<Product> promotionProducts = (List<Product>) request.getAttribute("promotionProducts");
+                        if (promotionProducts != null && !promotionProducts.isEmpty()) {
+                            for (Product p : promotionProducts) { %>
                     <div class="product">
                         <div class="sale-tag">
-                            <p class="sale-percent">-30%</p>
+                            <p class="sale-percent">-<%= p.getDiscountPercentage()%>%</p>
                         </div>
                         <a href="product-detail.jsp">
-                            <img class="product-image" src="images/lacxuong.png"/>
+                            <img class="product-image" src="<%= p.getImage()%>"/>
                         </a>
                         <a class="product-name" href="product-detail.jsp">
-                            <h3>Lạp xưởng</h3>
+                            <h3><%= p.getName()%>
+                            </h3>
                         </a>
                         <div class="product-price">
-                            <h4 class="new-price">70.000đ</h4>
-                            <h4 class="old-price">100.000đ</h4>
+                            <h4 class="new-price"><%= p.getFormattedPrice(p.getDiscountPrice())%>đ</h4>
+                            <h4 class="old-price"><%= p.getFormattedPrice(p.getPrice())%>đ</h4>
                         </div>
                         <a class="buy" href="product-detail.jsp">Mua hàng</a>
                     </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-26%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/bakhiatron.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Ba khía trộn</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">95.000đ</h4>
-                            <h4 class="old-price">129.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-18%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhdake.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh đa kê</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">28.000đ</h4>
-                            <h4 class="old-price">34.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-22%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhmen.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh men</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">14.000đ</h4>
-                            <h4 class="old-price">18.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-25%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhmexat.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh mè xát</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">15.000đ</h4>
-                            <h4 class="old-price">20.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-30%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhphongsua.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh tráng sữa</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">21.000đ</h4>
-                            <h4 class="old-price">30.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-20%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhphuthe.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh phu thê</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">24.000đ</h4>
-                            <h4 class="old-price">30.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-28%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/banhpia.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Bánh pía</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">36.000đ</h4>
-                            <h4 class="old-price">50.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-24%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/comdep.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Cốm dẹp</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">38.000đ</h4>
-                            <h4 class="old-price">50.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-27%</p>
-                        </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="images/duasap.png"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3>Dừa sáp</h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price">73.000đ</h4>
-                            <h4 class="old-price">100.000đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
+                    <% }
+                    } else { %>
+                    <p>Không có sản phẩm khuyến mãi nào.</p>
+                    <% } %>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
