@@ -11,4 +11,8 @@ public class ProductService {
     public List<Product> getTopDiscountProducts() {
         return productDAO.getTopDiscountProducts(10);
     }
+
+    public List<Product> getTopNewProducts() {
+        return productDAO.getTopNewProducts(10);
+    }
 }
