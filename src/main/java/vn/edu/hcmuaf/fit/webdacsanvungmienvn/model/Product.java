@@ -150,7 +150,7 @@ public class Product {
         this.discountPrice = discountPrice;
     }
 
-    public String getFormattedPrice(double price) {
+    public String format(double price) {
         java.text.NumberFormat formatter = java.text.NumberFormat.getInstance(new java.util.Locale("vi", "VN"));
         return formatter.format(price);
     }

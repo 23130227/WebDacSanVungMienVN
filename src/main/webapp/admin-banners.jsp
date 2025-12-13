@@ -80,7 +80,7 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img src="images/banner1.png" alt="Banner 1" style="width: 200px; height: auto;"></td>
+                            <td><img src="images/banners/banner1.png" alt="Banner 1" style="width: 200px; height: auto;"></td>
                             <td>Banner quảng cáo 1</td>
                             <td class="actions">
                                 <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><img src="images/banner2.png" alt="Banner 2" style="width: 200px; height: auto;"></td>
+                            <td><img src="images/banners/banner2.png" alt="Banner 2" style="width: 200px; height: auto;"></td>
                             <td>Banner quảng cáo 2</td>
                             <td class="actions">
                                 <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
@@ -98,7 +98,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><img src="images/banner3.png" alt="Banner 3" style="width: 200px; height: auto;"></td>
+                            <td><img src="images/banners/banner3.png" alt="Banner 3" style="width: 200px; height: auto;"></td>
                             <td>Banner quảng cáo 3</td>
                             <td class="actions">
                                 <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
@@ -150,7 +150,7 @@
                 <form id="editBannerForm">
                     <div class="form-group">
                         <label>Hình ảnh hiện tại</label>
-                        <img src="images/banner1.png" style="width: 100%; border-radius: 10px;" alt="Preview">
+                        <img src="images/banners/banner1.png" style="width: 100%; border-radius: 10px;" alt="Preview">
                     </div>
                     <div class="form-group">
                         <label>Thay đổi hình ảnh</label>
