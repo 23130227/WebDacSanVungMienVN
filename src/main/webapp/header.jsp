@@ -1,13 +1,14 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.ProductCategory" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header>
     <section class="section-top">
         <div class="container">
-            <a class="text text-logo" href="TrangChu.html">DacSanVungMien</a>
-            <form class="search-bar" method="get">
-                <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button class="search-button" type="button" onclick="location.href='KetQuaTimKiem.html'">
+            <a class="text text-logo" href="${pageContext.request.contextPath}/home">DacSanVungMien</a>
+            <form class="search-bar" method="get" action="search-results">
+                <input class="search-input" type="text" name="keyword" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-button" type="submit">
                     <img src="images/search.png" height="24" width="24"/>
                 </button>
             </form>
@@ -49,13 +50,9 @@
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
                         <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
-                        <% List<ProductCategory> topProductCategories = (List<ProductCategory>) application.getAttribute("topProductCategories");
-                            if (topProductCategories != null && !topProductCategories.isEmpty()) {
-                                for (ProductCategory tpc : topProductCategories) { %>
-                        <a class="sub-item" href="category-products.jsp"><%= tpc.getName()%>
-                        </a>
-                        <% }
-                        } %>
+                        <c:forEach items="${topProductCategories}" var="tpc">
+                            <a class="sub-item" href="category-products.jsp">${tpc.getName()}</a>
+                        </c:forEach>
                         <a class="sub-item" href="category-products.jsp">Xem thêm...</a>
                     </div>
                 </div>

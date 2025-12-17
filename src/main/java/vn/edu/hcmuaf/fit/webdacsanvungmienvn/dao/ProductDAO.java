@@ -101,4 +101,52 @@ public class ProductDAO {
         }
         return topSoldProducts;
     }
+
+    public List<Product> getSearchProducts(String keyword, int limit, int page) {
+        List<Product> searchProducts = new ArrayList<>();
+        String query = "SELECT p.id, p.name, p.price, p.image, " +
+                "COALESCE(pd.discount_percentage, cd.discount_percentage, 0) AS discount_percentage, " +
+                "p.price * (1 - COALESCE(pd.discount_percentage, cd.discount_percentage, 0)/100) AS discount_price " +
+                "FROM products p LEFT JOIN product_discounts pd ON p.id = pd.product_id " +
+                "AND NOW() BETWEEN pd.start_date AND pd.end_date " +
+                "LEFT JOIN category_discounts cd ON p.category_id = cd.category_id " +
+                "AND NOW() BETWEEN cd.start_date AND cd.end_date " +
+                "WHERE p.name LIKE ? LIMIT ? OFFSET ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setString(1, "%" + keyword + "%");
+            ps.setInt(2, limit);
+            ps.setInt(3, (page - 1) * limit);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Product product = new Product();
+                product.setId(rs.getInt("id"));
+                product.setName(rs.getString("name"));
+                product.setPrice(rs.getDouble("price"));
+                product.setImage(rs.getString("image"));
+                product.setDiscountPercentage(rs.getInt("discount_percentage"));
+                product.setDiscountPrice(rs.getDouble("discount_price"));
+                searchProducts.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return searchProducts;
+    }
+
+    public int countSearchProducts(String keyword) {
+        int count = 0;
+        String query = "SELECT COUNT(*) AS total FROM products WHERE name LIKE ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setString(1, "%" + keyword + "%");
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                count = rs.getInt("total");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
+    }
 }
