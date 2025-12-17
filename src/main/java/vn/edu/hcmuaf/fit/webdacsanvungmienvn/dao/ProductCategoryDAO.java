@@ -12,10 +12,11 @@ import java.util.List;
 public class ProductCategoryDAO {
     public List<ProductCategory> getTopProductCategories(int limit) {
         List<ProductCategory> topProductCategories = new ArrayList<>();
-        String query = "SELECT * FROM product_categories ORDER BY name LIMIT " + limit;
+        String query = "SELECT * FROM product_categories ORDER BY name LIMIT ?";
         try (Connection conn = DBConnect.getConnection();
-             PreparedStatement ps = conn.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setInt(1, limit);
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 ProductCategory productCategory = new ProductCategory();
                 productCategory.setId(rs.getInt("id"));
