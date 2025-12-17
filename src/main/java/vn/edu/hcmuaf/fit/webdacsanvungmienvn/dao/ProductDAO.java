@@ -21,10 +21,11 @@ public class ProductDAO {
                 "LEFT JOIN category_discounts cd ON p.category_id = cd.category_id " +
                 "AND NOW() BETWEEN cd.start_date AND cd.end_date " +
                 "WHERE COALESCE(pd.discount_percentage, cd.discount_percentage, 0) > 0 " +
-                "ORDER BY discount_percentage DESC LIMIT " + limit;
+                "ORDER BY discount_percentage DESC LIMIT ?";
         try (Connection conn = DBConnect.getConnection();
-             PreparedStatement ps = conn.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setInt(1, limit);
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Product product = new Product();
                 product.setId(rs.getInt("id"));
@@ -50,10 +51,11 @@ public class ProductDAO {
                 "AND NOW() BETWEEN pd.start_date AND pd.end_date " +
                 "LEFT JOIN category_discounts cd ON p.category_id = cd.category_id " +
                 "AND NOW() BETWEEN cd.start_date AND cd.end_date " +
-                "ORDER BY created_at DESC LIMIT " + limit;
+                "ORDER BY created_at DESC LIMIT ?";
         try (Connection conn = DBConnect.getConnection();
-             PreparedStatement ps = conn.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setInt(1, limit);
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Product product = new Product();
                 product.setId(rs.getInt("id"));
@@ -79,10 +81,11 @@ public class ProductDAO {
                 "AND NOW() BETWEEN pd.start_date AND pd.end_date " +
                 "LEFT JOIN category_discounts cd ON p.category_id = cd.category_id " +
                 "AND NOW() BETWEEN cd.start_date AND cd.end_date " +
-                "ORDER BY sold_quantity DESC LIMIT " + limit;
+                "ORDER BY sold_quantity DESC LIMIT ?";
         try (Connection conn = DBConnect.getConnection();
-             PreparedStatement ps = conn.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setInt(1, limit);
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Product product = new Product();
                 product.setId(rs.getInt("id"));

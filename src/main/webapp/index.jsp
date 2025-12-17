@@ -1,6 +1,6 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Product" %>
-<%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Banner" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,24 +19,23 @@
         <div class="container">
             <div class="slider">
                 <div class="slides">
-                    <% List<Banner> banners = (List<Banner>) request.getAttribute("banners");
-                        if (banners != null && !banners.isEmpty()) {
-                            for (Banner b : banners) { %>
-                    <div class="slide"><img src="<%= b.getImage()%>"/></div>
-                    <% }
-                    } else { %>
-                    <div class="slide"><img src=""/></div>
-                    <% } %>
+                    <c:forEach items="${banners}" var="b">
+                        <div class="slide">
+                            <img src="${b.image}"/>
+                        </div>
+                    </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
                 <div class="dots" id="dots">
-                    <button type="button" class="dot active" data-index="0" aria-label="Slide 1"></button>
-                    <% if (banners != null && !banners.isEmpty()) {
-                        for (int i = 1; i < banners.size(); i++) {%>
-                    <button type="button" class="dot" data-index="<%= i%>" aria-label="Slide <%= i%>"></button>
-                    <% }
-                    } %>
+                    <c:forEach items="${banners}" var="b" varStatus="status">
+                        <button
+                                type="button"
+                                class="dot ${status.first ? 'active' : ''}"
+                                data-index="${status.index}"
+                                aria-label="Slide ${status.index + 1}">
+                        </button>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -47,30 +46,24 @@
             <h1 class="title">Khuyến mãi</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <% List<Product> topDiscountProducts = (List<Product>) request.getAttribute("topDiscountProducts");
-                        if (topDiscountProducts != null && !topDiscountProducts.isEmpty()) {
-                            for (Product tdp : topDiscountProducts) { %>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <p class="sale-percent">-<%= tdp.getDiscountPercentage()%>%</p>
+                    <c:forEach items="${topDiscountProducts}" var="tdp">
+                        <div class="product">
+                            <div class="sale-tag">
+                                <p class="sale-percent">-${tdp.getDiscountPercentage()}%</p>
+                            </div>
+                            <a href="product-detail.jsp">
+                                <img class="product-image" src="${tdp.getImage()}"/>
+                            </a>
+                            <a class="product-name" href="product-detail.jsp">
+                                <h3>${tdp.getName()}</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">${tdp.format(tdp.getDiscountPrice())}đ</h4>
+                                <h4 class="old-price">${tdp.format(tdp.getPrice())}đ</h4>
+                            </div>
+                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
                         </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="<%= tdp.getImage()%>"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3><%= tdp.getName()%>
-                            </h3>
-                        </a>
-                        <div class="product-price">
-                            <h4 class="new-price"><%= tdp.format(tdp.getDiscountPrice())%>đ</h4>
-                            <h4 class="old-price"><%= tdp.format(tdp.getPrice())%>đ</h4>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <% }
-                    } else { %>
-                    <p>Không có sản phẩm khuyến mãi nào.</p>
-                    <% } %>
+                    </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
@@ -86,39 +79,32 @@
             <h1 class="title">Sản phẩm mới</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <% List<Product> topNewProducts = (List<Product>) request.getAttribute("topNewProducts");
-                        if (topNewProducts != null && !topNewProducts.isEmpty()) {
-                            for (Product tnp : topNewProducts) { %>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <% if (tnp.getDiscountPercentage() > 0) { %>
-                            <p class="sale-percent">-<%= tnp.getDiscountPercentage()%>%</p>
-                            <% } else {%>
-                            <p class="sale-percent"></p>
-                            <% } %>
+                    <c:forEach items="${topNewProducts}" var="tnp">
+                        <div class="product">
+                            <div class="sale-tag">
+                                <c:if test="${tnp.getDiscountPercentage() > 0}">
+                                    <p class="sale-percent">-${tnp.getDiscountPercentage()}%</p>
+                                </c:if>
+                            </div>
+                            <a href="product-detail.jsp">
+                                <img class="product-image" src="${tnp.getImage()}"/>
+                            </a>
+                            <a class="product-name" href="product-detail.jsp">
+                                <h3>${tnp.getName()}</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">
+                                        ${tnp.format(tnp.discountPercentage > 0 ? tnp.discountPrice : tnp.price)}đ
+                                </h4>
+                                <c:if test="${tnp.discountPercentage > 0}">
+                                    <h4 class="old-price">
+                                            ${tnp.format(tnp.price)}đ
+                                    </h4>
+                                </c:if>
+                            </div>
+                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
                         </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="<%= tnp.getImage()%>"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3><%= tnp.getName()%>
-                            </h3>
-                        </a>
-                        <div class="product-price">
-                            <% if (tnp.getDiscountPercentage() > 0) { %>
-                            <h4 class="new-price"><%= tnp.format(tnp.getDiscountPrice())%>đ</h4>
-                            <h4 class="old-price"><%= tnp.format(tnp.getPrice())%>đ</h4>
-                            <% } else { %>
-                            <h4 class="new-price"><%= tnp.format(tnp.getPrice())%>đ</h4>
-                            <h4 class="old-price"></h4>
-                            <% } %>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <% }
-                    } else { %>
-                    <p>Không có sản phẩm mới nào.</p>
-                    <% } %>
+                    </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
@@ -134,39 +120,32 @@
             <h1 class="title">Sản phẩm bán chạy</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <% List<Product> topSoldProducts = (List<Product>) request.getAttribute("topSoldProducts");
-                        if (topSoldProducts != null && !topSoldProducts.isEmpty()) {
-                            for (Product tsp : topSoldProducts) { %>
-                    <div class="product">
-                        <div class="sale-tag">
-                            <% if (tsp.getDiscountPercentage() > 0) { %>
-                            <p class="sale-percent">-<%= tsp.getDiscountPercentage()%>%</p>
-                            <% } else {%>
-                            <p class="sale-percent"></p>
-                            <% } %>
+                    <c:forEach items="${topSoldProducts}" var="tsp">
+                        <div class="product">
+                            <div class="sale-tag">
+                                <c:if test="${tsp.getDiscountPercentage() > 0}">
+                                    <p class="sale-percent">-${tsp.getDiscountPercentage()}%</p>
+                                </c:if>
+                            </div>
+                            <a href="product-detail.jsp">
+                                <img class="product-image" src="${tsp.getImage()}"/>
+                            </a>
+                            <a class="product-name" href="product-detail.jsp">
+                                <h3>${tsp.getName()}</h3>
+                            </a>
+                            <div class="product-price">
+                                <h4 class="new-price">
+                                        ${tsp.format(tsp.discountPercentage > 0 ? tsp.discountPrice : tsp.price)}đ
+                                </h4>
+                                <c:if test="${tsp.discountPercentage > 0}">
+                                    <h4 class="old-price">
+                                            ${tsp.format(tsp.price)}đ
+                                    </h4>
+                                </c:if>
+                            </div>
+                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
                         </div>
-                        <a href="product-detail.jsp">
-                            <img class="product-image" src="<%= tsp.getImage()%>"/>
-                        </a>
-                        <a class="product-name" href="product-detail.jsp">
-                            <h3><%= tsp.getName()%>
-                            </h3>
-                        </a>
-                        <div class="product-price">
-                            <% if (tsp.getDiscountPercentage() > 0) { %>
-                            <h4 class="new-price"><%= tsp.format(tsp.getDiscountPrice())%>đ</h4>
-                            <h4 class="old-price"><%= tsp.format(tsp.getPrice())%>đ</h4>
-                            <% } else { %>
-                            <h4 class="new-price"><%= tsp.format(tsp.getPrice())%>đ</h4>
-                            <h4 class="old-price"></h4>
-                            <% } %>
-                        </div>
-                        <a class="buy" href="product-detail.jsp">Mua hàng</a>
-                    </div>
-                    <% }
-                    } else { %>
-                    <p>Không có sản phẩm bán chạy nào.</p>
-                    <% } %>
+                    </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
