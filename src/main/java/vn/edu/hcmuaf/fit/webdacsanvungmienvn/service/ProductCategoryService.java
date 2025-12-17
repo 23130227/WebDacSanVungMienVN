@@ -8,7 +8,7 @@ import java.util.List;
 public class ProductCategoryService {
     private final ProductCategoryDAO productCategoryDAO = new ProductCategoryDAO();
 
-    public List<ProductCategory> getTopProductCategories() {
-        return productCategoryDAO.getTopProductCategories(4);
+    public List<ProductCategory> getTopProductCategories(int limit) {
+        return productCategoryDAO.getTopProductCategories(limit);
     }
 }
