@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,21 +14,30 @@
 
 <main>
     <div id="login">Đăng Nhập</div>
-    <div class="form-group">
-        <label for="username" class="account">Email:</label>
-        <input type="text" id="username" placeholder="Nhập Email">
-    </div>
-    <div class="form-group">
-        <label for="pass" class="pass">Mật khẩu:</label>
-        <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
-    </div>
-    <div class="remember-register">
-        <a href="register.jsp" title="Đăng ký tài khoản">Đăng ký tài khoản</a>
-    </div>
-    <button type="button" id="login-btn">Đăng nhập</button>
-    <div class="forget">
-        <a href="forgot-password.jsp" title="Quên mật khẩu">Quên mật khẩu</a>
-    </div>
+
+    <c:if test="${not empty error}">
+        <p style="color:red; text-align:center;">
+            ${error}
+        </p>
+    </c:if>
+    
+    <form action="login" methob="post">
+        <div class="form-group">
+            <label for="username" class="account">Email:</label>
+            <input type="text" id="username" placeholder="Nhập Email">
+        </div>
+        <div class="form-group">
+            <label for="pass" class="pass">Mật khẩu:</label>
+            <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
+        </div>
+        <div class="remember-register">
+            <a href="register.jsp" title="Đăng ký tài khoản">Đăng ký tài khoản</a>
+        </div>
+        <button type="button" id="login-btn">Đăng nhập</button>
+        <div class="forget">
+            <a href="forgot-password.jsp" title="Quên mật khẩu">Quên mật khẩu</a>
+        </div>
+    </form>
 </main>
 
 <%@ include file="footer.jsp" %>
