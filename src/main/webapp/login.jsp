@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +19,12 @@
             ${error}
         </p>
     </c:if>
+
     
-    <form action="login" methob="post">
+
         <div class="form-group">
             <label for="username" class="account">Email:</label>
-            <input type="text" id="username" placeholder="Nhập Email">
+            <input type="text" id="username" name="email" placeholder="Nhập Email">
         </div>
         <div class="form-group">
             <label for="pass" class="pass">Mật khẩu:</label>
@@ -33,11 +33,11 @@
         <div class="remember-register">
             <a href="register.jsp" title="Đăng ký tài khoản">Đăng ký tài khoản</a>
         </div>
-        <button type="button" id="login-btn">Đăng nhập</button>
+        <button type="submit" id="login-btn">Đăng nhập</button>
         <div class="forget">
             <a href="forgot-password.jsp" title="Quên mật khẩu">Quên mật khẩu</a>
         </div>
-    </form>
+
 </main>
 
 <%@ include file="footer.jsp" %>
