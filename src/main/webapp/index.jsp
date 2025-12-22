@@ -46,20 +46,20 @@
             <h1 class="title">Khuyến mãi</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <c:forEach items="${topDiscountProducts}" var="tdp">
+                    <c:forEach items="${topDiscountProducts}" var="p">
                         <div class="product">
                             <div class="sale-tag">
-                                <p class="sale-percent">-${tdp.getDiscountPercentage()}%</p>
+                                <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                             </div>
                             <a href="product-detail.jsp">
-                                <img class="product-image" src="${tdp.getImage()}"/>
+                                <img class="product-image" src="${p.getImage()}"/>
                             </a>
                             <a class="product-name" href="product-detail.jsp">
-                                <h3>${tdp.getName()}</h3>
+                                <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
-                                <h4 class="new-price">${tdp.format(tdp.getDiscountPrice())}đ</h4>
-                                <h4 class="old-price">${tdp.format(tdp.getPrice())}đ</h4>
+                                <h4 class="new-price">${p.format(p.getDiscountPrice())}đ</h4>
+                                <h4 class="old-price">${p.format(p.getPrice())}đ</h4>
                             </div>
                             <a class="buy" href="product-detail.jsp">Mua hàng</a>
                         </div>
@@ -79,26 +79,26 @@
             <h1 class="title">Sản phẩm mới</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <c:forEach items="${topNewProducts}" var="tnp">
+                    <c:forEach items="${topNewProducts}" var="p">
                         <div class="product">
                             <div class="sale-tag">
-                                <c:if test="${tnp.getDiscountPercentage() > 0}">
-                                    <p class="sale-percent">-${tnp.getDiscountPercentage()}%</p>
+                                <c:if test="${p.getDiscountPercentage() > 0}">
+                                    <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
                             <a href="product-detail.jsp">
-                                <img class="product-image" src="${tnp.getImage()}"/>
+                                <img class="product-image" src="${p.getImage()}"/>
                             </a>
                             <a class="product-name" href="product-detail.jsp">
-                                <h3>${tnp.getName()}</h3>
+                                <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
                                 <h4 class="new-price">
-                                        ${tnp.format(tnp.discountPercentage > 0 ? tnp.discountPrice : tnp.price)}đ
+                                        ${p.format(p.discountPercentage > 0 ? p.discountPrice : tnp.price)}đ
                                 </h4>
-                                <c:if test="${tnp.discountPercentage > 0}">
+                                <c:if test="${p.discountPercentage > 0}">
                                     <h4 class="old-price">
-                                            ${tnp.format(tnp.price)}đ
+                                            ${p.format(p.price)}đ
                                     </h4>
                                 </c:if>
                             </div>
@@ -120,26 +120,26 @@
             <h1 class="title">Sản phẩm bán chạy</h1>
             <div class="slider">
                 <div class="product-list slides">
-                    <c:forEach items="${topSoldProducts}" var="tsp">
+                    <c:forEach items="${topSoldProducts}" var="p">
                         <div class="product">
                             <div class="sale-tag">
-                                <c:if test="${tsp.getDiscountPercentage() > 0}">
-                                    <p class="sale-percent">-${tsp.getDiscountPercentage()}%</p>
+                                <c:if test="${p.getDiscountPercentage() > 0}">
+                                    <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
                             <a href="product-detail.jsp">
-                                <img class="product-image" src="${tsp.getImage()}"/>
+                                <img class="product-image" src="${p.getImage()}"/>
                             </a>
                             <a class="product-name" href="product-detail.jsp">
-                                <h3>${tsp.getName()}</h3>
+                                <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
                                 <h4 class="new-price">
-                                        ${tsp.format(tsp.discountPercentage > 0 ? tsp.discountPrice : tsp.price)}đ
+                                        ${p.format(p.discountPercentage > 0 ? p.discountPrice : p.price)}đ
                                 </h4>
-                                <c:if test="${tsp.discountPercentage > 0}">
+                                <c:if test="${p.discountPercentage > 0}">
                                     <h4 class="old-price">
-                                            ${tsp.format(tsp.price)}đ
+                                            ${p.format(p.price)}đ
                                     </h4>
                                 </c:if>
                             </div>

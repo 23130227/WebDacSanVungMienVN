@@ -11,4 +11,8 @@ public class ProductCategoryService {
     public List<ProductCategory> getTopProductCategories(int limit) {
         return productCategoryDAO.getTopProductCategories(limit);
     }
+
+    public List<ProductCategory> getAllProductCategories() {
+        return productCategoryDAO.getAllProductCategories();
+    }
 }
