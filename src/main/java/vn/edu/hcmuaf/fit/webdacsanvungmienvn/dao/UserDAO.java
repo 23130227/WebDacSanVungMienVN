@@ -11,8 +11,7 @@ public class UserDAO {
 
     public User login(String email, String password) {
         String sql = """
-                SELECT id, email, full_name, phone_number, gender,
-                       date_of_birth, role
+                SELECT *
                 FROM users
                 WHERE email = ? AND password = ?
                 """;

@@ -9,7 +9,15 @@ main {
     padding-top: 30px;
 
 }
-
+main form {
+    width: 100%;
+    max-width: 460px;
+    padding: 30px 40px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 main #login {
     font-size: 40px;
     font-weight: bold;

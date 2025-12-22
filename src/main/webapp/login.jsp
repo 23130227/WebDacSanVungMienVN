@@ -19,9 +19,8 @@
             ${error}
         </p>
     </c:if>
-
     
-
+    <form action="login" method="post">
         <div class="form-group">
             <label for="username" class="account">Email:</label>
             <input type="text" id="username" name="email" placeholder="Nhập Email">
@@ -37,7 +36,7 @@
         <div class="forget">
             <a href="forgot-password.jsp" title="Quên mật khẩu">Quên mật khẩu</a>
         </div>
-
+    </form>
 </main>
 
 <%@ include file="footer.jsp" %>
