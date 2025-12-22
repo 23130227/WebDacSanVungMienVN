@@ -10,21 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BannerDAO {
-    public List<Banner> getBanners() {
-        List<Banner> banners = new ArrayList<>();
+    public List<Banner> getAllBanners() {
+        List<Banner> allBanners = new ArrayList<>();
         String query = "SELECT * FROM banners";
         try (Connection conn = DBConnect.getConnection();
-             PreparedStatement ps = conn.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Banner banner = new Banner();
                 banner.setId(rs.getInt("id"));
                 banner.setImage(rs.getString("image"));
-                banners.add(banner);
+                allBanners.add(banner);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return banners;
+        return allBanners;
     }
 }

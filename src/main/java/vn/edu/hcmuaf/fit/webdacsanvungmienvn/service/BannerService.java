@@ -8,7 +8,7 @@ import java.util.List;
 public class BannerService {
     private final BannerDAO bannerDAO = new BannerDAO();
 
-    public List<Banner> getBanners() {
-        return bannerDAO.getBanners();
+    public List<Banner> getAllBanners() {
+        return bannerDAO.getAllBanners();
     }
 }

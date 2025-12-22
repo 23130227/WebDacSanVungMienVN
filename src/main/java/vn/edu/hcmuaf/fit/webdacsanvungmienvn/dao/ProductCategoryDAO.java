@@ -28,4 +28,22 @@ public class ProductCategoryDAO {
         }
         return topProductCategories;
     }
+
+    public List<ProductCategory> getAllProductCategories() {
+        List<ProductCategory> allProductCategories = new ArrayList<>();
+        String query = "SELECT * FROM product_categories ORDER BY name";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ProductCategory productCategory = new ProductCategory();
+                productCategory.setId(rs.getInt("id"));
+                productCategory.setName(rs.getString("name"));
+                allProductCategories.add(productCategory);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return allProductCategories;
+    }
 }
