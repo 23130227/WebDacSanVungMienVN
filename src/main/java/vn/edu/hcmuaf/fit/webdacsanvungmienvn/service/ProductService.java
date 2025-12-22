@@ -31,4 +31,8 @@ public class ProductService {
     public int totalPages(int totalProducts, int productsPerPage) {
         return (int) Math.ceil((double) totalProducts / productsPerPage);
     }
+
+    public Product getProduct(int productId) {
+        return productDAO.getProduct(productId);
+    }
 }
