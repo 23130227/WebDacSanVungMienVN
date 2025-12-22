@@ -11,7 +11,7 @@ import vn.edu.hcmuaf.fit.webdacsanvungmienvn.service.ProductService;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "HomeServlet", value = "")
+@WebServlet(name = "HomeServlet", value = "/home")
 public class HomeServlet extends HttpServlet {
     private final BannerService bannerService = new BannerService();
     private final ProductService productService = new ProductService();
@@ -21,13 +21,13 @@ public class HomeServlet extends HttpServlet {
         List<Banner> banners = bannerService.getBanners();
         request.setAttribute("banners", banners);
 
-        List<Product> topDiscountProducts = productService.getTopDiscountProducts();
+        List<Product> topDiscountProducts = productService.getTopDiscountProducts(10);
         request.setAttribute("topDiscountProducts", topDiscountProducts);
 
-        List<Product> topNewProducts = productService.getTopNewProducts();
+        List<Product> topNewProducts = productService.getTopNewProducts(10);
         request.setAttribute("topNewProducts", topNewProducts);
 
-        List<Product> topSoldProducts = productService.getTopSoldProducts();
+        List<Product> topSoldProducts = productService.getTopSoldProducts(10);
         request.setAttribute("topSoldProducts", topSoldProducts);
 
         request.getRequestDispatcher("index.jsp").forward(request, response);

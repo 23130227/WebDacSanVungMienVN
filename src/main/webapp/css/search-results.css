@@ -90,9 +90,29 @@ main nav {
     gap: 10px;
 }
 
-main button {
-    border: 2px solid hsl(0, 0%, 83%);
-    font-size: 20px;
-    border-radius: 10px;
+main nav a {
+    padding: 8px 14px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+main nav a:hover {
+    background-color: hsl(85, 44%, 40%);
+    color: #fff;
     cursor: pointer;
+}
+
+main nav a.active {
+    background-color: hsl(85, 44%, 40%);
+    color: white;
+    cursor: default;
+}
+
+main nav a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
