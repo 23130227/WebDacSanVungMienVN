@@ -17,26 +17,26 @@
             <h2 class="title">Kết quả tìm kiểm cho "${keyword}":</h2>
             <div class="nav-product-list">
                 <div class="product-list">
-                    <c:forEach items="${searchProducts}" var="sp">
+                    <c:forEach items="${products}" var="p">
                         <div class="product">
                             <div class="sale-tag">
-                                <c:if test="${sp.getDiscountPercentage() > 0}">
-                                    <p class="sale-percent">-${sp.getDiscountPercentage()}%</p>
+                                <c:if test="${p.getDiscountPercentage() > 0}">
+                                    <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
                             <a href="product-detail.jsp">
-                                <img class="product-image" src="${sp.getImage()}"/>
+                                <img class="product-image" src="${p.getImage()}"/>
                             </a>
                             <a class="product-name" href="product-detail.jsp">
-                                <h3>${sp.getName()}</h3>
+                                <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
                                 <h4 class="new-price">
-                                        ${sp.format(sp.discountPercentage > 0 ? sp.discountPrice : sp.price)}đ
+                                        ${p.format(p.discountPercentage > 0 ? p.discountPrice : p.price)}đ
                                 </h4>
-                                <c:if test="${sp.discountPercentage > 0}">
+                                <c:if test="${p.discountPercentage > 0}">
                                     <h4 class="old-price">
-                                            ${sp.format(sp.price)}đ
+                                            ${p.format(p.price)}đ
                                     </h4>
                                 </c:if>
                             </div>

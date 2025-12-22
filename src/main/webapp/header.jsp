@@ -44,19 +44,19 @@
                 <div class="item">
                     Danh mục sản phẩm
                     <div class="sub">
-                        <a class="sub-item" href="category-products.jsp">Tất cả sản phẩm</a>
-                        <a class="sub-item" href="category-products.jsp">Sản phẩm mới</a>
-                        <a class="sub-item" href="category-products.jsp">Sản phẩm bán chạy</a>
-                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Bắc</a>
-                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Trung</a>
-                        <a class="sub-item" href="category-products.jsp">Đặc sản miền Nam</a>
-                        <c:forEach items="${topProductCategories}" var="tpc">
-                            <a class="sub-item" href="category-products.jsp">${tpc.getName()}</a>
+                        <a class="sub-item" href="category-products">Tất cả sản phẩm</a>
+                        <a class="sub-item" href="category-products?filter=new">Sản phẩm mới</a>
+                        <a class="sub-item" href="category-products?filter=sold">Sản phẩm bán chạy</a>
+                        <a class="sub-item" href="category-products?region=north">Đặc sản miền Bắc</a>
+                        <a class="sub-item" href="category-products?region=central">Đặc sản miền Trung</a>
+                        <a class="sub-item" href="category-products?region=south">Đặc sản miền Nam</a>
+                        <c:forEach items="${productCategories}" var="c">
+                            <a class="sub-item" href="category-products?categoryId=${c.getId()}">${c.getName()}</a>
                         </c:forEach>
-                        <a class="sub-item" href="category-products.jsp">Xem thêm...</a>
+                        <a class="sub-item" href="category-products">Xem thêm...</a>
                     </div>
                 </div>
-                <a class="item" href="promotions.jsp">Khuyến mãi / ưu đãi</a>
+                <a class="item" href="promotions">Khuyến mãi / ưu đãi</a>
                 <a class="item" href="blog-news.jsp">Tin tức / blog</a>
             </nav>
         </div>

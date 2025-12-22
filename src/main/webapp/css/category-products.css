@@ -11,7 +11,7 @@ main .category-list {
     width: 225px;
 }
 
-main .category-button {
+main .category {
     border: none;
     background: none;
     border-bottom: 1px solid hsl(0, 0%, 83%);
@@ -24,7 +24,7 @@ main .category-button {
     cursor: pointer;
 }
 
-main .category-button:last-child {
+main .category:last-child {
     border: none;
 }
 
@@ -121,19 +121,33 @@ main nav {
     gap: 10px;
 }
 
-main nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+main nav a {
+    padding: 8px 14px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-main nav button {
-    border: 2px solid hsl(0, 0%, 83%);
-    font-size: 20px;
-    border-radius: 10px;
+main nav a:hover {
+    background-color: hsl(85, 44%, 40%);
+    color: #fff;
     cursor: pointer;
 }
 
-main .category-button.active {
+main nav a.active {
+    background-color: hsl(85, 44%, 40%);
+    color: white;
+    cursor: default;
+}
+
+main nav a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+main .category.active {
     opacity: 1;
 }

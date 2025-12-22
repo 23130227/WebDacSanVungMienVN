@@ -18,16 +18,16 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Banner> banners = bannerService.getBanners();
+        List<Banner> banners = bannerService.getAllBanners();
         request.setAttribute("banners", banners);
 
-        List<Product> topDiscountProducts = productService.getTopDiscountProducts(10);
+        List<Product> topDiscountProducts = productService.getTopProducts("discount", 10);
         request.setAttribute("topDiscountProducts", topDiscountProducts);
 
-        List<Product> topNewProducts = productService.getTopNewProducts(10);
+        List<Product> topNewProducts = productService.getTopProducts("new", 10);
         request.setAttribute("topNewProducts", topNewProducts);
 
-        List<Product> topSoldProducts = productService.getTopSoldProducts(10);
+        List<Product> topSoldProducts = productService.getTopProducts("sold", 10);
         request.setAttribute("topSoldProducts", topSoldProducts);
 
         request.getRequestDispatcher("index.jsp").forward(request, response);
