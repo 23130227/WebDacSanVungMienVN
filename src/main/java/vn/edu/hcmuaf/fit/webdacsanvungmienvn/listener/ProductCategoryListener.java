@@ -18,9 +18,9 @@ public class ProductCategoryListener implements ServletContextListener, HttpSess
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         /* This method is called when the servlet context is initialized(when the Web application is deployed). */
-        List<ProductCategory> topProductCategories = productCategoryService.getTopProductCategories(4);
+        List<ProductCategory> productCategories = productCategoryService.getTopProductCategories(4);
         ServletContext context = sce.getServletContext();
-        context.setAttribute("topProductCategories", topProductCategories);
+        context.setAttribute("productCategories", productCategories);
     }
 
     @Override

@@ -31,41 +31,41 @@
                        class="category ${activeMenu == 'central' ? 'active' : ''}">Đặc sản miền Trung</a>
                     <a href="category-products?region=south" class="category ${activeMenu == 'south' ? 'active' : ''}">Đặc
                         sản miền Nam</a>
-                    <c:forEach items="${productCategories}" var="pc">
+                    <c:forEach items="${productCategories}" var="c">
                         <c:choose>
-                            <c:when test="${activeMenu == 'category' && categoryId == pc.getId()}">
-                                <a href="category-products?categoryId=${pc.getId()}"
-                                   class="category active">${pc.getName()}</a>
+                            <c:when test="${activeMenu == 'category' && categoryId == c.getId()}">
+                                <a href="category-products?categoryId=${c.getId()}"
+                                   class="category active">${c.getName()}</a>
                             </c:when>
                             <c:otherwise>
-                                <a href="category-products?categoryId=${pc.getId()}"
-                                   class="category">${pc.getName()}</a>
+                                <a href="category-products?categoryId=${c.getId()}"
+                                   class="category">${c.getName()}</a>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
                 </div>
                 <div class="nav-product-list">
                     <div class="product-list">
-                        <c:forEach items="${categoryProducts}" var="cp">
+                        <c:forEach items="${products}" var="p">
                             <div class="product">
                                 <div class="sale-tag">
-                                    <c:if test="${cp.getDiscountPercentage() > 0}">
-                                        <p class="sale-percent">-${cp.getDiscountPercentage()}%</p>
+                                    <c:if test="${p.getDiscountPercentage() > 0}">
+                                        <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                     </c:if>
                                 </div>
                                 <a href="product-detail.jsp">
-                                    <img class="product-image" src="${cp.getImage()}"/>
+                                    <img class="product-image" src="${p.getImage()}"/>
                                 </a>
                                 <a class="product-name" href="product-detail.jsp">
-                                    <h3>${cp.getName()}</h3>
+                                    <h3>${p.getName()}</h3>
                                 </a>
                                 <div class="product-price">
                                     <h4 class="new-price">
-                                            ${cp.format(cp.discountPercentage > 0 ? cp.discountPrice : cp.price)}đ
+                                            ${p.format(p.discountPercentage > 0 ? p.discountPrice : p.price)}đ
                                     </h4>
-                                    <c:if test="${cp.discountPercentage > 0}">
+                                    <c:if test="${p.discountPercentage > 0}">
                                         <h4 class="old-price">
-                                                ${cp.format(cp.price)}đ
+                                                ${p.format(p.price)}đ
                                         </h4>
                                     </c:if>
                                 </div>

@@ -23,37 +23,37 @@ public class CategoryProductsServlet extends HttpServlet {
         if (request.getParameter("page") != null) {
             page = Integer.parseInt(request.getParameter("page"));
         }
-        List<Product> categoryProducts = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
         int totalProducts = 0;
         request.setAttribute("activeMenu", "all");
         if (request.getParameter("categoryId") != null) {
             int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-            categoryProducts = productService.getCategoryProducts(categoryId, 20, page);
+            products = productService.getCategoryProducts(categoryId, 20, page);
             totalProducts = productService.countCategoryProducts(categoryId);
             request.setAttribute("activeMenu", "category");
             request.setAttribute("categoryId", categoryId);
         } else if (request.getParameter("filter") != null) {
             String filter = request.getParameter("filter");
-            categoryProducts = productService.getAllProducts(filter, 20, page);
-            totalProducts = productService.countAllProducts();
+            products = productService.getAllProducts(filter, 20, page);
+            totalProducts = productService.countAllProducts(filter);
             request.setAttribute("activeMenu", filter);
             request.setAttribute("filter", filter);
         } else if (request.getParameter("region") != null) {
             String region = request.getParameter("region");
-            categoryProducts = productService.getRegionProducts(region, 20, page);
-            totalProducts = productService.countRegionProducts(request.getParameter("region"));
+            products = productService.getRegionProducts(region, 20, page);
+            totalProducts = productService.countRegionProducts(region);
             request.setAttribute("activeMenu", region);
             request.setAttribute("region", region);
         } else {
-            categoryProducts = productService.getAllProducts("all", 20, page);
-            totalProducts = productService.countAllProducts();
+            products = productService.getAllProducts("all", 20, page);
+            totalProducts = productService.countAllProducts("all");
         }
 
         List<ProductCategory> productCategories = productCategoryService.getAllProductCategories();
         int totalPages = productService.totalPages(totalProducts, 20);
 
         request.setAttribute("productCategories", productCategories);
-        request.setAttribute("categoryProducts", categoryProducts);
+        request.setAttribute("products", products);
         request.setAttribute("totalPages", totalPages);
         request.setAttribute("page", page);
 

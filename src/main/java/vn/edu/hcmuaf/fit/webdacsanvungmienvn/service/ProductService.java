@@ -49,13 +49,26 @@ public class ProductService {
                 return productDAO.getAllNewProducts(limit, page);
             case "sold":
                 return productDAO.getAllSoldProducts(limit, page);
+            case "discount":
+                return productDAO.getAllDiscountProducts(limit, page);
             default:
                 return null;
         }
     }
 
-    public int countAllProducts() {
-        return productDAO.countAllProducts();
+    public int countAllProducts(String filter) {
+        switch (filter) {
+            case "all":
+                return productDAO.countAllProducts();
+            case "new":
+                return productDAO.countAllProducts();
+            case "sold":
+                return productDAO.countAllProducts();
+            case "discount":
+                return productDAO.countAllDiscountProducts();
+            default:
+                return 0;
+        }
     }
 
     public List<Product> getRegionProducts(String region, int limit, int page) {

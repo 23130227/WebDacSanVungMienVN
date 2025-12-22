@@ -11,7 +11,7 @@ import java.util.List;
 
 public class BannerDAO {
     public List<Banner> getAllBanners() {
-        List<Banner> allBanners = new ArrayList<>();
+        List<Banner> banners = new ArrayList<>();
         String query = "SELECT * FROM banners";
         try (Connection conn = DBConnect.getConnection();
              PreparedStatement ps = conn.prepareStatement(query)) {
@@ -20,11 +20,11 @@ public class BannerDAO {
                 Banner banner = new Banner();
                 banner.setId(rs.getInt("id"));
                 banner.setImage(rs.getString("image"));
-                allBanners.add(banner);
+                banners.add(banner);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return allBanners;
+        return banners;
     }
 }

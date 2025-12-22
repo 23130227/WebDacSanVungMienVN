@@ -30,7 +30,7 @@ public class ProductCategoryDAO {
     }
 
     public List<ProductCategory> getAllProductCategories() {
-        List<ProductCategory> allProductCategories = new ArrayList<>();
+        List<ProductCategory> productCategories = new ArrayList<>();
         String query = "SELECT * FROM product_categories ORDER BY name";
         try (Connection conn = DBConnect.getConnection();
              PreparedStatement ps = conn.prepareStatement(query)) {
@@ -39,11 +39,11 @@ public class ProductCategoryDAO {
                 ProductCategory productCategory = new ProductCategory();
                 productCategory.setId(rs.getInt("id"));
                 productCategory.setName(rs.getString("name"));
-                allProductCategories.add(productCategory);
+                productCategories.add(productCategory);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return allProductCategories;
+        return productCategories;
     }
 }
