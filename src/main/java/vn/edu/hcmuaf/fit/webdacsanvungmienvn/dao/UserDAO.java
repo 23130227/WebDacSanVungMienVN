@@ -6,6 +6,7 @@ import vn.edu.hcmuaf.fit.webdacsanvungmienvn.util.DBConnect;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Date;
 
 public class UserDAO {
 
@@ -41,6 +42,7 @@ public class UserDAO {
             e.printStackTrace();
         }
         return null;
+
     }
     public boolean updatePassword(int userId, String newPassword) {
         String sql = "UPDATE users SET password = ? WHERE id = ?";
@@ -81,6 +83,53 @@ public class UserDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public boolean updatePersonalInfo(
+            int id,
+            String fullName,
+            String phoneNumber,
+            String gender,
+            Date dateOfBirth
+    ) {
+        String sql = """
+        UPDATE users
+        SET full_name = ?, phone_number = ?, gender = ?, date_of_birth = ?
+        WHERE id = ?
+        """;
+
+        try (
+                Connection conn = DBConnect.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)
+        ) {
+            ps.setString(1, fullName);
+            ps.setString(2, phoneNumber);
+            ps.setString(3, gender);
+            ps.setDate(4, dateOfBirth);
+            ps.setInt(5, id);
+
+            return ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean insertUser(String email, String password) {
+        String sql = """
+        INSERT INTO users (email, password, full_name, phone_number, gender, role)
+        VALUES (?, ?, '', '', 'Không xác định', 'user')
+        """;
+
+        try (
+                Connection conn = DBConnect.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)
+        ) {
+            ps.setString(1, email);
+            ps.setString(2, password);
+            return ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 
