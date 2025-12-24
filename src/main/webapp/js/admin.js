@@ -12,7 +12,7 @@ function closeModal(modalId) {
 }
 
 // Close modal when clicking outside
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('modal')) {
         e.target.classList.remove('active');
         document.body.style.overflow = 'auto';
@@ -20,7 +20,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Close modal with Escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         const modals = document.querySelectorAll('.modal.active');
         modals.forEach(modal => {
@@ -263,11 +263,11 @@ function updateNews() {
 }
 
 // Search functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchBoxes = document.querySelectorAll('.search-box');
     searchBoxes.forEach(box => {
         if (box.tagName === 'INPUT') {
-            box.addEventListener('input', function() {
+            box.addEventListener('input', function () {
                 const searchTerm = this.value.toLowerCase();
                 const table = document.querySelector('.data-table tbody');
                 if (table) {
@@ -284,11 +284,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // File upload preview
     const fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach(input => {
-        input.addEventListener('change', function() {
+        input.addEventListener('change', function () {
             const file = this.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     const preview = input.closest('.form-group').querySelector('.image-preview');
                     if (preview) {
                         preview.src = e.target.result;
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Pagination functionality
     const paginationButtons = document.querySelectorAll('.pagination button:not(:first-child):not(:last-child)');
     paginationButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             paginationButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
         });
@@ -341,7 +341,7 @@ function exportToCSV(tableId, filename) {
     });
 
     const csvContent = csv.join('\n');
-    const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob(['\ufeff' + csvContent], {type: 'text/csv;charset=utf-8;'});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = filename + '.csv';
@@ -361,3 +361,14 @@ function confirmLogout() {
     }
 }
 
+function openEditCategory(id, name) {
+    const idEl = document.getElementById('editCategoryId');
+    const nameEl = document.getElementById('editCategoryName');
+    if (!idEl || !nameEl) {
+        console.warn('[admin.js] Edit category modal elements not found');
+        return;
+    }
+    idEl.value = id;
+    nameEl.value = name;
+    openModal('editModal');
+}

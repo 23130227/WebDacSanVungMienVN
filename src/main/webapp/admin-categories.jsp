@@ -1,11 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%
+    // If accessed directly (no controller attributes), redirect to the controller.
+    // Avoid redirect loop by skipping redirect when we're already on /admin/categories.
+    if (request.getAttribute("categories") == null && !request.getRequestURI().endsWith("/admin/categories")) {
+        String qs = request.getQueryString();
+        response.sendRedirect(request.getContextPath() + "/admin/categories" + (qs != null ? ("?" + qs) : ""));
+        return;
+    }
+%>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Danh mục - Admin</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -21,7 +32,7 @@
 
                 <p class="menu-section">Quản lý sản phẩm</p>
                 <li><a href="admin-products.jsp"><i class="fas fa-box"></i> <span>Sản phẩm</span></a></li>
-                <li><a href="AdminDanhMuc.html" class="active"><i class="fas fa-tags"></i> <span>Danh mục</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin/categories" class="active"><i class="fas fa-tags"></i> <span>Danh mục</span></a></li>
                 <li><a href="admin-brands.jsp"><i class="fas fa-trademark"></i> <span>Thương hiệu</span></a></li>
                 <li><a href="admin-banners.jsp"><i class="fas fa-image"></i> <span>Banner</span></a></li>
 
@@ -69,85 +80,93 @@
                         </button>
                     </div>
                 </div>
+
+                <c:if test="${param.error == 'empty'}">
+                    <div class="alert alert-danger">Tên danh mục không được để trống.</div>
+                </c:if>
+                <c:if test="${param.error == 'db'}">
+                    <div class="alert alert-danger">Không thể lưu danh mục. Vui lòng kiểm tra kết nối DB hoặc ràng buộc dữ liệu.</div>
+                </c:if>
+                <c:if test="${param.success == '1'}">
+                    <div class="alert alert-success">Thêm danh mục thành công.</div>
+                </c:if>
+
+                <div style="margin: 8px 0; font-size: 12px; color: #666;">
+                    Tổng danh mục: <c:out value="${totalItems}" default="0"/>
+                </div>
+
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>STT</th>
                             <th>Tên danh mục</th>
                             <th>Số sản phẩm</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Đặc sản miền Bắc</td>
-                            <td>25</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa" onclick="openModal('editModal')"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa" onclick="confirmDelete()"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Đặc sản miền Trung</td>
-                            <td>30</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Đặc sản miền Nam</td>
-                            <td>35</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Bánh</td>
-                            <td>20</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Trà</td>
-                            <td>15</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Mứt</td>
-                            <td>12</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Lạp xưởng</td>
-                            <td>8</td>
-                            <td class="actions">
-                                <button class="btn btn-warning btn-sm" title="Sửa"><i class="fas fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm" title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
+                        <c:choose>
+                            <c:when test="${not empty categories}">
+                                <c:set var="startIndex" value="${(currentPage - 1) * pageSize}"/>
+                                <c:forEach var="cat" items="${categories}" varStatus="st">
+                                    <tr>
+                                        <td><c:out value="${startIndex + st.index + 1}"/></td>
+                                        <td><c:out value="${cat.name}"/></td>
+                                        <td>-</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-warning btn-sm" title="Sửa"
+                                                    onclick="openEditCategory('<c:out value='${cat.id}'/>','<c:out value='${cat.name}'/>' )">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+
+                                            <form action="<%=request.getContextPath()%>/admin/category/delete" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="<c:out value='${cat.id}'/>"/>
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Xóa" onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </c:when>
+                            <c:otherwise>
+                                <tr>
+                                    <td colspan="4">Chưa có danh mục nào trong database.</td>
+                                </tr>
+                            </c:otherwise>
+                        </c:choose>
                     </tbody>
                 </table>
+
                 <div class="pagination">
-                    <button><i class="fas fa-chevron-left"></i></button>
-                    <button class="active">1</button>
-                    <button><i class="fas fa-chevron-right"></i></button>
+                    <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+                    <c:set var="cp" value="${currentPage}"/>
+                    <c:set var="tp" value="${totalPages}"/>
+
+                    <c:if test="${cp > 1}">
+                        <a class="btn" href="${ctx}/admin/categories?page=${cp-1}"><i class="fas fa-chevron-left"></i></a>
+                    </c:if>
+                    <c:if test="${cp <= 1}">
+                        <button disabled><i class="fas fa-chevron-left"></i></button>
+                    </c:if>
+
+                    <c:forEach var="i" begin="1" end="${tp}">
+                        <c:choose>
+                            <c:when test="${i == cp}">
+                                <button class="active" disabled><c:out value="${i}"/></button>
+                            </c:when>
+                            <c:otherwise>
+                                <a class="btn" href="${ctx}/admin/categories?page=${i}"><c:out value="${i}"/></a>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
+
+                    <c:if test="${cp < tp}">
+                        <a class="btn" href="${ctx}/admin/categories?page=${cp+1}"><i class="fas fa-chevron-right"></i></a>
+                    </c:if>
+                    <c:if test="${cp >= tp}">
+                        <button disabled><i class="fas fa-chevron-right"></i></button>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -161,18 +180,22 @@
                 <button class="modal-close" onclick="closeModal('addModal')">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="addCategoryForm">
+                <form id="addCategoryForm" action="<%=request.getContextPath()%>/admin/category/add" method="post">
                     <div class="form-group">
                         <label>Tên danh mục *</label>
-                        <input type="text" name="name" required placeholder="Nhập tên danh mục">
+                        <input type="text" name="categoryName" required placeholder="Nhập tên danh mục" value="<c:out value='${param.categoryName}'/>">
+                        <c:if test="${param.error == 'duplicate'}">
+                            <div style="margin-top:6px;color:#dc3545;font-size:13px;">Danh mục thêm vào bị trùng</div>
+                        </c:if>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn" onclick="closeModal('addModal')">Hủy</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Lưu
+                        </button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" onclick="closeModal('addModal')">Hủy</button>
-                <button class="btn btn-primary" onclick="saveCategory()">
-                    <i class="fas fa-save"></i> Lưu
-                </button>
             </div>
         </div>
     </div>
@@ -185,23 +208,25 @@
                 <button class="modal-close" onclick="closeModal('editModal')">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="editCategoryForm">
+                <form id="editCategoryForm" action="<%=request.getContextPath()%>/admin/category/update" method="post">
+                    <input type="hidden" name="id" id="editCategoryId" />
                     <div class="form-group">
                         <label>Tên danh mục *</label>
-                        <input type="text" name="name" required value="Đặc sản miền Bắc">
+                        <input type="text" name="categoryName" id="editCategoryName" required>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn" onclick="closeModal('editModal')">Hủy</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Cập nhật
+                        </button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" onclick="closeModal('editModal')">Hủy</button>
-                <button class="btn btn-primary" onclick="updateCategory()">
-                    <i class="fas fa-save"></i> Cập nhật
-                </button>
             </div>
         </div>
     </div>
 
-    <script src="js/admin.js"></script>
+    <script src="<%=request.getContextPath()%>/js/admin.js"></script>
 </body>
 </html>
 
