@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/product-detail.css">
     <script src="js/product-detail.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -68,41 +69,49 @@
 
                 <div class="review-summary">
                     <div class="rating-overview">
-                        <span class="average-rating">4.5</span>
+                        <span class="average-rating">${ratingInfo.averageRating}</span>
                         <div class="stars-overview">
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star half">★</span>
+                            <c:forEach begin="1" end="${ratingInfo.fullStars}">
+                                <i class="fa-solid fa-star"></i>
+                            </c:forEach>
+                            <c:if test="${ratingInfo.halfStar}">
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </c:if>
+                            <c:forEach begin="${ratingInfo.fullStars + (ratingInfo.halfStar ? 1 : 0) + 1}" end="5">
+                                <i class="fa-regular fa-star"></i>
+                            </c:forEach>
                         </div>
-                        <span class="total-reviews">(12 đánh giá)</span>
+                        <span class="total-reviews">(${totalReviews} đánh giá)</span>
                     </div>
                 </div>
 
                 <div class="review-form-wrapper">
                     <h3>Viết đánh giá của bạn</h3>
-                    <form class="review-form">
+                    <form class="review-form" action="product-detail" method="post">
+                        <input type="hidden" name="productId" value="${product.id}">
                         <div class="rating-input">
                             <label>Đánh giá của bạn:</label>
                             <div class="star-rating">
-                                <input type="radio" id="star5" name="rating" value="5">
-                                <label for="star5" class="star-label">★</label>
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <label for="star5" class="star-label"><i class="fa-solid fa-star"></i></label>
                                 <input type="radio" id="star4" name="rating" value="4">
-                                <label for="star4" class="star-label">★</label>
+                                <label for="star4" class="star-label"><i class="fa-solid fa-star"></i></label>
                                 <input type="radio" id="star3" name="rating" value="3">
-                                <label for="star3" class="star-label">★</label>
+                                <label for="star3" class="star-label"><i class="fa-solid fa-star"></i></label>
                                 <input type="radio" id="star2" name="rating" value="2">
-                                <label for="star2" class="star-label">★</label>
+                                <label for="star2" class="star-label"><i class="fa-solid fa-star"></i></label>
                                 <input type="radio" id="star1" name="rating" value="1">
-                                <label for="star1" class="star-label">★</label>
+                                <label for="star1" class="star-label"><i class="fa-solid fa-star"></i></label>
                             </div>
                         </div>
                         <div class="content-input">
                             <label for="review-content">Nội dung đánh giá:</label>
                             <textarea id="review-content" name="content" rows="4"
-                                      placeholder="Nhập đánh giá của bạn về sản phẩm..."></textarea>
+                                      placeholder="Nhập đánh giá của bạn về sản phẩm..." required></textarea>
                         </div>
+                        <c:if test="${not empty error}">
+                            <p style="color:red">${error}</p>
+                        </c:if>
                         <button type="submit" class="submit-review-btn">Gửi đánh giá</button>
                     </form>
                 </div>
@@ -110,79 +119,64 @@
                 <div class="review-list">
                     <h3>Tất cả đánh giá</h3>
 
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Nguyễn Văn A</span>
-                                    <span class="review-date">05/12/2025</span>
+                    <c:forEach items="${reviews}" var="r">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-details">
+                                        <span class="reviewer-name">${r.userFullName}</span>
+                                        <span class="review-date">${r.createdAt}</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <c:forEach begin="1" end="${r.rating}">
+                                        <i class="fa-solid fa-star"></i>
+                                    </c:forEach>
+                                    <c:forEach begin="${r.rating + 1}" end="5">
+                                        <i class="fa-regular fa-star"></i>
+                                    </c:forEach>
                                 </div>
                             </div>
-                            <div class="review-rating">
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
+                            <div class="review-content">
+                                <p>${r.content}</p>
                             </div>
                         </div>
-                        <div class="review-content">
-                            <p>Sản phẩm rất ngon, đóng gói cẩn thận. Lạp xưởng thơm, vị đậm đà, gia đình tôi rất thích.
-                                Sẽ ủng hộ shop tiếp!</p>
-                        </div>
-                    </div>
-
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Trần Thị B</span>
-                                    <span class="review-date">03/12/2025</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star">★</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p>Chất lượng tốt, giao hàng nhanh. Lạp xưởng ăn ngon, chỉ có điều hơi mặn một chút với khẩu
-                                vị của mình.</p>
-                        </div>
-                    </div>
-
-                    <div class="review-item">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-details">
-                                    <span class="reviewer-name">Lê Văn C</span>
-                                    <span class="review-date">01/12/2025</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                                <span class="star filled">★</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p>Mua làm quà Tết cho gia đình, ai cũng khen ngon. Đóng gói đẹp, hạn sử dụng còn dài. Rất
-                                hài lòng!</p>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
 
-                <div class="review-pagination">
-                    <button class="pagination-btn active">1</button>
-                    <button class="pagination-btn">2</button>
-                    <button class="pagination-btn">3</button>
-                    <button class="pagination-btn next">Tiếp &raquo;</button>
-                </div>
+                <nav>
+                    <c:choose>
+                        <c:when test="${totalPages == 0}">
+                            <h3>Chưa có đánh giá nào!</h3>
+                        </c:when>
+                        <c:otherwise>
+                            <c:choose>
+                                <c:when test="${page > 1}">
+                                    <a href="product-detail?id=${product.id}&page=${page - 1}">
+                                        Trang trước
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a class="disabled">Trang trước</a>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="i" begin="1" end="${totalPages}">
+                                <a href="product-detail?id=${product.id}&page=${i}"
+                                   class="${i == page? 'active':''}">${i}</a>
+                            </c:forEach>
+                            <c:choose>
+                                <c:when test="${page < totalPages}">
+                                    <a href="product-detail?id=${product.id}&page=${page + 1}">
+                                        Trang sau
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a class="disabled">Trang sau</a>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:otherwise>
+                    </c:choose>
+                </nav>
             </div>
         </div>
     </section>

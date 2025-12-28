@@ -49,27 +49,34 @@
                 </div>
                 <nav>
                     <c:choose>
-                        <c:when test="${page > 1}">
-                            <a href="promotions?page=${page - 1}">
-                                Trang trước
-                            </a>
+                        <c:when test="${totalPages == 0}">
+                            <h3>Chưa có sản phẩm nào!</h3>
                         </c:when>
                         <c:otherwise>
-                            <a class="disabled">Trang trước</a>
-                        </c:otherwise>
-                    </c:choose>
-                    <c:forEach var="i" begin="1" end="${totalPages}">
-                        <a href="promotions?page=${i}"
-                           class="${i == page? 'active':''}">${i}</a>
-                    </c:forEach>
-                    <c:choose>
-                        <c:when test="${page < totalPages}">
-                            <a href="promotions?page=${page + 1}">
-                                Trang sau
-                            </a>
-                        </c:when>
-                        <c:otherwise>
-                            <a class="disabled">Trang sau</a>
+                            <c:choose>
+                                <c:when test="${page > 1}">
+                                    <a href="promotions?page=${page - 1}">
+                                        Trang trước
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a class="disabled">Trang trước</a>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:forEach var="i" begin="1" end="${totalPages}">
+                                <a href="promotions?page=${i}"
+                                   class="${i == page? 'active':''}">${i}</a>
+                            </c:forEach>
+                            <c:choose>
+                                <c:when test="${page < totalPages}">
+                                    <a href="promotions?page=${page + 1}">
+                                        Trang sau
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a class="disabled">Trang sau</a>
+                                </c:otherwise>
+                            </c:choose>
                         </c:otherwise>
                     </c:choose>
                 </nav>
