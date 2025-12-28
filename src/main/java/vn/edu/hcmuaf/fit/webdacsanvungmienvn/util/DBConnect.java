@@ -4,7 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBConnect {
-    private static final String URL = "jdbc:mysql://localhost:3306/webdacsanvungmienvn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    private static final String URL = "jdbc:mysql://localhost:3306/webdacsanvungmienvn" +
+            "?useUnicode=true" +
+            "&characterEncoding=UTF-8" +
+            "&useSSL=false" +
+            "&allowPublicKeyRetrieval=true" +
+            "&serverTimezone=Asia/Ho_Chi_Minh";
     private static final String USER = "root";
     private static final String PASSWORD = "";
 

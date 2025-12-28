@@ -408,7 +408,7 @@ public class ProductDAO {
 
     public Product getProductById(int productId) {
         Product product = null;
-        String query = "SELECT p.*, b.name as brand_name, " +
+        String query = "SELECT p.*, b.name AS brand_name, " +
                 "COALESCE(pd.discount_percentage, cd.discount_percentage, 0) AS discount_percentage, " +
                 "p.price * (1 - COALESCE(pd.discount_percentage, cd.discount_percentage, 0)/100) AS discount_price " +
                 "FROM products p LEFT JOIN product_discounts pd ON p.id = pd.product_id " +
@@ -435,7 +435,7 @@ public class ProductDAO {
                 product.setRegion(rs.getString("region"));
                 product.setDescription(rs.getString("description"));
                 product.setImage(rs.getString("image"));
-                product.setCreatedAt(rs.getDate("created_at"));
+                product.setCreatedAt(rs.getTimestamp("created_at"));
                 product.setDiscountPercentage(rs.getInt("discount_percentage"));
                 product.setDiscountPrice(rs.getDouble("discount_price"));
             }
