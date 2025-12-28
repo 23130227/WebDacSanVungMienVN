@@ -406,6 +406,37 @@ public class ProductDAO {
         return count;
     }
 
+    public Product getProduct(int productId) {
+        Product product = null;
+        String query = "SELECT p.id, p.name, p.price, p.image, p.description, p.quantity, " +
+                "COALESCE(pd.discount_percentage, cd.discount_percentage, 0) AS discount_percentage, " +
+                "p.price * (1 - COALESCE(pd.discount_percentage, cd.discount_percentage, 0)/100) AS discount_price " +
+                "FROM products p LEFT JOIN product_discounts pd ON p.id = pd.product_id " +
+                "AND NOW() BETWEEN pd.start_date AND pd.end_date " +
+                "LEFT JOIN category_discounts cd ON p.category_id = cd.category_id " +
+                "AND NOW() BETWEEN cd.start_date AND cd.end_date " +
+                "WHERE p.id = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setInt(1, productId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                product = new Product();
+                product.setId(rs.getInt("id"));
+                product.setName(rs.getString("name"));
+                product.setPrice(rs.getDouble("price"));
+                product.setImage(rs.getString("image"));
+                product.setDescription(rs.getString("description"));
+                product.setQuantity(rs.getInt("quantity"));
+                product.setDiscountPercentage(rs.getInt("discount_percentage"));
+                product.setDiscountPrice(rs.getDouble("discount_price"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+
     public Product getProductById(int productId) {
         Product product = null;
         String query = "SELECT p.*, b.name AS brand_name, " +

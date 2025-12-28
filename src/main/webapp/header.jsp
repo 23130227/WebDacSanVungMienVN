@@ -32,6 +32,9 @@
                     <img src="images/grocery-store.png" height="24" width="24"/>
                     <p class="text">
                         Giỏ hàng
+                        <c:if test="${not empty sessionScope.cart}">
+                            (${sessionScope.cart.totalQuantity})
+                        </c:if>
                     </p>
                     <span id="cart-count" class="badge">0</span>
                 </a>

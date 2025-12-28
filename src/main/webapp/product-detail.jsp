@@ -44,7 +44,9 @@
                             <button class="increase-button">+</button>
                         </div>
                     </div>
-                    <button class="add-to-cart-button" type="submit">Thêm vào giỏ hàng</button>
+                    <a href= "add-cart?productId=${product.id}&quantity=1">
+                        <button class="add-to-cart-button" type="submit" >Thêm vào giỏ hàng</button>
+                    </a>
                 </div>
             </div>
         </div>

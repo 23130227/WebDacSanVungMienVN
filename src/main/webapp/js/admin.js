@@ -12,7 +12,7 @@ function closeModal(modalId) {
 }
 
 // Close modal when clicking outside
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('modal')) {
         e.target.classList.remove('active');
         document.body.style.overflow = 'auto';
@@ -20,7 +20,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Close modal with Escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         const modals = document.querySelectorAll('.modal.active');
         modals.forEach(modal => {
@@ -262,12 +262,33 @@ function updateNews() {
     }
 }
 
+// Banner edit helper
+function openEditBanner(id, imagePath) {
+    const idEl = document.getElementById('editBannerId');
+    const previewEl = document.getElementById('editBannerPreview');
+
+    if (!idEl || !previewEl) {
+        console.warn('[admin.js] Edit banner modal elements not found');
+        return;
+    }
+
+    idEl.value = id;
+
+    // imagePath stored in DB is usually like: images/banners/xxx.png
+    // We build full URL with current context path.
+    const ctx = (window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] : '');
+    const normalized = (imagePath || '').replace(/^\/+/, '');
+    previewEl.src = normalized ? (ctx + '/' + normalized) : '';
+
+    openModal('editModal');
+}
+
 // Search functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchBoxes = document.querySelectorAll('.search-box');
     searchBoxes.forEach(box => {
         if (box.tagName === 'INPUT') {
-            box.addEventListener('input', function() {
+            box.addEventListener('input', function () {
                 const searchTerm = this.value.toLowerCase();
                 const table = document.querySelector('.data-table tbody');
                 if (table) {
@@ -281,32 +302,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // File upload preview
+    // File upload preview (supports both add/edit modals)
     const fileInputs = document.querySelectorAll('input[type="file"]');
     fileInputs.forEach(input => {
-        input.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const preview = input.closest('.form-group').querySelector('.image-preview');
-                    if (preview) {
-                        preview.src = e.target.result;
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
+        input.addEventListener('change', function () {
+            const file = this.files && this.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                // Prefer an .image-preview in the same "file-upload" block.
+                const host = input.closest('.file-upload') || input.closest('.form-group') || document;
+                const preview = host.querySelector('.image-preview');
+                if (preview) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+            };
+            reader.readAsDataURL(file);
         });
     });
 
     // Pagination functionality
     const paginationButtons = document.querySelectorAll('.pagination button:not(:first-child):not(:last-child)');
     paginationButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             paginationButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
         });
     });
+
+    // Banner add: enforce selecting an image before submit/click.
+    const addBannerForm = document.getElementById('addBannerForm');
+    if (addBannerForm) {
+        const validate = function (e) {
+            const input = addBannerForm.querySelector('input[type="file"][name="bannerImage"]');
+            const err = document.getElementById('bannerImageError');
+
+            const hasFile = !!(input && input.files && input.files.length > 0);
+            if (!hasFile) {
+                if (e) e.preventDefault();
+                if (err) err.style.display = 'inline';
+                // Keep modal open and do NOT auto-open file picker (user requested)
+                if (input) input.focus();
+                return false;
+            }
+            return true;
+        };
+
+        // Validate on submit
+        addBannerForm.addEventListener('submit', function (e) {
+            validate(e);
+        });
+
+        // Validate on clicking the submit button
+        const submitBtn = addBannerForm.querySelector('button[type="submit"], input[type="submit"]');
+        if (submitBtn) {
+            submitBtn.addEventListener('click', function (e) {
+                validate(e);
+            });
+        }
+
+        // Hide inline error once user selects a file
+        const fileInput = addBannerForm.querySelector('input[type="file"][name="bannerImage"]');
+        if (fileInput) {
+            fileInput.addEventListener('change', function () {
+                const err = document.getElementById('bannerImageError');
+                if (err) err.style.display = 'none';
+            });
+        }
+    }
 });
 
 // Format currency
@@ -341,7 +406,7 @@ function exportToCSV(tableId, filename) {
     });
 
     const csvContent = csv.join('\n');
-    const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob(['\ufeff' + csvContent], {type: 'text/csv;charset=utf-8;'});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = filename + '.csv';
@@ -361,3 +426,49 @@ function confirmLogout() {
     }
 }
 
+function openEditCategory(id, name) {
+    const idEl = document.getElementById('editCategoryId');
+    const nameEl = document.getElementById('editCategoryName');
+    if (!idEl || !nameEl) {
+        console.warn('[admin.js] Edit category modal elements not found');
+        return;
+    }
+    idEl.value = id;
+    nameEl.value = name;
+    openModal('editModal');
+}
+
+// Handle click on category edit buttons (works even when clicking the inner <i> icon)
+document.addEventListener('click', function (e) {
+    const btn = e.target.closest ? e.target.closest('.js-edit-category') : null;
+    if (!btn) return;
+
+    const id = btn.getAttribute('data-id');
+    const name = btn.getAttribute('data-name') || '';
+
+    if (!id) {
+        console.warn('[admin.js] Missing data-id on .js-edit-category button');
+        return;
+    }
+
+    // Prevent any default behavior
+    e.preventDefault();
+    openEditCategory(id, name);
+});
+
+// Banner: open edit modal when clicking edit buttons
+document.addEventListener('click', function (e) {
+    const btn = e.target.closest ? e.target.closest('.js-edit-banner') : null;
+    if (!btn) return;
+
+    const id = btn.getAttribute('data-id');
+    const image = btn.getAttribute('data-image') || '';
+
+    if (!id) {
+        console.warn('[admin.js] Missing data-id on .js-edit-banner button');
+        return;
+    }
+
+    e.preventDefault();
+    openEditBanner(id, image);
+});

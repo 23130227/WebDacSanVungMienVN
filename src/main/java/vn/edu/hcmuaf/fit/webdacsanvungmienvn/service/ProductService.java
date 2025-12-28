@@ -97,6 +97,10 @@ public class ProductService {
         }
     }
 
+    public Product getProduct(int productId) {
+        return productDAO.getProduct(productId);
+    }
+
     public Product getProductById(int productId) {
         return productDAO.getProductById(productId);
     }
