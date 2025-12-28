@@ -27,10 +27,10 @@
                                     <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
-                            <a href="product-detail.jsp">
+                            <a href="product-detail?id=${p.getId()}">
                                 <img class="product-image" src="${p.getImage()}"/>
                             </a>
-                            <a class="product-name" href="product-detail.jsp">
+                            <a class="product-name" href="product-detail?id=${p.getId()}">
                                 <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
@@ -43,7 +43,7 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
+                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>

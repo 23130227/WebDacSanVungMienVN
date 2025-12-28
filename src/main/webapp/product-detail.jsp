@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,18 +16,24 @@
     <section class="section-product-detail">
         <div class="container">
             <div class="product-wrapper">
-                <img src="images/lacxuong.png"/>
+                <img src="${product.image}"/>
                 <div class="product-options">
-                    <h2 class="product-name">Lạp xưởng</h2>
+                    <h2 class="product-name">${product.name}</h2>
                     <div class="product-price">
-                        <h3 class="new-price">70.000đ</h3>
-                        <h3 class="old-price">100.000đ</h3>
+                        <h4 class="new-price">
+                            ${product.format(product.discountPercentage > 0 ? product.discountPrice : product.price)}đ
+                        </h4>
+                        <c:if test="${product.discountPercentage > 0}">
+                            <h4 class="old-price">
+                                    ${product.format(product.price)}đ
+                            </h4>
+                        </c:if>
                     </div>
                     <p>
-                        <strong>Thương hiệu: </strong>Viet Special
+                        <strong>Thương hiệu: </strong>${product.brandName}
                     </p>
                     <p>
-                        <strong>Quy cách đóng gói: </strong>500g
+                        <strong>Quy cách đóng gói: </strong>${product.specification}
                     </p>
                     <div class="quantity-selector">
                         <strong>Số lượng:</strong>
@@ -47,24 +54,11 @@
         <div class="container">
             <div class="product-description">
                 <h2 class="title">Mô tả sản phẩm</h2>
-                <p>Lạp xưởng tươi truyền thống được làm từ thịt heo nạc vai chọn lọc, kết hợp cùng mỡ heo hảo hạng, rượu
-                    mai
-                    quế lộ và gia vị tự nhiên, mang đến hương vị đậm đà, thơm ngon đặc trưng. Từng cây lạp xưởng được
-                    nhồi
-                    thủ công, phơi sấy theo quy trình truyền thống giúp giữ trọn độ ngọt của thịt và mùi thơm hấp dẫn.
-                    Khi
-                    chế biến, lạp xưởng có màu đỏ hồng đẹp mắt, vị ngọt nhẹ, béo mà không ngấy.
+                <p>${product.description}
                 </p>
-                <p class="description-image-panel">
-                    <img class="description-image" src="images/lapxuong-chitiet-1.png"/>
-                </p>
-                <p>
-                    Sản phẩm không sử dụng chất bảo quản hay phẩm màu độc hại, đảm bảo an toàn cho sức khỏe. Lạp xưởng
-                    thích
-                    hợp để chiên, nướng, hấp hoặc xào cùng cơm chiên, xôi, mì, bánh bao,… rất tiện lợi cho bữa ăn gia
-                    đình
-                    hoặc dùng làm món quà biếu Tết đầy ý nghĩa.
-                </p>
+                <%--                <p class="description-image-panel">--%>
+                <%--                    <img class="description-image" src="images/lapxuong-chitiet-1.png"/>--%>
+                <%--                </p>--%>
             </div>
         </div>
     </section>

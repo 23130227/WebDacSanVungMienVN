@@ -51,24 +51,24 @@
                             <div class="sale-tag">
                                 <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                             </div>
-                            <a href="product-detail.jsp">
+                            <a href="product-detail?id=${p.getId()}">
                                 <img class="product-image" src="${p.getImage()}"/>
                             </a>
-                            <a class="product-name" href="product-detail.jsp">
+                            <a class="product-name" href="product-detail?id=${p.getId()}">
                                 <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
                                 <h4 class="new-price">${p.format(p.getDiscountPrice())}đ</h4>
                                 <h4 class="old-price">${p.format(p.getPrice())}đ</h4>
                             </div>
-                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
+                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
             </div>
-            <a class="show-all" href="promotions.jsp">
+            <a class="show-all" href="promotions">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
@@ -86,15 +86,15 @@
                                     <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
-                            <a href="product-detail.jsp">
+                            <a href="product-detail?id=${p.getId()}">
                                 <img class="product-image" src="${p.getImage()}"/>
                             </a>
-                            <a class="product-name" href="product-detail.jsp">
+                            <a class="product-name" href="product-detail?id=${p.getId()}">
                                 <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
                                 <h4 class="new-price">
-                                        ${p.format(p.discountPercentage > 0 ? p.discountPrice : tnp.price)}đ
+                                        ${p.format(p.discountPercentage > 0 ? p.discountPrice : p.price)}đ
                                 </h4>
                                 <c:if test="${p.discountPercentage > 0}">
                                     <h4 class="old-price">
@@ -102,14 +102,14 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
+                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
             </div>
-            <a class="show-all" href="category-products.jsp">
+            <a class="show-all" href="category-products?filter=new">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
@@ -127,10 +127,10 @@
                                     <p class="sale-percent">-${p.getDiscountPercentage()}%</p>
                                 </c:if>
                             </div>
-                            <a href="product-detail.jsp">
+                            <a href="product-detail?id=${p.getId()}">
                                 <img class="product-image" src="${p.getImage()}"/>
                             </a>
-                            <a class="product-name" href="product-detail.jsp">
+                            <a class="product-name" href="product-detail?id=${p.getId()}">
                                 <h3>${p.getName()}</h3>
                             </a>
                             <div class="product-price">
@@ -143,14 +143,14 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail.jsp">Mua hàng</a>
+                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
                 <button class="arrow prev" type="button" aria-label="Prev">&#10094;</button>
                 <button class="arrow next" type="button" aria-label="Next">&#10095;</button>
             </div>
-            <a class="show-all" href="category-products.jsp">
+            <a class="show-all" href="category-products?filter=sold">
                 <h4>Xem tất cả →</h4>
             </a>
         </div>
@@ -159,17 +159,17 @@
         <div class="container">
             <h1 class="title">Đặc sản ba miền</h1>
             <div class="dac-san-ba-mien">
-                <a class="dac-san-mien" href="category-products.jsp">
+                <a class="dac-san-mien" href="category-products?region=north">
                     <div class="overlay"></div>
                     <h2 class="dac-san-mien-text">Đặc sản miền Bắc</h2>
                     <img src="images/ho-hoan-kiem-2.jpg"/>
                 </a>
-                <a class="dac-san-mien" href="category-products.jsp">
+                <a class="dac-san-mien" href="category-products?region=central">
                     <div class="overlay"></div>
                     <h2 class="dac-san-mien-text">Đặc sản miền Trung</h2>
                     <img src="images/mien-trung.jpg">
                 </a>
-                <a class="dac-san-mien" href="category-products.jsp">
+                <a class="dac-san-mien" href="category-products?region=south">
                     <div class="overlay"></div>
                     <h2 class="dac-san-mien-text">Đặc sản miền Nam</h2>
                     <img src="images/Du-lich-mien-Nam-thang-1-2.jpg"/>

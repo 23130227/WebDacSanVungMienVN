@@ -42,7 +42,7 @@
     <section class="section-bottom">
         <div class="container">
             <nav>
-                <a class="item" href="TrangChu.html">Trang chủ</a>
+                <a class="item" href="${pageContext.request.contextPath}/home">Trang chủ</a>
                 <a class="item" href="about-us.jsp">Giới thiệu</a>
                 <div class="item">
                     Danh mục sản phẩm
