@@ -28,33 +28,33 @@
         </div>
         <nav>
             <ul>
-                <li><a href="admin-dashboard.jsp"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-dashboard.jsp"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
 
                 <p class="menu-section">Quản lý sản phẩm</p>
-                <li><a href="admin-products.jsp"><i class="fas fa-box"></i> <span>Sản phẩm</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-products.jsp"><i class="fas fa-box"></i> <span>Sản phẩm</span></a></li>
                 <li><a href="<%=request.getContextPath()%>/admin/categories" class="active"><i class="fas fa-tags"></i> <span>Danh mục</span></a></li>
-                <li><a href="admin-brands.jsp"><i class="fas fa-trademark"></i> <span>Thương hiệu</span></a></li>
-                <li><a href="admin-banners.jsp"><i class="fas fa-image"></i> <span>Banner</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-brands.jsp"><i class="fas fa-trademark"></i> <span>Thương hiệu</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-banners.jsp"><i class="fas fa-image"></i> <span>Banner</span></a></li>
 
                 <p class="menu-section">Khuyến mãi</p>
-                <li><a href="admin-product-promotions.jsp"><i class="fas fa-percent"></i> <span>KM Sản phẩm</span></a></li>
-                <li><a href="admin-category-promotions.jsp"><i class="fas fa-tag"></i> <span>KM Danh mục</span></a></li>
-                <li><a href="admin-discount-vouchers.jsp"><i class="fas fa-ticket-alt"></i> <span>Phiếu giảm giá</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-product-promotions.jsp"><i class="fas fa-percent"></i> <span>KM Sản phẩm</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-category-promotions.jsp"><i class="fas fa-tag"></i> <span>KM Danh mục</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-discount-vouchers.jsp"><i class="fas fa-ticket-alt"></i> <span>Phiếu giảm giá</span></a></li>
 
                 <p class="menu-section">Đơn hàng</p>
-                <li><a href="admin-orders.jsp"><i class="fas fa-shopping-cart"></i> <span>Đơn hàng</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-orders.jsp"><i class="fas fa-shopping-cart"></i> <span>Đơn hàng</span></a></li>
 
                 <p class="menu-section">Người dùng</p>
-                <li><a href="admin-users.jsp"><i class="fas fa-users"></i> <span>Người dùng</span></a></li>
-                <li><a href="admin-shipping-info.jsp"><i class="fas fa-map-marker-alt"></i> <span>Địa chỉ giao</span></a></li>
-                <li><a href="admin-reviews.jsp"><i class="fas fa-star"></i> <span>Đánh giá</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-users.jsp"><i class="fas fa-users"></i> <span>Người dùng</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-shipping-info.jsp"><i class="fas fa-map-marker-alt"></i> <span>Địa chỉ giao</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-reviews.jsp"><i class="fas fa-star"></i> <span>Đánh giá</span></a></li>
 
                 <p class="menu-section">Nội dung</p>
-                <li><a href="admin-news.jsp"><i class="fas fa-newspaper"></i> <span>Tin tức</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/admin-news.jsp"><i class="fas fa-newspaper"></i> <span>Tin tức</span></a></li>
 
                 <p class="menu-section">Hệ thống</p>
-                <li><a href="index.jsp"><i class="fas fa-external-link-alt"></i> <span>Xem Website</span></a></li>
-                <li><a href="login.jsp"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/index.jsp"><i class="fas fa-external-link-alt"></i> <span>Xem Website</span></a></li>
+                <li><a href="<%=request.getContextPath()%>/login.jsp"><i class="fas fa-sign-out-alt"></i> <span>Đăng xuất</span></a></li>
             </ul>
         </nav>
     </aside>
@@ -65,7 +65,7 @@
             <h1>Quản lý Danh mục sản phẩm</h1>
             <div class="user-info">
                 <span>Xin chào, Admin</span>
-                <img src="images/user.png" alt="Admin">
+                <img src="<%=request.getContextPath()%>/images/user.png" alt="Admin">
             </div>
         </header>
 
@@ -114,8 +114,8 @@
                                         <td><c:out value="${cat.name}"/></td>
                                         <td>-</td>
                                         <td class="actions">
-                                            <button type="button" class="btn btn-warning btn-sm" title="Sửa"
-                                                    onclick="openEditCategory('<c:out value='${cat.id}'/>','<c:out value='${cat.name}'/>' )">
+                                            <button type="button" class="btn btn-warning btn-sm js-edit-category" title="Sửa"
+                                                    data-id="<c:out value='${cat.id}'/>" data-name="<c:out value='${cat.name}'/>">
                                                 <i class="fas fa-edit"></i>
                                             </button>
 
@@ -185,7 +185,7 @@
                         <label>Tên danh mục *</label>
                         <input type="text" name="categoryName" required placeholder="Nhập tên danh mục" value="<c:out value='${param.categoryName}'/>">
                         <c:if test="${param.error == 'duplicate'}">
-                            <div style="margin-top:6px;color:#dc3545;font-size:13px;">Danh mục thêm vào bị trùng</div>
+                            <div style="margin-top:6px;color:red;font-size:13px;">Danh mục thêm vào bị trùng</div>
                         </c:if>
                     </div>
 
@@ -226,7 +226,7 @@
         </div>
     </div>
 
-    <script src="<%=request.getContextPath()%>/js/admin.js"></script>
+    <script src="<%=request.getContextPath()%>/js/admin.js?v=20251224"></script>
 </body>
 </html>
 

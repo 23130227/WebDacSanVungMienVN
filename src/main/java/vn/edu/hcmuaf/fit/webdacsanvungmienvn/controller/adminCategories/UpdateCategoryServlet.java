@@ -1,9 +1,8 @@
 package vn.edu.hcmuaf.fit.webdacsanvungmienvn.controller.adminCategories;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 import vn.edu.hcmuaf.fit.webdacsanvungmienvn.service.ProductCategoryService;
 
 import java.io.IOException;
