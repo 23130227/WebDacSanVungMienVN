@@ -2,6 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.ProductCategory" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- Font Awesome CDN for star icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <header>
     <section class="section-top">
         <div class="container">

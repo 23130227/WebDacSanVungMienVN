@@ -140,17 +140,18 @@ main .average-rating {
     color: hsl(85, 44%, 40%);
 }
 
-main .stars-overview .star {
+main .stars-overview i.fa-star,
+main .stars-overview i.fa-star-half-alt,
+main .stars-overview i.fa-regular.fa-star,
+main .stars-overview i.fa-solid.fa-star,
+main .stars-overview i.fa-solid.fa-star-half-stroke {
     font-size: 24px;
-    color: #ddd;
+    color: #ffc107; /* vàng */
+    margin-right: 2px;
 }
 
-main .stars-overview .star.filled {
-    color: #ffc107;
-}
-
-main .stars-overview .star.half {
-    color: #ffc107;
+main .stars-overview i.fa-star:last-child {
+    margin-right: 0;
 }
 
 main .total-reviews {
@@ -302,13 +303,18 @@ main .review-date {
     color: #999;
 }
 
-main .review-rating .star {
+main .review-rating i.fa-star,
+main .review-rating i.fa-star-half-alt,
+main .review-rating i.fa-regular.fa-star,
+main .review-rating i.fa-solid.fa-star,
+main .review-rating i.fa-solid.fa-star-half-stroke {
     font-size: 16px;
-    color: #ddd;
+    color: #ffc107;
+    margin-right: 1px;
 }
 
-main .review-rating .star.filled {
-    color: #ffc107;
+main .review-rating i.fa-star:last-child {
+    margin-right: 0;
 }
 
 main .review-content p {
@@ -318,35 +324,36 @@ main .review-content p {
 }
 
 /* Review Pagination */
-main .review-pagination {
+main nav {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 10px;
 }
 
-main .pagination-btn {
+main nav a {
     padding: 8px 14px;
+    text-decoration: none;
     border: 1px solid #ddd;
-    background-color: #fff;
     color: #333;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+main nav a:hover {
+    background-color: hsl(85, 44%, 40%);
+    color: #fff;
     cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.3s;
 }
 
-main .pagination-btn:hover {
+main nav a.active {
     background-color: hsl(85, 44%, 40%);
     color: white;
-    border-color: hsl(85, 44%, 40%);
+    cursor: default;
 }
 
-main .pagination-btn.active {
-    background-color: hsl(85, 44%, 40%);
-    color: white;
-    border-color: hsl(85, 44%, 40%);
-}
-
-main .pagination-btn.next {
-    padding: 8px 18px;
+main nav a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
