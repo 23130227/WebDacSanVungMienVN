@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.webdacsanvungmienvn.dao;
 
 import vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.User;
 import vn.edu.hcmuaf.fit.webdacsanvungmienvn.util.DBConnect;
+import vn.edu.hcmuaf.fit.webdacsanvungmienvn.util.MD5Util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,7 +23,7 @@ public class UserDAO {
                 PreparedStatement ps = conn.prepareStatement(sql)
         ) {
             ps.setString(1, email);
-            ps.setString(2, password);
+            ps.setString(2, MD5Util.hash(password));
 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
@@ -51,7 +52,7 @@ public class UserDAO {
                 Connection conn = DBConnect.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql)
         ) {
-            ps.setString(1, newPassword);
+            ps.setString(1, MD5Util.hash(newPassword));
             ps.setInt(2, userId);
 
             return ps.executeUpdate() > 0;
@@ -77,7 +78,7 @@ public class UserDAO {
         String sql = "UPDATE users SET password = ? WHERE email = ?";
         try (Connection conn = DBConnect.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setString(1, password);
+            ps.setString(1, MD5Util.hash(password));
             ps.setString(2, email);
             ps.executeUpdate();
         } catch (Exception e) {
@@ -124,7 +125,7 @@ public class UserDAO {
                 PreparedStatement ps = conn.prepareStatement(sql)
         ) {
             ps.setString(1, email);
-            ps.setString(2, password);
+            ps.setString(2, MD5Util.hash(password));
             return ps.executeUpdate() > 0;
         } catch (Exception e) {
             e.printStackTrace();
