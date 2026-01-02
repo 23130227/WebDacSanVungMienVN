@@ -99,6 +99,7 @@
                     <thead>
                         <tr>
                             <th>STT</th>
+                            <th>ID</th>
                             <th>Tên danh mục</th>
                             <th>Số sản phẩm</th>
                             <th>Thao tác</th>
@@ -111,6 +112,7 @@
                                 <c:forEach var="cat" items="${categories}" varStatus="st">
                                     <tr>
                                         <td><c:out value="${startIndex + st.index + 1}"/></td>
+                                        <td><c:out value="${cat.id}"/></td>
                                         <td><c:out value="${cat.name}"/></td>
                                         <td>-</td>
                                         <td class="actions">
@@ -131,7 +133,7 @@
                             </c:when>
                             <c:otherwise>
                                 <tr>
-                                    <td colspan="4">Chưa có danh mục nào trong database.</td>
+                                    <td colspan="5">Chưa có danh mục nào trong database.</td>
                                 </tr>
                             </c:otherwise>
                         </c:choose>
