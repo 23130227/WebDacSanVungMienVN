@@ -90,6 +90,7 @@
                     <thead>
                         <tr>
                             <th>STT</th>
+                            <th>ID</th>
                             <th>Hình ảnh</th>
                             <th>Đường dẫn</th>
                             <th>Thao tác</th>
@@ -101,7 +102,8 @@
                                 <c:forEach var="b" items="${banners}" varStatus="st">
                                     <tr>
                                         <td><c:out value="${st.index + 1}"/></td>
-                                           <td>
+                                        <td><c:out value="${b.id}"/></td>
+                                        <td>
                                             <c:set var="imgPath" value="${b.image}"/>
                                             <c:if test="${fn:startsWith(imgPath, '/')}">
                                                 <c:set var="imgPath" value="${fn:substring(imgPath, 1, fn:length(imgPath))}"/>
@@ -130,7 +132,7 @@
                                 </c:forEach>
                             </c:when>
                             <c:otherwise>
-                                <tr><td colspan="4">Chưa có banner.</td></tr>
+                                <tr><td colspan="5">Chưa có banner.</td></tr>
                             </c:otherwise>
                         </c:choose>
                     </tbody>
