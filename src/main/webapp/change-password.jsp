@@ -13,15 +13,29 @@
 
 <main>
     <div id="title">Thay đổi mật khẩu</div>
-    <div class="change-pass">
-        <label for="pass">Mật khẩu hiện tại:</label>
-        <input type="password" id="oldpass" name="pass" placeholder="Nhập mật khẩu hiện tại">
-        <label for="pass">Mật khẩu mới:</label>
-        <input type="password" id="pass" name="pass" placeholder="Nhập mật khẩu mới">
-        <label for="pass">Nhập lại mật khẩu mới:</label>
-        <input type="password" id="rewritewpass" name="pass" placeholder="Nhập lại mật khẩu mới">
-    </div>
-    <button class="comfirm-button" type="button">Xác nhận</button>
+    <c:if test="${not empty error}">
+        <p style="color:red; text-align:center;">${error}</p>
+    </c:if>
+
+    <c:if test="${not empty success}">
+        <p style="color:green; text-align:center;">${success}</p>
+    </c:if>
+
+    <form action="change-password" method="post">
+        <div class="change-pass">
+            <label>Mật khẩu hiện tại:</label>
+            <input type="password" name="oldPassword" required>
+
+            <label>Mật khẩu mới:</label>
+            <input type="password" name="newPassword" required>
+
+            <label>Nhập lại mật khẩu:</label>
+            <input type="password" name="confirmPassword" required>
+        </div>
+
+        <button class="comfirm-button" type="submit">Xác nhận</button>
+    </form>
+
 </main>
 
 <%@ include file="footer.jsp" %>
