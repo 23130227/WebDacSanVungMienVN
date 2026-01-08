@@ -15,9 +15,17 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String email = request.getParameter("email").trim();
-        String password = request.getParameter("password").trim();
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
 
+        if (email != null) email = email.trim();
+        if (password != null) password = password.trim();
+
+        if (password == null || password.length() < 8) {
+            request.setAttribute("error", "Mật khẩu phải có ít nhất 8 ký tự");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+            return;
+        }
         UserDAO dao = new UserDAO();
         User user = dao.login(email, password);
 
