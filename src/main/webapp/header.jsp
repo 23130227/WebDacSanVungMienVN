@@ -20,7 +20,6 @@
 
                     <c:choose>
 
-                        <!-- ĐÃ ĐĂNG NHẬP -->
                         <c:when test="${not empty sessionScope.user}">
                             <img src="images/user.png" height="24" width="24"/>
 
@@ -37,7 +36,7 @@
                             </div>
                         </c:when>
 
-                        <!-- CHƯA ĐĂNG NHẬP -->
+
                         <c:otherwise>
                             <img src="images/user.png" height="24" width="24"/>
                             <a class="text" href="login.jsp">Đăng nhập</a>
