@@ -31,14 +31,14 @@
                 </button>
 
                 <label for="email">OTP:</label>
-                <input type="text" name="OTP" placeholder="Nhập OTP">
+                <input type="email" name="OTP" placeholder="Nhập OTP">
             </div>
 
             <div class="Rewrite-pass">
                 <label for="newPass">Mật khẩu mới:</label>
-                <input type="password" id="pass" name="newPassword" placeholder="Nhập mật khẩu mới">
+                <input type="password" id="pass" name="newPassword" placeholder="Nhập mật khẩu mới" required minlength="8">
                 <label for="comfirmPass">Nhập lại mật khẩu mới:</label>
-                <input type="password" id="rewritewpass" name="confirmPassword" placeholder="Nhập lại mật khẩu mới">
+                <input type="password" id="rewritewpass" name="confirmPassword" placeholder="Nhập lại mật khẩu mới" required minlength="8">
             </div>
         </div>
         <button class="comfirm-button" type="submit" name="action" value="resetPassword">

@@ -16,7 +16,7 @@
 
     <c:if test="${not empty error}">
         <p style="color:red; text-align:center;">
-            ${error}
+                ${error}
         </p>
     </c:if>
     
@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
             <label for="pass" class="pass">Mật khẩu:</label>
-            <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu">
+            <input type="password" id="pass" name="password" placeholder="Nhập mật khẩu" minlength="8" required>
         </div>
         <div class="remember-register">
             <a href="register.jsp" title="Đăng ký tài khoản">Đăng ký tài khoản</a>

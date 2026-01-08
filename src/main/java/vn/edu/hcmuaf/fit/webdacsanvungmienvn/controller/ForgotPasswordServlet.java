@@ -35,8 +35,9 @@ public class ForgotPasswordServlet extends HttpServlet {
 
                 session.setAttribute("OTP", otp);
                 session.setAttribute("OTP_EMAIL", email);
+                session.setAttribute("OTP_TIME", System.currentTimeMillis());
 
-                // Demo: in OTP ra console
+                // Demo
                 System.out.println("OTP (demo): " + otp);
 
                 request.setAttribute("success", "OTP đã được gửi!");
@@ -52,11 +53,22 @@ public class ForgotPasswordServlet extends HttpServlet {
 
             String sessionOtp = (String) session.getAttribute("OTP");
             String email = (String) session.getAttribute("OTP_EMAIL");
+            Long otpTime = (Long) session.getAttribute("OTP_TIME");
 
-            if (sessionOtp == null || !sessionOtp.equals(otpInput)) {
-                request.setAttribute("error", "OTP không đúng hoặc đã hết hạn!");
+            if (sessionOtp == null || otpTime == null) {
+                request.setAttribute("error", "OTP không tồn tại hoặc đã hết hạn!");
+            }
+            else if (System.currentTimeMillis() - otpTime > 5 * 60 * 1000) {
+                request.setAttribute("error", "OTP đã hết hạn!");
+            }
+
+            else if (!sessionOtp.equals(otpInput)) {
+                request.setAttribute("error", "OTP không đúng!");
+
             } else if (newPass == null || newPass.isEmpty()) {
                 request.setAttribute("error", "Mật khẩu mới không được để trống!");
+            }else if (newPass.length() < 8) {
+                    request.setAttribute("error", "Mật khẩu phải có ít nhất 8 ký tự!");
             } else if (!newPass.equals(confirmPass)) {
                 request.setAttribute("error", "Mật khẩu nhập lại không khớp!");
             } else {
@@ -66,6 +78,7 @@ public class ForgotPasswordServlet extends HttpServlet {
                 // Xóa OTP sau khi dùng
                 session.removeAttribute("OTP");
                 session.removeAttribute("OTP_EMAIL");
+                session.removeAttribute("OTP_TIME");
 
                 request.setAttribute("success", "Đổi mật khẩu thành công!");
             }

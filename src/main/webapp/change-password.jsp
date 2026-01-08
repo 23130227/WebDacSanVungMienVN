@@ -27,10 +27,10 @@
             <input type="password" name="oldPassword" required>
 
             <label>Mật khẩu mới:</label>
-            <input type="password" name="newPassword" required>
+            <input type="password" name="newPassword" required minlength="8" title="Mật khẩu phải có ít nhất 8 ký tự">
 
             <label>Nhập lại mật khẩu:</label>
-            <input type="password" name="confirmPassword" required>
+            <input type="password" name="confirmPassword" required minlength="8" title="Mật khẩu phải có ít nhất 8 ký tự">
         </div>
 
         <button class="comfirm-button" type="submit">Xác nhận</button>

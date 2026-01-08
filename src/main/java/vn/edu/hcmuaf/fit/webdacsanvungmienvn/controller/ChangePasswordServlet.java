@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import vn.edu.hcmuaf.fit.webdacsanvungmienvn.util.MD5Util;
 
 import java.io.IOException;
 
@@ -18,6 +19,7 @@ public class ChangePasswordServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
 
         // Lấy session hiện tại
         HttpSession session = request.getSession(false);
@@ -35,16 +37,29 @@ public class ChangePasswordServlet extends HttpServlet {
         String newPassword = request.getParameter("newPassword");
         String confirmPassword = request.getParameter("confirmPassword");
 
+
         // Kiểm tra mật khẩu cũ
-        if (!user.getPassword().equals(oldPassword)) {
+        String oldPasswordHash = MD5Util.hash(oldPassword);
+        if (oldPassword == null || !user.getPassword().equals(oldPasswordHash)) {
             request.setAttribute("error", "Mật khẩu hiện tại không đúng");
+            request.getRequestDispatcher("change-password.jsp")
+                    .forward(request, response);
+            return;
+        }
+        if (newPassword == null || newPassword.trim().isEmpty()) {
+            request.setAttribute("error", "Mật khẩu mới không được để trống");
+            request.getRequestDispatcher("change-password.jsp").forward(request, response);
+            return;
+        }
+        if (newPassword.length() < 8) {
+            request.setAttribute("error", "Mật khẩu phải có ít nhất 8 ký tự");
             request.getRequestDispatcher("change-password.jsp")
                     .forward(request, response);
             return;
         }
 
         // Kiểm tra nhập lại mật khẩu
-        if (!newPassword.equals(confirmPassword)) {
+        if (confirmPassword == null || !newPassword.equals(confirmPassword)) {
             request.setAttribute("error", "Mật khẩu mới không khớp");
             request.getRequestDispatcher("change-password.jsp")
                     .forward(request, response);
@@ -57,7 +72,7 @@ public class ChangePasswordServlet extends HttpServlet {
 
         if (updated) {
             // Cập nhật lại session
-            user.setPassword(newPassword);
+            user.setPassword(MD5Util.hash(newPassword));
             session.setAttribute("user", user);
 
             request.setAttribute("success", "Đổi mật khẩu thành công");

@@ -15,10 +15,27 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String rePassword = request.getParameter("rePassword");
+
+        if (email == null || email.trim().isEmpty()) {
+            request.setAttribute("error", "Email không được để trống");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+            return;
+        }
+        if (password == null || password.trim().isEmpty()) {
+            request.setAttribute("error", "Mật khẩu không được để trống");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+            return;
+        }
+        if (password.length() < 8) {
+            request.setAttribute("error", "Mật khẩu phải có ít nhất 8 ký tự");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+            return;
+        }
 
         if (!password.equals(rePassword)) {
             request.setAttribute("error", "Mật khẩu nhập lại không khớp");

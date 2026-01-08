@@ -15,9 +15,8 @@
     <c:if test="${not empty error}">
         <p style="color:red; text-align:center">${error}</p>
     </c:if>
-
-    <c:if test="${not empty message}">
-        <p style="color:green; text-align:center">${message}</p>
+    <c:if test="${not empty success}">
+        <p style="color:green; text-align:center">${success}</p>
     </c:if>
 
     <form class="signup" action="register" method="post">
@@ -25,9 +24,9 @@
             <label class="account">Email:</label>
             <input type="email" name="email" placeholder="Nhập Email" required>
             <label class="pass" id>Mật khẩu:</label>
-            <input type="password" name="password" placeholder="Nhập mật khẩu" required>
+            <input type="password" name="password" placeholder="Nhập mật khẩu" minlength="8" required>
             <label class="pass" id>Nhập lại mật khẩu:</label>
-            <input type="password" name="rePassword" placeholder="Nhập lại mật khẩu" required>
+            <input type="password" name="rePassword" placeholder="Nhập lại mật khẩu" minlength="8" required>
             <button type="submit">Đăng ký</button>
         </div>
     </form>
