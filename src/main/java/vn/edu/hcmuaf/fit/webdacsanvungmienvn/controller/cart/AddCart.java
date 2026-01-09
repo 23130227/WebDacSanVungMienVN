@@ -3,7 +3,7 @@ package vn.edu.hcmuaf.fit.webdacsanvungmienvn.controller.cart;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import vn.edu.hcmuaf.fit.webdacsanvungmienvn.cart.cart;
+import vn.edu.hcmuaf.fit.webdacsanvungmienvn.cart.Cart;
 import vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.Product;
 import vn.edu.hcmuaf.fit.webdacsanvungmienvn.service.ProductService;
 
@@ -16,16 +16,20 @@ public class AddCart extends HttpServlet {
         int productId = Integer.parseInt(request.getParameter("productId"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         HttpSession session = request.getSession();
-        cart cart = (cart) session.getAttribute("cart");
+        Cart cart = (Cart) session.getAttribute("cart");
         if (cart == null) {
-            cart = new cart();
+            cart = new Cart();
         }
         ProductService productService = new ProductService();
         Product product = productService.getProduct(productId);
-        if(product != null){
+        if (product != null) {
             cart.addItem(product, quantity);
             session.setAttribute("cart", cart);
-            response.sendRedirect("list-product");
+            String referer = request.getHeader("Referer");
+            if (referer == null) {
+                referer = "home";
+            }
+            response.sendRedirect(referer);
             request.setAttribute("product", product);
             return;
         }

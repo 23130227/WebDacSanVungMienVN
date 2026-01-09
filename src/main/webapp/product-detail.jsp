@@ -36,17 +36,19 @@
                     <p>
                         <strong>Quy cách đóng gói: </strong>${product.specification}
                     </p>
-                    <div class="quantity-selector">
-                        <strong>Số lượng:</strong>
-                        <div class="quantity-controls">
-                            <button class="decrease-button">-</button>
-                            <input type="text" class="quantity-input" value="1" readonly>
-                            <button class="increase-button">+</button>
+                    <form action="add-cart" method="get">
+                        <input type="hidden" name="productId" value="${product.id}"/>
+
+                        <div class="quantity-selector">
+                            <strong>Số lượng:</strong>
+                            <div class="quantity-controls">
+                                <button type="button" class="decrease-button">-</button>
+                                <input type="text" class="quantity-input" name="quantity" value="1" readonly>
+                                <button type="button" class="increase-button">+</button>
+                            </div>
                         </div>
-                    </div>
-                    <a href= "add-cart?productId=${product.id}&quantity=1">
-                        <button class="add-to-cart-button" type="submit" >Thêm vào giỏ hàng</button>
-                    </a>
+                        <button class="add-to-cart-button" type="submit">Thêm vào giỏ hàng</button>
+                    </form>
                 </div>
             </div>
         </div>

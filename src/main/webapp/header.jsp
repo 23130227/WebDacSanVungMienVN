@@ -3,7 +3,8 @@
 <%@ page import="vn.edu.hcmuaf.fit.webdacsanvungmienvn.model.ProductCategory" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Font Awesome CDN for star icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <header>
     <section class="section-top">
         <div class="container">
@@ -32,11 +33,10 @@
                     <img src="images/grocery-store.png" height="24" width="24"/>
                     <p class="text">
                         Giỏ hàng
-                        <c:if test="${not empty sessionScope.cart}">
-                            (${sessionScope.cart.totalQuantity})
-                        </c:if>
                     </p>
-                    <span id="cart-count" class="badge">0</span>
+                    <c:if test="${not empty sessionScope.cart}">
+                        <span id="cart-count" class="badge">${sessionScope.cart.totalQuantity}</span>
+                    </c:if>
                 </a>
             </div>
         </div>

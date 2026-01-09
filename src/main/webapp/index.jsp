@@ -61,7 +61,7 @@
                                 <h4 class="new-price">${p.format(p.getDiscountPrice())}đ</h4>
                                 <h4 class="old-price">${p.format(p.getPrice())}đ</h4>
                             </div>
-                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
+                            <a class="buy" href="add-cart?productId=${p.id}&quantity=1">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
@@ -102,7 +102,7 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
+                            <a class="buy" href="add-cart?productId=${p.id}&quantity=1">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
@@ -143,7 +143,7 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
+                            <a class="buy" href="add-cart?productId=${p.id}&quantity=1">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>
