@@ -29,7 +29,7 @@
                         Đăng ký
                     </a>
                 </div>
-                <a class="sub-group" href="shopping-cart.jsp">
+                <a class="sub-group" href="my-cart">
                     <img src="images/grocery-store.png" height="24" width="24"/>
                     <p class="text">
                         Giỏ hàng

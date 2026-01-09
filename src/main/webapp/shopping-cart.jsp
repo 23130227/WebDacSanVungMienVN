@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,58 +16,55 @@
 <main>
     <section class="cart-section">
         <h1>Giỏ hàng của bạn</h1>
-        <div class="cart-container">
-            <div class="cart-item">
-                <div class="item-left">
-                    <img src="images/keodua.png" alt="Kẹo dừa"/>
-                    <button class="remove-btn">Xóa</button>
-                </div>
+        <c:choose>
+            <c:when test="${not empty sessionScope.cart and not empty sessionScope.cart.items}">
+                <div class="cart-container">
+                    <c:forEach items="${sessionScope.cart.items}" var="item">
+                        <div class="cart-item">
+                            <div class="item-left">
+                                <img src="${item.product.image}"/>
+                                <button class="remove-btn">Xóa</button>
+                            </div>
 
-                <div class="item-middle">Kẹo dừa</div>
+                            <div class="item-middle">${item.product.name}</div>
 
-                <div class="item-right">
-                    <p class="price">40.000đ</p>
-                    <div class="quantity-controls">
-                        <button class="decrease-button">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <input type="text" class="quantity-input" value="1" readonly>
-                        <button class="increase-button">
-                            <i class="fa-solid fa-plus"></i>
+                            <div class="item-right">
+                                <c:choose>
+                                    <c:when test="${item.product.discountPercentage > 0}">
+                                        <p class="price">${item.product.format(item.product.discountPrice)}đ</p>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <p class="price">${item.product.format(item.product.price)}đ</p>
+                                    </c:otherwise>
+                                </c:choose>
+                                <div class="quantity-controls">
+                                    <button class="decrease-button">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <input type="text" class="quantity-input" name="quantity"
+                                           value="${item.quantity}"
+                                           readonly>
+                                    <button class="increase-button">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </c:forEach>
+                    <div class="cart-total">
+                        <p>Tổng cộng: <span
+                                id="total-price">${sessionScope.cart.format(sessionScope.cart.total)}đ</span></p>
+                        <button class="order-btn" onclick="location.href='payment-info.jsp'">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Đặt hàng
                         </button>
                     </div>
                 </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="item-left">
-                    <img src="images/banhpia.png" alt="Bánh pía"/>
-                    <button class="remove-btn">Xóa</button>
-                </div>
-                <div class="item-middle">Bánh pía</div>
-                <div class="item-right">
-                    <p class="price">30.000đ</p>
-                    <div class="quantity-controls">
-                        <button class="decrease-button">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-                        <input type="text" class="quantity-input" value="1" readonly>
-                        <button class="increase-button">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart-total">
-                <p>Tổng cộng: <span id="total-price">75.000đ</span></p>
-                <button class="order-btn" onclick="location.href='payment-info.jsp'">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Đặt hàng
-                </button>
-            </div>
-
-        </div>
+            </c:when>
+            <c:otherwise>
+                <p>Giỏ hàng của bạn đang trống.</p>
+            </c:otherwise>
+        </c:choose>
     </section>
 </main>
 

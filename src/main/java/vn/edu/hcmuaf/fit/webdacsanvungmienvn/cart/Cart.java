@@ -68,7 +68,7 @@ public class Cart implements Serializable {
         return total.get();
     }
 
-    public double total() {
+    public double getTotal() {
         AtomicReference<Double> total = new AtomicReference<>((double) 0);
         getItems().forEach(item -> {
             total.updateAndGet(v -> v + (item.getQuantity() * item.getPrice()));
@@ -78,5 +78,10 @@ public class Cart implements Serializable {
 
     public void updateCustomer(User user) {
         this.user = user;
+    }
+
+    public String format(double price) {
+        java.text.NumberFormat formatter = java.text.NumberFormat.getInstance(new java.util.Locale("vi", "VN"));
+        return formatter.format(price);
     }
 }
