@@ -37,17 +37,20 @@
                                         <p class="price">${item.product.format(item.product.price)}đ</p>
                                     </c:otherwise>
                                 </c:choose>
-                                <div class="quantity-controls">
-                                    <button class="decrease-button">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </button>
-                                    <input type="text" class="quantity-input" name="quantity"
-                                           value="${item.quantity}"
-                                           readonly>
-                                    <button class="increase-button">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </button>
-                                </div>
+                                <form action="update-item" method="post">
+                                    <input type="hidden" name="productId" value="${item.product.id}">
+                                    <div class="quantity-controls">
+                                        <button class="decrease-button">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input type="text" class="quantity-input" name="quantity"
+                                               value="${item.quantity}"
+                                               readonly>
+                                        <button class="increase-button">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </c:forEach>
