@@ -40,7 +40,7 @@
                                     </h4>
                                 </c:if>
                             </div>
-                            <a class="buy" href="product-detail?id=${p.getId()}">Mua hàng</a>
+                            <a class="buy" href="add-cart?productId=${p.id}&quantity=1">Mua hàng</a>
                         </div>
                     </c:forEach>
                 </div>

@@ -11,11 +11,11 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class cart implements Serializable {
-    Map<Integer, cartItem> data;
+public class Cart implements Serializable {
+    Map<Integer, CartItem> data;
     private User user;
 
-    public cart() {
+    public Cart() {
         this.data = new HashMap<>();
     }
 
@@ -25,8 +25,13 @@ public class cart implements Serializable {
         }
         if (get(product.getId()) != null)
             data.get(product.getId()).upQuantity(quantity);
-        else
-            data.put(product.getId(), new cartItem(quantity, product.getPrice(), product));
+        else {
+            if (product.getDiscountPercentage() > 0) {
+                data.put(product.getId(), new CartItem(quantity, product.getDiscountPrice(), product));
+            } else {
+                data.put(product.getId(), new CartItem(quantity, product.getPrice(), product));
+            }
+        }
     }
 
     public boolean updateItem(int productId, int quantity) {
@@ -36,22 +41,22 @@ public class cart implements Serializable {
         return true;
     }
 
-    public cartItem removeItem(int productId) {
+    public CartItem removeItem(int productId) {
         if (get(productId) == null) return null;
         return data.remove(productId);
     }
 
-    public List<cartItem> removeAllItems() {
-        ArrayList<cartItem> cartItems = new ArrayList<>(data.values());
+    public List<CartItem> removeAllItems() {
+        ArrayList<CartItem> cartItems = new ArrayList<>(data.values());
         data.clear();
         return cartItems;
     }
 
-    public List<cartItem> getItems() {
+    public List<CartItem> getItems() {
         return new ArrayList<>(data.values());
     }
 
-    private cartItem get(int id) {
+    private CartItem get(int id) {
         return data.get(id);
     }
 
@@ -63,15 +68,20 @@ public class cart implements Serializable {
         return total.get();
     }
 
-    public double total() {
+    public double getTotal() {
         AtomicReference<Double> total = new AtomicReference<>((double) 0);
         getItems().forEach(item -> {
             total.updateAndGet(v -> v + (item.getQuantity() * item.getPrice()));
         });
-        return  total.get();
+        return total.get();
     }
 
     public void updateCustomer(User user) {
         this.user = user;
+    }
+
+    public String format(double price) {
+        java.text.NumberFormat formatter = java.text.NumberFormat.getInstance(new java.util.Locale("vi", "VN"));
+        return formatter.format(price);
     }
 }
