@@ -21,10 +21,13 @@
                 <div class="cart-container">
                     <c:forEach items="${sessionScope.cart.items}" var="item">
                         <div class="cart-item">
-                            <div class="item-left">
-                                <img src="${item.product.image}"/>
-                                <button class="remove-btn">Xóa</button>
-                            </div>
+                            <form method="post" action="del-item">
+                                <input type="hidden" name="productId" value="${item.product.id}">
+                                <div class="item-left">
+                                    <img src="${item.product.image}"/>
+                                    <button type="submit" class="remove-btn">Xóa</button>
+                                </div>
+                            </form>
 
                             <div class="item-middle">${item.product.name}</div>
 

@@ -35,7 +35,8 @@
                         Giỏ hàng
                     </p>
                     <c:if test="${not empty sessionScope.cart}">
-                        <span id="cart-count" class="badge">${sessionScope.cart.totalQuantity}</span>
+                        <span id="cart-count" style="${sessionScope.cart.totalQuantity != 0 ? '' : 'display:none;'}"
+                              class="badge">${sessionScope.cart.totalQuantity}</span>
                     </c:if>
                 </a>
             </div>
