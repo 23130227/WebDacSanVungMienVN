@@ -9,6 +9,7 @@ public class Product {
     private int brandId;
     private String brandName;
     private int categoryId;
+    private String categoryName;
     private String specification;
     private int quantity;
     private int soldQuantity;
@@ -85,6 +86,14 @@ public class Product {
 
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getSpecification() {

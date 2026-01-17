@@ -104,4 +104,18 @@ public class ProductService {
     public Product getProductById(int productId) {
         return productDAO.getProductById(productId);
     }
+
+    // ===== Admin CRUD =====
+
+    public int createProduct(Product product) {
+        return productDAO.createProduct(product);
+    }
+
+    public boolean updateProduct(Product product) {
+        return productDAO.updateProduct(product);
+    }
+
+    public boolean deleteProduct(int productId) {
+        return productDAO.deleteProduct(productId);
+    }
 }
