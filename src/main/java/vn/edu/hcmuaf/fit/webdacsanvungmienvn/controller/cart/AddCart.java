@@ -26,15 +26,11 @@ public class AddCart extends HttpServlet {
             cart.addItem(product, quantity);
             session.setAttribute("cart", cart);
             String referer = request.getHeader("Referer");
-            if (referer == null) {
-                referer = "home";
-            }
-            response.sendRedirect(referer);
-            request.setAttribute("product", product);
+            response.sendRedirect(referer != null ? referer : "home");
             return;
         }
         request.setAttribute("msg", "Product not found");
-        request.getRequestDispatcher("header.jsp").forward(request, response);
+        request.getRequestDispatcher("home").forward(request, response);
     }
 
     @Override

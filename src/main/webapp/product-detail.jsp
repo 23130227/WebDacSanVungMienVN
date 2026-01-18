@@ -91,7 +91,7 @@
 
                 <div class="review-form-wrapper">
                     <h3>Viết đánh giá của bạn</h3>
-                    <form class="review-form" action="product-detail" method="post">
+                    <form class="review-form" action="add-review" method="post">
                         <input type="hidden" name="productId" value="${product.id}">
                         <div class="rating-input">
                             <label>Đánh giá của bạn:</label>

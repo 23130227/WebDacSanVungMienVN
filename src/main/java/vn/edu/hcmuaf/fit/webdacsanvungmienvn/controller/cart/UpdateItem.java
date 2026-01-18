@@ -24,7 +24,6 @@ public class UpdateItem extends HttpServlet {
             cart.updateItem(productId, quantity);
             session.setAttribute("cart", cart);
         }
-        String referer = request.getHeader("Referer");
-        response.sendRedirect(referer != null ? referer : "cart");
+        response.sendRedirect("my-cart");
     }
 }

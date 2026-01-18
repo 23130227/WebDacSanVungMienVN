@@ -22,13 +22,11 @@ public class RemoveItem extends HttpServlet {
         if (cart == null) {
             cart = new Cart();
             session.setAttribute("cart", cart);
-            String referer = request.getHeader("Referer");
-            response.sendRedirect(referer != null ? referer : "cart");
+            response.sendRedirect("my-cart");
             return;
         }
         cart.removeItem(productId);
         session.setAttribute("cart", cart);
-        String referer = request.getHeader("Referer");
-        response.sendRedirect(referer != null ? referer : "cart");
+        response.sendRedirect("my-cart");
     }
 }
